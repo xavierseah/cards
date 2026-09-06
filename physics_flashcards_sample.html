@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Physics cards</title>
+<style>
+:root{
+  --paper:#f7f5ee; --ink:#1d2433; --line:#cfd6e0; --navy:#22406e;
+  --unit:#b3550a; --unitbg:#fff1e0; --got:#2f7a4f; --shaky:#b8860b; --notyet:#b03a2e;
+  --card:#ffffff;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;height:100%;background:var(--paper);color:var(--ink);
+  font:17px/1.4 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+button{font:inherit;border:0;border-radius:12px;padding:14px 16px;min-height:52px;cursor:pointer}
+.screen{display:none;min-height:100%;padding:14px 14px 28px;max-width:560px;margin:0 auto}
+.screen.on{display:block}
+h1{font-size:22px;margin:6px 0 12px;font-weight:700;color:var(--navy)}
+.muted{color:#5b6472;font-size:14px}
+/* home */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 14px}
+.chip{background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:8px 14px;min-height:40px;font-size:15px}
+.chip.sel{background:var(--navy);color:#fff;border-color:var(--navy)}
+.target{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.deck{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px}
+.deck .top{display:flex;justify-content:space-between;align-items:baseline}
+.deck .name{font-weight:700;font-size:18px}
+.bar{height:12px;border-radius:6px;background:#e6e9ee;overflow:hidden;display:flex;margin:10px 0}
+.bar span{display:block;height:100%}
+.bar .g{background:var(--got)} .bar .s{background:var(--shaky)} .bar .n{background:var(--notyet)}
+.row{display:flex;gap:8px}
+.row button{flex:1}
+.primary{background:var(--navy);color:#fff}
+.ghost{background:#fff;border:1.5px solid var(--line)}
+/* card screen */
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.topbar button{min-height:44px;padding:8px 14px}
+.stage{position:relative;display:flex;align-items:center;gap:6px}
+.arrow{width:44px;min-height:120px;background:transparent;font-size:30px;color:var(--navy);padding:0}
+.card{flex:1;background:var(--card);border:1.5px solid var(--line);border-radius:18px;min-height:56vh;
+  padding:22px 18px 18px;position:relative;display:flex;flex-direction:column;justify-content:center;
+  box-shadow:0 2px 0 var(--line)}
+.card .tag{position:absolute;top:12px;left:16px;font-size:13px;color:#5b6472}
+.card .star{position:absolute;top:6px;right:8px;background:none;font-size:26px;min-height:44px;padding:6px 10px;color:#9aa4b2}
+.card .star.on{color:#d9a400}
+.card .face{font-size:20px;line-height:1.45}
+.card .face.back{font-size:18px}
+.card .face p{margin:0 0 10px}
+.card .line{display:grid;grid-template-columns:96px 1fr;gap:6px;margin:6px 0}
+.card .line b{color:var(--navy);font-weight:600}
+.u{background:var(--unitbg);color:var(--unit);font-weight:700;padding:0 5px;border-radius:5px}
+.card .hint{font-size:13px;color:#5b6472;margin-top:16px;text-align:center}
+.card svg{max-width:100%;height:auto;display:block;margin:0 auto 10px}
+.marks{display:flex;gap:8px;margin-top:14px}
+.marks button{flex:1;color:#fff;font-weight:600}
+.marks .n{background:var(--notyet)} .marks .s{background:var(--shaky)} .marks .g{background:var(--got)}
+.marks[hidden]{display:none}
+textarea{width:100%;min-height:64px;border:1.5px solid var(--line);border-radius:10px;padding:10px;font:inherit;margin-top:12px;resize:none}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+.compare div{background:#f3f5f8;border-radius:10px;padding:10px;font-size:16px}
+.compare .lbl{font-size:12px;color:#5b6472;display:block;margin-bottom:4px}
+pre.export{background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:12px;white-space:pre-wrap;font:15px/1.5 ui-monospace,Menlo,monospace}
+.empty{padding:40px 10px;text-align:center;color:#5b6472}
+@media (prefers-reduced-motion:no-preference){.card{transition:transform .12s}.card:active{transform:scale(.99)}}
+</style>
+</head>
+<body>
+
+<!-- HOME -->
+<section id="home" class="screen on">
+  <h1>Physics cards</h1>
+  <div class="target"><div><b id="todayCount">0 of 10 today</b><div class="muted">daily target</div></div>
+    <button class="ghost" id="targetBtn" style="min-height:40px">Set</button></div>
+  <div class="chips" id="chips"></div>
+  <div id="deckList"></div>
+</section>
+
+<!-- CARD -->
+<section id="study" class="screen">
+  <div class="topbar">
+    <button class="ghost" id="homeBtn">Home</button>
+    <b id="counter">1 of 5</b>
+    <button class="ghost" id="shuffleBtn">Shuffle</button>
+  </div>
+  <div class="stage">
+    <button class="arrow" id="prevBtn" aria-label="Back">&#8249;</button>
+    <div class="card" id="card"></div>
+    <button class="arrow" id="nextBtn" aria-label="Next">&#8250;</button>
+  </div>
+  <div class="marks" id="marks" hidden>
+    <button class="n" data-m="n">Not yet</button>
+    <button class="s" data-m="s">Shaky</button>
+    <button class="g" data-m="g">Got it</button>
+  </div>
+</section>
+
+<!-- EXPORT -->
+<section id="export" class="screen">
+  <div class="topbar"><button class="ghost" id="exportHome">Home</button><b>To revise</b><span></span></div>
+  <pre class="export" id="exportText"></pre>
+</section>
+
+<script>
+/* ---------- cards (sample of 5) ---------- */
+const svgCar = `<svg viewBox="0 0 300 190" width="300" height="190" aria-label="speed time graph">
+<rect width="300" height="190" fill="#fff"/>
+<g stroke="#e3e7ee" stroke-width="1">
+${[0,1,2,3,4,5].map(i=>`<line x1="${50+i*40}" y1="20" x2="${50+i*40}" y2="150"/>`).join('')}
+${[0,1,2,3,4].map(i=>`<line x1="50" y1="${150-i*32}" x2="290" y2="${150-i*32}"/>`).join('')}
+</g>
+<line x1="50" y1="150" x2="290" y2="150" stroke="#1d2433" stroke-width="2"/>
+<line x1="50" y1="150" x2="50" y2="20" stroke="#1d2433" stroke-width="2"/>
+<polyline points="50,150 130,54 210,54 250,150" fill="none" stroke="#22406e" stroke-width="3"/>
+<line x1="130" y1="54" x2="130" y2="150" stroke="#22406e" stroke-dasharray="4 4"/>
+<line x1="210" y1="54" x2="210" y2="150" stroke="#22406e" stroke-dasharray="4 4"/>
+<text x="88" y="120" font-size="14" fill="#1d2433">A</text>
+<text x="166" y="100" font-size="14" fill="#1d2433">B</text>
+<text x="258" y="100" font-size="14" fill="#1d2433">C</text>
+<text x="34" y="58" font-size="12" text-anchor="end">20</text>
+<text x="34" y="154" font-size="12" text-anchor="end">0</text>
+<text x="130" y="168" font-size="12" text-anchor="middle">5</text>
+<text x="210" y="168" font-size="12" text-anchor="middle">10</text>
+<text x="250" y="168" font-size="12" text-anchor="middle">12.5</text>
+<text x="20" y="14" font-size="12">Speed / m/s</text>
+<text x="290" y="184" font-size="12" text-anchor="end">Time / s</text>
+</svg>`;
+
+const CARDS = [
+ {id:1, ch:2, type:"Name the type",
+  front:`<p>Speed-time graph.</p><p>Which method gives the distance travelled?</p>`,
+  back:`<p><b>Area under the graph.</b></p><p class="muted">Gradient of a speed-time graph gives acceleration, not distance.</p>`,
+  src:"Ch02 Notes 3, item 5"},
+ {id:2, ch:2, type:"Graph reading",
+  front:`${svgCar}<p>Part A: find the acceleration of the car.</p>`,
+  back:`<div class="line"><b>Formula</b><span>a = (v − u) ÷ t</span></div>
+        <div class="line"><b>Substitute</b><span>(20 − 0) ÷ 5</span></div>
+        <div class="line"><b>Answer</b><span>a = 4 <span class="u">m/s²</span></span></div>
+        <p class="muted" style="margin-top:10px">t is the gap: 5 − 0. u first, v last.</p>`,
+  src:"Kinematics WS2 Q1(b), Figure 1"},
+ {id:3, ch:4, type:"Explain skeleton",
+  front:`<p>A crate is pushed with 35 N and moves at uniform velocity.</p><p>What is the friction, and why?</p>`,
+  back:`<div class="line"><b>Condition</b><span>Uniform velocity, so resultant force = 0</span></div>
+        <div class="line"><b>Reason</b><span>Friction balances the 35 N push</span></div>
+        <div class="line"><b>Conclusion</b><span>Friction = 35 <span class="u">N</span></span></div>`,
+  src:"Dynamics WS4 Q3"},
+ {id:4, ch:5, type:"Formula",
+  front:`<p>Uniform metre rule pivoted at its centre.</p><p>50 N hangs 20 cm left of the pivot. 40 N hangs d to the right.</p><p>Find d.</p>`,
+  back:`<div class="line"><b>Formula</b><span>Sum of clockwise moments = sum of anticlockwise moments</span></div>
+        <div class="line"><b>Substitute</b><span>40 × d = 50 × 20</span></div>
+        <div class="line"><b>Answer</b><span>d = 1000 ÷ 40 = 25 <span class="u">cm</span></span></div>`,
+  src:"Moments WS5.1 Q4"},
+ {id:5, ch:3, type:"Unit", typed:true,
+  front:`<p>What is the unit of pressure?</p>`,
+  back:`<p><span class="u">N/m²</span></p><p class="muted">Also written as Pa (pascal). Force in N, area in m².</p>`,
+  answer:"N/m²", alt:["N/m2","Pa","pascal","n/m2","n/m^2","N/m^2"],
+  src:"WA2 Q6(c) answer line"}
+];
+const DECK = {id:"sample", name:"Sample deck", chapters:"Ch 2, 3, 4, 5"};
+
+/* ---------- storage ---------- */
+const KEY="phys_cards_sample_v1";
+let S = load();
+function load(){ try{ return JSON.parse(localStorage.getItem(KEY))||fresh(); }catch(e){ return fresh(); } }
+function fresh(){ return {marks:{}, stars:{}, seen:{}, target:10, today:{date:todayStr(),count:0}}; }
+function save(){ localStorage.setItem(KEY, JSON.stringify(S)); }
+function todayStr(){ return new Date().toISOString().slice(0,10); }
+function tick(){ if(S.today.date!==todayStr()){ S.today={date:todayStr(),count:0}; } }
+
+/* ---------- filters ---------- */
+let F = {ch:null, type:null, starred:false, notyet:false};
+const TYPES=[...new Set(CARDS.map(c=>c.type))];
+const CHS=[...new Set(CARDS.map(c=>c.ch))].sort();
+function renderChips(){
+  const el=document.getElementById('chips'); el.innerHTML='';
+  CHS.forEach(ch=>el.appendChild(chip('Ch '+ch, F.ch===ch, ()=>{F.ch=F.ch===ch?null:ch; renderHome();})));
+  TYPES.forEach(t=>el.appendChild(chip(t, F.type===t, ()=>{F.type=F.type===t?null:t; renderHome();})));
+  el.appendChild(chip('★ Starred', F.starred, ()=>{F.starred=!F.starred; renderHome();}));
+  el.appendChild(chip('Not yet only', F.notyet, ()=>{F.notyet=!F.notyet; renderHome();}));
+}
+function chip(label,sel,fn){ const b=document.createElement('button'); b.className='chip'+(sel?' sel':''); b.textContent=label; b.onclick=fn; return b; }
+function filtered(){
+  return CARDS.filter(c=>(F.ch==null||c.ch===F.ch)&&(F.type==null||c.type===F.type)
+    &&(!F.starred||S.stars[c.id])&&(!F.notyet||S.marks[c.id]==='n'));
+}
+
+/* ---------- home ---------- */
+function renderHome(){
+  tick(); renderChips();
+  document.getElementById('todayCount').textContent=`${S.today.count} of ${S.target} today`;
+  const list=filtered();
+  const g=list.filter(c=>S.marks[c.id]==='g').length, s=list.filter(c=>S.marks[c.id]==='s').length, n=list.filter(c=>S.marks[c.id]==='n').length;
+  const tot=list.length||1;
+  const el=document.getElementById('deckList');
+  el.innerHTML = list.length? `
+   <div class="deck">
+     <div class="top"><span class="name">${DECK.name}</span><span class="muted">${list.length} cards</span></div>
+     <div class="muted">${DECK.chapters}</div>
+     <div class="bar"><span class="g" style="width:${g/tot*100}%"></span><span class="s" style="width:${s/tot*100}%"></span><span class="n" style="width:${n/tot*100}%"></span></div>
+     <div class="muted">Got it ${g} · Shaky ${s} · Not yet ${n} · Unseen ${list.length-g-s-n}</div>
+     <div class="row" style="margin-top:12px">
+       <button class="primary" id="startBtn">Start</button>
+       <button class="ghost" id="resetBtn">Reset deck</button>
+       <button class="ghost" id="exportBtn">Export</button>
+     </div>
+   </div>` : `<div class="empty">No cards match these filters.</div>`;
+  if(list.length){
+    document.getElementById('startBtn').onclick=()=>start(list);
+    document.getElementById('resetBtn').onclick=()=>{ if(confirm('Reset marks and stars for this deck?')){ S=fresh(); save(); renderHome(); } };
+    document.getElementById('exportBtn').onclick=()=>exportList(list);
+  }
+}
+document.getElementById('targetBtn').onclick=()=>{ const v=parseInt(prompt('Daily target (cards)',S.target)); if(v>0){S.target=v; save(); renderHome();} };
+
+/* ---------- study ---------- */
+let Q=[], i=0, flipped=false;
+function order(list){
+  const w={n:0,s:1,undefined:2,g:3};   // not yet soonest, then shaky, then unseen, got it last
+  return [...list].sort((a,b)=>(w[S.marks[a.id]]??2)-(w[S.marks[b.id]]??2));
+}
+function start(list){ Q=order(list); i=0; show(); go('study'); }
+function show(){
+  flipped=false; const c=Q[i]; const card=document.getElementById('card');
+  document.getElementById('counter').textContent=`${i+1} of ${Q.length}`;
+  document.getElementById('marks').hidden=true;
+  card.innerHTML=`<span class="tag">Ch ${c.ch} · ${c.type}</span>
+    <button class="star ${S.stars[c.id]?'on':''}" aria-label="star">★</button>
+    <div class="face">${c.front}${c.typed?`<textarea id="ans" placeholder="Type your answer, then tap the card"></textarea>`:''}</div>
+    <div class="hint">Tap to flip</div>`;
+  card.querySelector('.star').onclick=e=>{e.stopPropagation(); S.stars[c.id]=!S.stars[c.id]; save(); e.target.classList.toggle('on');};
+  const ta=card.querySelector('#ans'); if(ta){ ta.onclick=e=>e.stopPropagation(); ta.onfocus=e=>e.stopPropagation(); }
+  card.onclick=flip;
+}
+function flip(){
+  if(flipped) return; flipped=true; const c=Q[i]; const card=document.getElementById('card');
+  let typed='';
+  if(c.typed){ typed=(card.querySelector('#ans')?.value||'').trim(); }
+  let body=c.back;
+  if(c.typed){
+    const ok=typed && [c.answer,...(c.alt||[])].some(a=>a.toLowerCase().replace(/\s/g,'')===typed.toLowerCase().replace(/\s/g,''));
+    body=`<div class="compare"><div><span class="lbl">Your answer</span>${typed||'(blank)'} ${typed?(ok?'✅':'✗'):''}</div><div><span class="lbl">Model answer</span>${c.back}</div></div>`;
+  }
+  card.innerHTML=`<span class="tag">Ch ${c.ch} · ${c.type}</span>
+    <button class="star ${S.stars[c.id]?'on':''}" aria-label="star">★</button>
+    <div class="face back">${body}</div><div class="hint">${c.src}</div>`;
+  card.querySelector('.star').onclick=e=>{e.stopPropagation(); S.stars[c.id]=!S.stars[c.id]; save(); e.target.classList.toggle('on');};
+  card.onclick=null;
+  document.getElementById('marks').hidden=false;
+}
+document.querySelectorAll('#marks button').forEach(b=>b.onclick=()=>{
+  tick(); const c=Q[i]; S.marks[c.id]=b.dataset.m; if(!S.seen[c.id]){S.seen[c.id]=1;} S.today.count++; save(); next();
+});
+function next(){ if(i<Q.length-1){i++; show();} else { go('home'); renderHome(); } }
+function prev(){ if(i>0){i--; show();} }
+document.getElementById('nextBtn').onclick=next;
+document.getElementById('prevBtn').onclick=prev;
+document.getElementById('homeBtn').onclick=()=>{go('home'); renderHome();};
+document.getElementById('shuffleBtn').onclick=()=>{ for(let k=Q.length-1;k>0;k--){const j=Math.floor(Math.random()*(k+1));[Q[k],Q[j]]=[Q[j],Q[k]];} i=0; show(); };
+
+/* ---------- export ---------- */
+function exportList(list){
+  const rows=list.filter(c=>S.marks[c.id]==='n'||S.marks[c.id]==='s')
+    .map(c=>`[${S.marks[c.id]==='n'?'Not yet':'Shaky'}] Ch ${c.ch}, ${c.type}: ${strip(c.front)}  (${c.src})`);
+  document.getElementById('exportText').textContent = rows.length? `To revise, ${todayStr()}\n\n`+rows.join('\n') : 'Nothing marked Not yet or Shaky.';
+  go('export');
+}
+document.getElementById('exportHome').onclick=()=>{go('home'); renderHome();};
+function strip(h){ const d=document.createElement('div'); d.innerHTML=h.replace(/<svg[\s\S]*?<\/svg>/,'[graph]'); return d.textContent.replace(/\s+/g,' ').trim(); }
+
+function go(id){ document.querySelectorAll('.screen').forEach(s=>s.classList.remove('on')); document.getElementById(id).classList.add('on'); window.scrollTo(0,0); }
+renderHome();
+</script>
+</body>
+</html>
