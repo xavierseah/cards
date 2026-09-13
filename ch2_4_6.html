@@ -57,6 +57,7 @@
   .fig svg { width: 100%; height: auto; display: block; }
   .hint { color: #6b7280; font-size: 14px; margin-top: 12px; }
   .back .line { font-size: 19px; margin: 6px 0; }
+  .qsmall { color: #6b7280; font-size: 14px; border-left: 3px solid #dfe3ec; padding-left: 10px; margin: 0 0 12px; }
   .back .line.eq { font-family: "Helvetica Neue", Arial, sans-serif; }
   .k { color: #1d4ed8; font-weight: 700; }
   .u { color: #b45309; font-weight: 700; }
@@ -329,7 +330,7 @@ const CARDS = [
   front:"A crane lifts 2000 N up 15 m. Work done?",
   back: EQ(`W = F × d`) + EQ(`= 2000 × 15`) + EQ(`= 30 000 ${U("J")}`) + L(`Distance in the ${K("direction of the force")}`)},
  {id:18, ch:6, type:"calc",
-  front:"The crane lift takes 25 s. Power of the crane?",
+  front:"A crane does 30 000 J of work lifting a load in 25 s. Power of the crane?",
   back: EQ(`P = W ÷ t`) + EQ(`= 30 000 ÷ 25`) + EQ(`= 1200 ${U("W")}`) + L(`Or P = E ÷ t`)},
 ];
 
@@ -395,7 +396,7 @@ function renderCard(){
   const typed = c.typed && flags.type;
   $("front").innerHTML = (c.fig ? `<div class="fig">${FIG[c.fig]}</div>` : "") + `<div class="q">${c.front}</div>` +
     (typed ? `<input type="text" id="typedIn" placeholder="Type your answer" autocomplete="off"><div class="actions"><button id="btnCheck">Check</button></div>` : `<div class="hint">Tap the card to see the answer</div>`);
-  $("back").innerHTML = (c.fig ? `<div class="fig">${FIG[c.fig]}</div>` : "") + c.back;
+  $("back").innerHTML = (c.fig ? `<div class="fig">${FIG[c.fig]}</div>` : "") + `<div class="qsmall">${c.front}</div>` + c.back;
   $("front").classList.add("on"); $("back").classList.remove("on"); $("marks").classList.remove("on");
   $("btnPrev").disabled = pos===0;
   if (typed){ const inp = $("typedIn"); inp.onclick = e=>e.stopPropagation(); $("btnCheck").onclick = e=>{ e.stopPropagation(); flip(inp.value); }; }
@@ -404,9 +405,10 @@ function flip(yours){
   const c = queue[pos];
   if (flipped) return;
   flipped = true;
-  if (yours !== undefined){ $("back").innerHTML += `<div class="yours"><div class="lbl2">Your answer</div>${yours ? yours.replace(/</g,"&lt;") : "(blank)"}</div>`; }
+  if (yours !== undefined && !$("back").querySelector(".yours")){ $("back").innerHTML += `<div class="yours"><div class="lbl2">Your answer</div>${yours ? yours.replace(/</g,"&lt;") : "(blank)"}</div>`; }
   $("front").classList.remove("on"); $("back").classList.add("on"); $("marks").classList.add("on");
 }
+function unflip(){ flipped = false; $("front").classList.add("on"); $("back").classList.remove("on"); $("marks").classList.remove("on"); }
 function mark(m){
   const c = queue[pos]; cs(c.id).mark = m;
   todayCount(); mem.today.n++; save();
@@ -434,7 +436,7 @@ $("btnExport").onclick = ()=>{
 $("copyExport").onclick = ()=>{ const t=$("exportText"); t.select(); t.setSelectionRange(0,99999); try{ document.execCommand("copy"); toast("Copied"); }catch(e){ toast("Select and copy the text"); } };
 $("closeExport").onclick = ()=>{ $("exportBox").style.display = "none"; };
 $("btnHome").onclick = ()=>{ show("home"); renderHome(); };
-$("card").onclick = e=>{ if (e.target.id==="btnStar") return; if (!flipped && !(queue[pos].typed && flags.type)) flip(); };
+$("card").onclick = e=>{ if (e.target.id==="btnStar") return; if (flipped) { unflip(); return; } if (!(queue[pos].typed && flags.type)) flip(); };
 $("btnStar").onclick = e=>{ e.stopPropagation(); const c=queue[pos]; cs(c.id).star = !cs(c.id).star; save(); $("btnStar").classList.toggle("on", cs(c.id).star); };
 document.querySelectorAll("#marks button").forEach(b=>b.onclick = ()=>mark(b.dataset.m));
 $("btnPrev").onclick = ()=>{ if (pos>0){ pos--; renderCard(); } };
