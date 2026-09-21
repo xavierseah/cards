@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Acid reactions — Exam Memory Sheet</title>
+<style>
+:root{
+  --bg:#f6f7fb;
+  --card:#ffffff;
+  --ink:#172033;
+  --muted:#657085;
+  --line:#dfe4ee;
+  --blue:#2156d9;
+  --blue-soft:#eef3ff;
+  --green:#16794f;
+  --green-soft:#edf9f4;
+  --orange:#a45406;
+  --orange-soft:#fff5e8;
+  --purple:#7048b8;
+  --purple-soft:#f5efff;
+  --red:#b42318;
+  --red-soft:#fff0ef;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:18px;
+  line-height:1.55;
+}
+main{
+  width:min(940px, calc(100% - 28px));
+  margin:0 auto;
+  padding:28px 0 60px;
+}
+.hero{
+  background:linear-gradient(135deg,#ffffff 0%,#eef3ff 100%);
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:28px;
+  box-shadow:0 8px 28px rgba(28,39,64,.06);
+}
+.eyebrow{
+  margin:0 0 8px;
+  color:var(--blue);
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-size:.78rem;
+}
+h1{
+  margin:0;
+  font-size:clamp(2rem,5vw,3rem);
+  line-height:1.05;
+}
+.lead{
+  margin:12px 0 0;
+  color:var(--muted);
+  max-width:680px;
+}
+.memory-line{
+  margin:22px 0 0;
+  padding:18px 20px;
+  border-radius:16px;
+  background:#172033;
+  color:#fff;
+  font-size:1.08rem;
+  font-weight:700;
+}
+.memory-line span{color:#9ec0ff}
+.nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:16px 0 0;
+}
+.nav a{
+  text-decoration:none;
+  color:var(--ink);
+  background:#fff;
+  border:1px solid var(--line);
+  padding:7px 11px;
+  border-radius:999px;
+  font-size:.88rem;
+  font-weight:700;
+}
+section{
+  margin-top:30px;
+}
+.section-title{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:18px;
+  margin-bottom:14px;
+}
+h2{
+  margin:0;
+  font-size:1.55rem;
+  line-height:1.2;
+}
+.section-title p{
+  margin:0;
+  color:var(--muted);
+  font-size:.95rem;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+}
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:20px;
+  box-shadow:0 5px 18px rgba(28,39,64,.04);
+}
+.rule-card{
+  position:relative;
+  overflow:hidden;
+}
+.rule-letter{
+  width:44px;height:44px;
+  display:grid;place-items:center;
+  border-radius:12px;
+  color:#fff;
+  font-size:1.35rem;
+  font-weight:900;
+  margin-bottom:14px;
+}
+.a .rule-letter{background:var(--blue)}
+.b .rule-letter{background:var(--green)}
+.c .rule-letter{background:var(--orange)}
+.d .rule-letter{background:var(--purple)}
+.rule{
+  font-size:1.18rem;
+  font-weight:800;
+  margin:0 0 8px;
+}
+.product{
+  margin:0;
+  color:var(--muted);
+}
+.gas{
+  display:inline-block;
+  margin-top:12px;
+  padding:7px 10px;
+  border-radius:10px;
+  font-weight:900;
+}
+.a .gas{background:var(--blue-soft);color:var(--blue)}
+.b .gas{background:var(--green-soft);color:var(--green)}
+.c .gas{background:var(--orange-soft);color:var(--orange)}
+.d .gas{background:var(--purple-soft);color:var(--purple)}
+
+.alert{
+  margin-top:14px;
+  padding:14px 16px;
+  border:1px solid #ffd2cf;
+  background:var(--red-soft);
+  color:var(--red);
+  border-radius:14px;
+  font-weight:800;
+}
+
+.steps{
+  counter-reset:step;
+  display:grid;
+  gap:12px;
+}
+.step{
+  counter-increment:step;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:18px 18px 18px 68px;
+  position:relative;
+}
+.step:before{
+  content:counter(step);
+  position:absolute;
+  left:18px; top:16px;
+  width:34px;height:34px;
+  border-radius:50%;
+  background:var(--blue);
+  color:white;
+  display:grid;
+  place-items:center;
+  font-weight:900;
+}
+.step strong{color:var(--blue)}
+.answer-strip{
+  margin-top:14px;
+  padding:18px;
+  border-radius:16px;
+  background:var(--blue-soft);
+  border:1px solid #cad8ff;
+  font-size:1.15rem;
+}
+.answer-strip b{font-size:1.35rem}
+
+.table-wrap{
+  overflow:auto;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:16px;
+}
+table{
+  border-collapse:collapse;
+  width:100%;
+  min-width:620px;
+}
+th,td{
+  padding:14px 16px;
+  text-align:left;
+  border-bottom:1px solid var(--line);
+  vertical-align:top;
+}
+th{
+  font-size:.82rem;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  background:#fafbfe;
+}
+tr:last-child td{border-bottom:0}
+td strong{color:var(--blue)}
+
+.salt-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:14px;
+}
+.big-example{
+  font-size:1.15rem;
+  font-weight:800;
+  padding:18px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:16px;
+}
+.big-example .arrow{color:var(--blue)}
+.mini-note{
+  color:var(--muted);
+  margin:.5rem 0 0;
+  font-size:.95rem;
+}
+.acid-map{
+  display:grid;
+  gap:8px;
+}
+.acid-map div{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:12px 14px;
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+}
+.acid-map b{color:var(--blue)}
+
+.flashcards{
+  display:grid;
+  gap:10px;
+}
+.flash{
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#fff;
+  overflow:hidden;
+}
+.flash button{
+  width:100%;
+  border:0;
+  background:#fff;
+  padding:16px 18px;
+  font:inherit;
+  color:var(--ink);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:18px;
+  cursor:pointer;
+  text-align:left;
+  font-weight:800;
+}
+.flash button span:last-child{
+  color:var(--blue);
+  font-size:.88rem;
+}
+.flash .back{
+  display:none;
+  padding:0 18px 16px;
+  color:var(--muted);
+}
+.flash.open .back{display:block}
+.flash.open button{background:#fafbfe}
+
+.rapid{
+  background:#172033;
+  color:#fff;
+  border-radius:20px;
+  padding:22px;
+}
+.rapid h2{margin-bottom:14px}
+.rapid-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+}
+.rapid-item{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:14px;
+  padding:14px;
+}
+.rapid-item .k{
+  font-size:.8rem;
+  color:#c8d1e4;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+}
+.rapid-item .v{
+  margin-top:4px;
+  font-size:1.05rem;
+  font-weight:900;
+}
+footer{
+  margin-top:20px;
+  color:var(--muted);
+  font-size:.9rem;
+  text-align:center;
+}
+@media (max-width:720px){
+  body{font-size:17px}
+  main{width:min(100% - 20px,940px);padding-top:12px}
+  .hero{padding:20px}
+  .grid,.salt-grid{grid-template-columns:1fr}
+  .rapid-grid{grid-template-columns:1fr 1fr}
+  .section-title{display:block}
+  .section-title p{margin-top:5px}
+}
+@media print{
+  body{background:#fff}
+  main{width:100%;padding:0}
+  .nav,.flashcards,footer{display:none}
+  .hero,.card,.table-wrap,.big-example,.acid-map div,.rapid{box-shadow:none}
+  section{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<main>
+
+<header class="hero">
+  <p class="eyebrow">Exam memory sheet</p>
+  <h1>Acid reactions: which gas?</h1>
+  <p class="lead">Learn the four patterns first. In a question, look for <b>acid</b>, then identify the other substance.</p>
+
+  <div class="memory-line">
+    Acid? <span>Yes → check the other substance.</span>
+    No acid? <span>Think D → ammonia.</span>
+  </div>
+
+  <nav class="nav" aria-label="Page sections">
+    <a href="#four">4 reactions</a>
+    <a href="#decide">How to decide</a>
+    <a href="#salt">Name the salt</a>
+    <a href="#examples">Examples</a>
+    <a href="#recall">Rapid recall</a>
+  </nav>
+</header>
+
+<section id="four">
+  <div class="section-title">
+    <div><p class="eyebrow">1. Memorise</p><h2>The four reactions</h2></div>
+    <p>These are the core facts.</p>
+  </div>
+
+  <div class="grid">
+    <article class="card rule-card a">
+      <div class="rule-letter">A</div>
+      <p class="rule">acid + metal</p>
+      <p class="product">→ salt + hydrogen</p>
+      <span class="gas">Gas: hydrogen</span>
+    </article>
+
+    <article class="card rule-card b">
+      <div class="rule-letter">B</div>
+      <p class="rule">acid + carbonate</p>
+      <p class="product">→ salt + water + carbon dioxide</p>
+      <span class="gas">Gas: carbon dioxide</span>
+    </article>
+
+    <article class="card rule-card c">
+      <div class="rule-letter">C</div>
+      <p class="rule">acid + oxide or hydroxide</p>
+      <p class="product">→ salt + water</p>
+      <span class="gas">No gas</span>
+    </article>
+
+    <article class="card rule-card d">
+      <div class="rule-letter">D</div>
+      <p class="rule">alkali + ammonium salt, warmed</p>
+      <p class="product">→ salt + water + ammonia</p>
+      <span class="gas">Gas: ammonia</span>
+    </article>
+  </div>
+
+  <div class="alert">Exam trap: the gas is never oxygen.</div>
+</section>
+
+<section id="decide">
+  <div class="section-title">
+    <div><p class="eyebrow">2. Decide</p><h2>Use this order every time</h2></div>
+    <p>Do not jump straight to the last word.</p>
+  </div>
+
+  <div class="steps">
+    <div class="step"><b>Read every word</b> of both substances.</div>
+    <div class="step">Ask: <strong>Is there an acid?</strong></div>
+    <div class="step">
+      If <b>NO acid</b>: use <strong>D → ammonia</strong>.
+    </div>
+    <div class="step">
+      If <b>YES</b>: look at the <strong>other substance</strong>:
+      <br>• one word, a metal → A → hydrogen
+      <br>• ends in carbonate → B → carbon dioxide
+      <br>• ends in oxide or hydroxide → C → no gas
+    </div>
+  </div>
+
+  <div class="answer-strip">
+    Write your final answer like this: <b>B, carbon dioxide</b>
+  </div>
+</section>
+
+<section id="salt">
+  <div class="section-title">
+    <div><p class="eyebrow">3. Salt names</p><h2>Name the salt correctly</h2></div>
+    <p>Metal first, acid ending second.</p>
+  </div>
+
+  <div class="salt-grid">
+    <div class="big-example">
+      magnesium + sulfuric acid
+      <span class="arrow">→</span>
+      magnesium sulfate + hydrogen
+      <p class="mini-note">“magnesium” comes from the metal. “sulfate” comes from the acid.</p>
+    </div>
+
+    <div class="acid-map">
+      <div><span>hydrochloric acid</span><b>chloride</b></div>
+      <div><span>sulfuric acid</span><b>sulfate</b></div>
+      <div><span>nitric acid</span><b>nitrate</b></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <b>Remember:</b>
+    <br>• Always write both words. “sulfate” on its own is not a salt.
+    <br>• Copy the metal exactly: copper(II) carbonate gives copper(II) sulfate.
+    <br>• In D there is no acid, so the second word comes from the ammonium salt.
+  </div>
+</section>
+
+<section id="examples">
+  <div class="section-title">
+    <div><p class="eyebrow">4. Apply</p><h2>Worked examples</h2></div>
+    <p>Notice the decision order.</p>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Reaction</th>
+          <th>Acid?</th>
+          <th>What decides it?</th>
+          <th>Answer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>calcium + hydrochloric acid</td>
+          <td>Yes</td>
+          <td>calcium = one-word metal</td>
+          <td><strong>A, hydrogen</strong></td>
+        </tr>
+        <tr>
+          <td>magnesium carbonate + hydrochloric acid</td>
+          <td>Yes</td>
+          <td>ends in carbonate</td>
+          <td><strong>B, carbon dioxide</strong></td>
+        </tr>
+        <tr>
+          <td>potassium hydroxide + hydrochloric acid</td>
+          <td>Yes</td>
+          <td>ends in hydroxide</td>
+          <td><strong>C, no gas</strong></td>
+        </tr>
+        <tr>
+          <td>ammonium nitrate + calcium hydroxide, warmed</td>
+          <td>No</td>
+          <td>No acid → D</td>
+          <td><strong>D, ammonia</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <b>Important trap:</b> the last example contains “hydroxide”, but there is no acid. That is why you must ask the acid question first.
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <b>Carbon dioxide check:</b> carbon dioxide needs carbon. If the word <b>carbonate</b> is not in the line, the gas cannot be carbon dioxide.
+  </div>
+</section>
+
+<section>
+  <div class="section-title">
+    <div><p class="eyebrow">5. Test yourself</p><h2>Tap to reveal</h2></div>
+    <p>Use these for quick memorisation.</p>
+  </div>
+
+  <div class="flashcards">
+    <div class="flash">
+      <button type="button"><span>Acid + metal gives which gas?</span><span>Reveal</span></button>
+      <div class="back"><b>A, hydrogen.</b></div>
+    </div>
+    <div class="flash">
+      <button type="button"><span>Acid + carbonate gives which gas?</span><span>Reveal</span></button>
+      <div class="back"><b>B, carbon dioxide.</b></div>
+    </div>
+    <div class="flash">
+      <button type="button"><span>Acid + oxide or hydroxide gives which gas?</span><span>Reveal</span></button>
+      <div class="back"><b>C, no gas.</b></div>
+    </div>
+    <div class="flash">
+      <button type="button"><span>Alkali + ammonium salt, warmed gives which gas?</span><span>Reveal</span></button>
+      <div class="back"><b>D, ammonia.</b></div>
+    </div>
+    <div class="flash">
+      <button type="button"><span>What must you check before looking at “carbonate”, “oxide” or “hydroxide”?</span><span>Reveal</span></button>
+      <div class="back"><b>Check whether an acid is present.</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="recall" class="rapid">
+  <h2>10-second rapid recall</h2>
+  <div class="rapid-grid">
+    <div class="rapid-item"><div class="k">A</div><div class="v">metal → H₂ / hydrogen</div></div>
+    <div class="rapid-item"><div class="k">B</div><div class="v">carbonate → carbon dioxide</div></div>
+    <div class="rapid-item"><div class="k">C</div><div class="v">oxide / hydroxide → no gas</div></div>
+    <div class="rapid-item"><div class="k">D</div><div class="v">ammonium + alkali → ammonia</div></div>
+  </div>
+</section>
+
+<footer>Look for the acid first. Then let the other substance decide.</footer>
+
+</main>
+
+<script>
+document.querySelectorAll('.flash button').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    const card = btn.closest('.flash');
+    card.classList.toggle('open');
+    btn.querySelector('span:last-child').textContent =
+      card.classList.contains('open') ? 'Hide' : 'Reveal';
+  });
+});
+</script>
+</body>
+</html>
