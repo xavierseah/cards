@@ -2,7 +2,7 @@
 <html lang="en-GB"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sec 3 SS EOY Revision Notes</title>
+<title>Secondary 3 Social Studies: End-of-Year Exam Revision Notes</title>
 
 <style>/* latin-ext */
 @font-face {
@@ -84,20 +84,60 @@ button:focus-visible, a:focus-visible { outline: 3px solid oklch(0.45 0.14 250);
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
 </style>
+<style>
+@page { size: A4; margin: 12mm 12mm 14mm; }
+@media print {
+  html { font-size: 14px !important; }
+  body { font-size: 14px !important; background: #fff !important; }
+  main { gap: 1.8rem !important; }
+  * { color: #000 !important; box-shadow: none !important; text-shadow: none !important; }
+  /* light tints become white boxes with a grey outline */
+  [style*="background:oklch"] { background: #fff !important; border: 1px solid #8a8a8a !important; }
+  /* memory hooks, golden rules, Think/Feel/Do and flashcard answers: light grey + thick black border */
+  [style*="background:oklch(0.96 0.08 95)"] { background: #fff !important; border: 4px double #000 !important; }
+  /* dark pills stay black with white text */
+  [style*="background:#1b2a4a"] { background: #fff !important; border: 1.5px solid #000 !important; }
+  * { background-image: none !important; }
+  body, main, section, header { background: #fff !important; }
+  /* coloured borders become black or grey */
+  [style*="border-left:3px"] { border-left: 3px solid #555 !important; }
+  [style*="border:1px solid oklch"] { border-color: #8a8a8a !important; }
+  [style*="border:2px solid oklch(0.7 0.1 150)"] { border: 2px solid #000 !important; }
+  [style*="border:2px solid oklch(0.7 0.12 20)"] { border: 2px dashed #000 !important; }
+  [style*="border:1px solid oklch(0.8 0.05 200)"] { border-color: #555 !important; }
+  /* keep boxes whole across pages */
+  [style*="border-radius:12px"], [style*="border-radius:10px"], [style*="border-radius:8px"] { break-inside: avoid; }
+  section > div:first-child { break-after: avoid; }
+  #doneLabel, #cardsLabel { display: none !important; }
+  [style*="background:#fff;border-radius:8px;padding:.2rem .7rem"] { border: 1.5px solid #000 !important; }
+  [style*="border-top:6px"] { border-top: 3px solid #000 !important; }
+  [style*="border-top:3px"] { border-top: 3px solid #000 !important; }
+  #s2, #s4, #s7, #s8, #sp, #s9, #cards { break-before: page; }
+  #sp .set-card { break-before: page; break-inside: auto; }
+  #sp .set-card.first { break-before: auto; }
+  #sp .self-check { break-before: page; }
+  #sp summary { display: none !important; }
+  #sp details { border-top: none !important; padding-top: 0 !important; }
+  #sp th, #sp td { border: 1px solid #8a8a8a !important; background: #fff !important; }
+  .marks-bar { display: none !important; }
+  .keep-next { break-after: avoid; }
+}
+</style>
 </head>
 <body>
 <nav style="position:sticky;top:0;z-index:10;background:oklch(0.985 0.006 85 / 0.94);backdrop-filter:blur(8px);border-bottom:1px solid oklch(0.9 0.01 250)">
   <div style="max-width:62rem;margin:0 auto;padding:.6rem 1.25rem;display:flex;gap:.4rem;overflow-x:auto;align-items:center">
-    <strong style="flex:none;margin-right:.5rem;font-size:.9rem">SS EOY</strong>
+    <strong style="flex:none;margin-right:.5rem;font-size:.9rem">Social Studies</strong>
     <a href="#s1" style="flex:none;text-decoration:none;color:#1b2a4a;background:#fff;border:1px solid oklch(0.88 0.01 250);border-radius:999px;padding:.2rem .7rem;font-size:.85rem;font-weight:700">1 Paper</a>
-    <a href="#s2" style="flex:none;text-decoration:none;color:#1b2a4a;background:#fff;border:1px solid oklch(0.88 0.01 250);border-radius:999px;padding:.2rem .7rem;font-size:.85rem;font-weight:700">2 SBQ frames</a>
+    <a href="#s2" style="flex:none;text-decoration:none;color:#1b2a4a;background:#fff;border:1px solid oklch(0.88 0.01 250);border-radius:999px;padding:.2rem .7rem;font-size:.85rem;font-weight:700">2 Section A frames</a>
     <a href="#s3" style="flex:none;text-decoration:none;color:#1b2a4a;background:#fff;border:1px solid oklch(0.88 0.01 250);border-radius:999px;padding:.2rem .7rem;font-size:.85rem;font-weight:700">3 PEEL</a>
     <a href="#s4" style="flex:none;text-decoration:none;color:#1b2a4a;background:#fff;border:1px solid oklch(0.88 0.01 250);border-radius:999px;padding:.2rem .7rem;font-size:.85rem;font-weight:700">4 Diversity</a>
     <a href="#s5" style="flex:none;text-decoration:none;color:#1b2a4a;background:#fff;border:1px solid oklch(0.88 0.01 250);border-radius:999px;padding:.2rem .7rem;font-size:.85rem;font-weight:700">5 Harmony</a>
     <a href="#s6" style="flex:none;text-decoration:none;color:#1b2a4a;background:#fff;border:1px solid oklch(0.88 0.01 250);border-radius:999px;padding:.2rem .7rem;font-size:.85rem;font-weight:700">6 Benefits</a>
     <a href="#s7" style="flex:none;text-decoration:none;color:#1b2a4a;background:#fff;border:1px solid oklch(0.88 0.01 250);border-radius:999px;padding:.2rem .7rem;font-size:.85rem;font-weight:700">7 Challenges</a>
     <a href="#s8" style="flex:none;text-decoration:none;color:#1b2a4a;background:#fff;border:1px solid oklch(0.88 0.01 250);border-radius:999px;padding:.2rem .7rem;font-size:.85rem;font-weight:700">8 Model answers</a>
-    <a href="#s9" style="flex:none;text-decoration:none;color:#1b2a4a;background:#fff;border:1px solid oklch(0.88 0.01 250);border-radius:999px;padding:.2rem .7rem;font-size:.85rem;font-weight:700">9 Checklist</a>
+    <a href="#sp" style="flex:none;text-decoration:none;color:#1b2a4a;background:#fff;border:1px solid oklch(0.88 0.01 250);border-radius:999px;padding:.2rem .7rem;font-size:.85rem;font-weight:700">9 Section B practice</a>
+    <a href="#s9" style="flex:none;text-decoration:none;color:#1b2a4a;background:#fff;border:1px solid oklch(0.88 0.01 250);border-radius:999px;padding:.2rem .7rem;font-size:.85rem;font-weight:700">10 Checklist</a>
     <a href="#cards" style="flex:none;text-decoration:none;color:#fff;background:#1b2a4a;border-radius:999px;padding:.2rem .8rem;font-size:.85rem;font-weight:700">Test yourself</a>
   </div>
 </nav>
@@ -105,9 +145,9 @@ button:focus-visible, a:focus-visible { outline: 3px solid oklch(0.45 0.14 250);
 <main style="max-width:62rem;margin:0 auto;padding:2.5rem 1.25rem 5rem;display:flex;flex-direction:column;gap:3.5rem">
 
 <header style="display:flex;flex-direction:column;gap:.4rem">
-  <div style="font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:oklch(0.45 0.02 250)">Updated 27 September 2026</div>
-  <h1 style="margin:0;font-size:clamp(2rem,5vw,3rem);line-height:1.05">Sec 3 SS EOY Revision Notes</h1>
-  <p style="margin:.4rem 0 0;max-width:40rem;color:oklch(0.42 0.03 250)">Colour = skill. Numbered boxes = the order you write in. Yellow = memory hooks. Finish with the flashcards at the end.</p>
+  <div style="font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:oklch(0.45 0.02 250)">Updated 28 September 2026</div>
+  <h1 style="margin:0;font-size:clamp(2rem,5vw,3rem);line-height:1.05">Secondary 3 Social Studies: End-of-Year Exam Revision Notes</h1>
+  <p style="margin:.4rem 0 0;max-width:40rem;color:oklch(0.42 0.03 250)">The numbered boxes show the order to write your answer in. Highlighted boxes are memory hooks. Practise Section B in Section 9, then finish with the flashcards at the end.</p>
 </header>
 
 <!-- 1 -->
@@ -116,28 +156,24 @@ button:focus-visible, a:focus-visible { outline: 3px solid oklch(0.45 0.14 250);
     <span style="font-size:2.4rem;font-weight:700;line-height:1">1</span>
     <h2 style="margin:0;font-size:1.6rem">The paper at a glance</h2>
   </div>
-  <div style="display:flex;border-radius:10px;overflow:hidden;font-weight:700;font-size:.95rem">
-    <div style="flex:35;background:#1b2a4a;color:#fff;padding:.6rem .9rem">Section A · SBQ · 35 marks</div>
-    <div style="flex:15;background:oklch(0.9 0.05 60);color:oklch(0.35 0.1 60);padding:.6rem .9rem">B · SRQ · 15</div>
-  </div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:1rem">
     <div style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-radius:12px;padding:1rem 1.1rem;display:flex;flex-direction:column;gap:.5rem">
-      <div style="font-weight:700">Section A: Issue 1 (citizenship &amp; governance)</div>
-      <div style="font-size:.92rem;color:oklch(0.42 0.03 250)">Sources give you the content. Tests <strong>skills</strong>, not memory.</div>
+      <div style="font-weight:700">Section A: Source-Based Questions (35 marks)</div>
+      <div style="font-size:.92rem;color:oklch(0.42 0.03 250)">Topic: Issue 1, Citizenship and Governance. The sources give you the content, so it tests your <strong>skills</strong>, not your memory.</div>
       <div style="display:grid;grid-template-columns:auto 1fr auto;gap:.4rem .7rem;align-items:center;margin-top:.3rem">
-        <span style="background:oklch(0.93 0.04 250);color:oklch(0.38 0.13 250);font-weight:700;border-radius:6px;padding:.1rem .45rem;font-size:.85rem">Q1</span><span><strong>Inference</strong>: what it tells you</span><span style="font-weight:700">5</span>
-        <span style="background:oklch(0.93 0.04 200);color:oklch(0.38 0.1 200);font-weight:700;border-radius:6px;padding:.1rem .45rem;font-size:.85rem">Q2</span><span><strong>Purpose</strong>: why it was made</span><span style="font-weight:700">6</span>
-        <span style="background:oklch(0.93 0.04 150);color:oklch(0.38 0.1 150);font-weight:700;border-radius:6px;padding:.1rem .45rem;font-size:.85rem">Q3</span><span><strong>Comparison</strong>: similar or different</span><span style="font-weight:700">7</span>
-        <span style="background:oklch(0.93 0.05 70);color:oklch(0.4 0.1 60);font-weight:700;border-radius:6px;padding:.1rem .45rem;font-size:.85rem">Q4</span><span><strong>Reliability</strong>: can you trust it</span><span style="font-weight:700">7</span>
-        <span style="background:oklch(0.93 0.04 20);color:oklch(0.4 0.13 20);font-weight:700;border-radius:6px;padding:.1rem .45rem;font-size:.85rem">Q5</span><span><strong>Evaluative</strong>: "How far…" all sources</span><span style="font-weight:700">10</span>
+        <span style="background:oklch(0.93 0.04 250);color:oklch(0.38 0.13 250);font-weight:700;border-radius:6px;padding:.1rem .45rem;font-size:.85rem">Question 1</span><span><strong>Inference</strong>: what the source tells you</span><span style="font-weight:700">5 marks</span>
+        <span style="background:oklch(0.93 0.04 200);color:oklch(0.38 0.1 200);font-weight:700;border-radius:6px;padding:.1rem .45rem;font-size:.85rem">Question 2</span><span><strong>Purpose</strong>: why it was made</span><span style="font-weight:700">6 marks</span>
+        <span style="background:oklch(0.93 0.04 150);color:oklch(0.38 0.1 150);font-weight:700;border-radius:6px;padding:.1rem .45rem;font-size:.85rem">Question 3</span><span><strong>Comparison</strong>: similar or different</span><span style="font-weight:700">7 marks</span>
+        <span style="background:oklch(0.93 0.05 70);color:oklch(0.4 0.1 60);font-weight:700;border-radius:6px;padding:.1rem .45rem;font-size:.85rem">Question 4</span><span><strong>Reliability</strong>: can you trust it</span><span style="font-weight:700">7 marks</span>
+        <span style="background:oklch(0.93 0.04 20);color:oklch(0.4 0.13 20);font-weight:700;border-radius:6px;padding:.1rem .45rem;font-size:.85rem">Question 5</span><span><strong>Evaluative</strong>: "How far…?" using all the sources</span><span style="font-weight:700">10 marks</span>
       </div>
     </div>
     <div style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-radius:12px;padding:1rem 1.1rem;display:flex;flex-direction:column;gap:.5rem">
-      <div style="font-weight:700">Section B: Issue 2: Ch5 (diversity) &amp; Ch6 (living in a diverse society)</div>
-      <div style="font-size:.92rem;color:oklch(0.42 0.03 250)">Use <strong>your own examples</strong>. Never use the extracts as evidence.</div>
+      <div style="font-weight:700">Section B: Structured-Response Questions (15 marks)</div>
+      <div style="font-size:.92rem;color:oklch(0.42 0.03 250)">Topic: Issue 2, Chapter 5 (diversity) and Chapter 6 (living in a diverse society). Use <strong>your own examples</strong>. Never use the extracts as evidence.</div>
       <div style="display:grid;grid-template-columns:auto 1fr auto;gap:.4rem .7rem;align-items:center;margin-top:.3rem">
-        <span style="background:oklch(0.9 0.05 60);color:oklch(0.35 0.1 60);font-weight:700;border-radius:6px;padding:.1rem .45rem;font-size:.85rem">Q6</span><span><strong>Opinion</strong>: 1 reason → 1 PEEL</span><span style="font-weight:700">7</span>
-        <span style="background:oklch(0.9 0.05 60);color:oklch(0.35 0.1 60);font-weight:700;border-radius:6px;padding:.1rem .45rem;font-size:.85rem">Q7</span><span><strong>Explanation</strong>: 2 factors → 2 PEEL</span><span style="font-weight:700">8</span>
+        <span style="background:oklch(0.9 0.05 60);color:oklch(0.35 0.1 60);font-weight:700;border-radius:6px;padding:.1rem .45rem;font-size:.85rem">Question 6</span><span><strong>Opinion</strong>: one reason, written as one PEEL paragraph</span><span style="font-weight:700">7 marks</span>
+        <span style="background:oklch(0.9 0.05 60);color:oklch(0.35 0.1 60);font-weight:700;border-radius:6px;padding:.1rem .45rem;font-size:.85rem">Question 7</span><span><strong>Explanation</strong>: two factors, written as two PEEL paragraphs</span><span style="font-weight:700">8 marks</span>
       </div>
     </div>
   </div>
@@ -147,14 +183,14 @@ button:focus-visible, a:focus-visible { outline: 3px solid oklch(0.45 0.14 250);
       <span style="font-size:2rem;font-weight:700;line-height:1">1</span>
       <div style="display:flex;flex-direction:column;gap:.35rem">
         <strong style="font-size:1.15rem">Quote, then explain in your own words.</strong>
-        <span style="font-size:.95rem">After every quote write <strong>"This shows that…"</strong> in simpler words. You lost marks for this in every WA source question.</span>
+        <span style="font-size:.95rem">After every quote, write <strong>"This shows that…"</strong> in simpler words. You lost marks for this in every source question in your Weighted Assessments.</span>
       </div>
     </div>
     <div style="background:oklch(0.96 0.08 95);border-radius:12px;padding:1.1rem 1.2rem;display:flex;gap:.9rem">
       <span style="font-size:2rem;font-weight:700;line-height:1">2</span>
       <div style="display:flex;flex-direction:column;gap:.35rem">
-        <strong style="font-size:1.15rem">Two things asked = two paragraphs.</strong>
-        <span style="font-size:.95rem">Question names two things → one full PEEL for each. WA2 got L2 because only one was answered.</span>
+        <strong style="font-size:1.15rem">Two things asked means two paragraphs.</strong>
+        <span style="font-size:.95rem">If the question names two things, write one full PEEL paragraph for each. In Weighted Assessment 2, you got Level 2 because you answered only one.</span>
       </div>
     </div>
   </div>
@@ -170,24 +206,24 @@ button:focus-visible, a:focus-visible { outline: 3px solid oklch(0.45 0.14 250);
 
   <div style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-top:6px solid oklch(0.6 0.14 250);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.9rem">
     <div style="display:flex;flex-wrap:wrap;gap:.5rem .8rem;align-items:baseline">
-      <span style="background:oklch(0.93 0.04 250);color:oklch(0.38 0.13 250);font-weight:700;border-radius:6px;padding:.1rem .5rem">Q1 · 5m</span>
+      <span style="background:oklch(0.93 0.04 250);color:oklch(0.38 0.13 250);font-weight:700;border-radius:6px;padding:.1rem .5rem">Question 1 (5 marks)</span>
       <strong style="font-size:1.25rem">Inference</strong>
       <span style="color:oklch(0.42 0.03 250);font-style:italic">"What can you learn from Source A about…?"</span>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,12rem),1fr));gap:.6rem">
       <div style="background:oklch(0.96 0.025 250);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.38 0.13 250)">1 Infer</span><span style="font-size:.93rem">Source A tells me that…</span></div>
       <div style="background:oklch(0.96 0.025 250);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.38 0.13 250)">2 Evidence</span><span style="font-size:.93rem">This is seen when Source A says, "…"</span></div>
-      <div style="background:oklch(0.96 0.025 250);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.38 0.13 250)">3 Explain</span><span style="font-size:.93rem">This shows that… (own, simpler words)</span></div>
+      <div style="background:oklch(0.96 0.025 250);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.38 0.13 250)">3 Explain</span><span style="font-size:.93rem">This shows that… (in your own, simpler words)</span></div>
     </div>
-    <div style="font-size:.93rem">+ Time left? Add a second inference the same way.</div>
-      <div style="border-left:3px solid oklch(0.6 0.14 250);padding:.2rem 0 .2rem .9rem;font-size:.93rem"><strong>WA1 upgrade:</strong> Source A tells me that some women support serving in NS. Siti says defence is "a shared responsibility" and she would encourage other women to try the boot camp. This shows she believes women also have a duty to protect Singapore, not just men.</div>
+    <div style="font-size:.93rem">If you have time left, add a second inference in the same way.</div>
+      <div style="border-left:3px solid oklch(0.6 0.14 250);padding:.2rem 0 .2rem .9rem;font-size:.93rem"><strong>A better version of your Weighted Assessment 1 answer:</strong> Source A tells me that some women support serving in National Service. Siti says defence is "a shared responsibility" and she would encourage other women to try the boot camp. This shows she believes women also have a duty to protect Singapore, not just men.</div>
   </div>
 
   <div style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-top:6px solid oklch(0.6 0.12 200);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.9rem">
     <div style="display:flex;flex-wrap:wrap;gap:.5rem .8rem;align-items:baseline">
-      <span style="background:oklch(0.93 0.04 200);color:oklch(0.38 0.1 200);font-weight:700;border-radius:6px;padding:.1rem .5rem">Q2 · 6m</span>
+      <span style="background:oklch(0.93 0.04 200);color:oklch(0.38 0.1 200);font-weight:700;border-radius:6px;padding:.1rem .5rem">Question 2 (6 marks)</span>
       <strong style="font-size:1.25rem">Purpose</strong>
-      <span style="color:oklch(0.42 0.03 250);font-style:italic">"Why did [author] publish/say this?"</span>
+      <span style="color:oklch(0.42 0.03 250);font-style:italic">"Why did [the author] publish or say this?"</span>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,10.5rem),1fr));gap:.6rem">
       <div style="background:oklch(0.96 0.025 200);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.38 0.1 200)">1 Answer</span><span style="font-size:.93rem">[Author] made this to [purpose word] [audience] that…</span></div>
@@ -207,27 +243,27 @@ button:focus-visible, a:focus-visible { outline: 3px solid oklch(0.45 0.14 250);
       <span style="border:1px solid oklch(0.8 0.05 200);border-radius:999px;padding:.05rem .6rem">criticise</span>
       <span style="border:1px solid oklch(0.8 0.05 200);border-radius:999px;padding:.05rem .6rem">blame</span>
     </div>
-      <div style="border-left:3px solid oklch(0.6 0.12 200);padding:.2rem 0 .2rem .9rem;font-size:.93rem"><strong>WA2 upgrade:</strong> Mr Khaw made this speech to convince Singaporeans that the route going around the nature reserve is not a good idea. He says the longer route adds six minutes, and anything over five minutes counts as a disruption. This shows the longer route would make commuters frustrated. He wants Singaporeans to accept the shorter route under the reserve.</div>
+      <div style="border-left:3px solid oklch(0.6 0.12 200);padding:.2rem 0 .2rem .9rem;font-size:.93rem"><strong>A better version of your Weighted Assessment 2 answer:</strong> Mr Khaw made this speech to convince Singaporeans that the route going around the nature reserve is not a good idea. He says the longer route adds six minutes, and anything over five minutes counts as a disruption. This shows the longer route would make commuters frustrated. He wants Singaporeans to accept the shorter route under the reserve.</div>
   </div>
 
   <div style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-top:6px solid oklch(0.6 0.12 150);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.9rem">
     <div style="display:flex;flex-wrap:wrap;gap:.5rem .8rem;align-items:baseline">
-      <span style="background:oklch(0.93 0.04 150);color:oklch(0.38 0.1 150);font-weight:700;border-radius:6px;padding:.1rem .5rem">Q3 · 7m</span>
+      <span style="background:oklch(0.93 0.04 150);color:oklch(0.38 0.1 150);font-weight:700;border-radius:6px;padding:.1rem .5rem">Question 3 (7 marks)</span>
       <strong style="font-size:1.25rem">Comparison</strong>
-      <span style="color:oklch(0.42 0.03 250);font-style:italic">"How similar/different are Sources C and D?"</span>
+      <span style="color:oklch(0.42 0.03 250);font-style:italic">"How similar or different are Sources C and D?"</span>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,12rem),1fr));gap:.6rem">
-      <div style="background:oklch(0.96 0.025 150);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.38 0.1 150)">1 Answer</span><span style="font-size:.93rem">Sources C and D are similar/different in…</span></div>
-      <div style="background:oklch(0.96 0.025 150);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.38 0.1 150)">2 Point</span><span style="font-size:.93rem">Both sources show that… / Source C says… but Source D says…</span></div>
+      <div style="background:oklch(0.96 0.025 150);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.38 0.1 150)">1 Answer</span><span style="font-size:.93rem">Sources C and D are similar (or different) in…</span></div>
+      <div style="background:oklch(0.96 0.025 150);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.38 0.1 150)">2 Point</span><span style="font-size:.93rem">Both sources show that… (or: Source C says… but Source D says…)</span></div>
       <div style="background:oklch(0.96 0.025 150);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.38 0.1 150)">3 Evidence</span><span style="font-size:.93rem">Source C says, "…". Source D says, "…"</span></div>
       <div style="background:oklch(0.96 0.025 150);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.38 0.1 150)">4 Explain</span><span style="font-size:.93rem">This shows that…</span></div>
     </div>
-    <div style="font-size:.93rem"><strong>Score higher:</strong> 1 similarity <strong>+</strong> 1 difference, then "Overall, they are more similar/different because…". Compare the <strong>message</strong>, not the type of source.</div>
+    <div style="font-size:.93rem"><strong>To score higher:</strong> give one similarity <strong>and</strong> one difference, then end with "Overall, they are more similar (or different) because…". Compare the <strong>message</strong>, not the type of source.</div>
   </div>
 
   <div style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-top:6px solid oklch(0.65 0.13 70);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.9rem">
     <div style="display:flex;flex-wrap:wrap;gap:.5rem .8rem;align-items:baseline">
-      <span style="background:oklch(0.93 0.05 70);color:oklch(0.4 0.1 60);font-weight:700;border-radius:6px;padding:.1rem .5rem">Q4 · 7m</span>
+      <span style="background:oklch(0.93 0.05 70);color:oklch(0.4 0.1 60);font-weight:700;border-radius:6px;padding:.1rem .5rem">Question 4 (7 marks)</span>
       <strong style="font-size:1.25rem">Reliability</strong>
       <span style="color:oklch(0.42 0.03 250);font-style:italic">"How reliable is Source E…?"</span>
     </div>
@@ -235,28 +271,28 @@ button:focus-visible, a:focus-visible { outline: 3px solid oklch(0.45 0.14 250);
       <div style="background:oklch(0.96 0.03 75);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.4 0.1 60)">1 Answer</span><span style="font-size:.93rem">Source E is (not) reliable about…</span></div>
       <div style="background:oklch(0.96 0.03 75);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.4 0.1 60)">2 Infer</span><span style="font-size:.93rem">Source E tells me that…</span></div>
       <div style="background:oklch(0.96 0.03 75);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.4 0.1 60)">3 Evidence</span><span style="font-size:.93rem">Source E says, "…"</span></div>
-      <div style="background:oklch(0.96 0.03 75);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.4 0.1 60)">4 Cross-check</span><span style="font-size:.93rem">Supported / contradicted by Source __, which says "…"</span></div>
+      <div style="background:oklch(0.96 0.03 75);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.4 0.1 60)">4 Cross-check</span><span style="font-size:.93rem">This is supported (or contradicted) by Source __, which says "…"</span></div>
       <div style="background:oklch(0.96 0.03 75);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.4 0.1 60)">5 Author</span><span style="font-size:.93rem">Source E is from ___, who may want to ___.</span></div>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,13rem),1fr));gap:.6rem;font-size:.93rem">
-      <div style="border:2px solid oklch(0.7 0.1 150);border-radius:8px;padding:.6rem .8rem">Another source <strong>agrees</strong> → <strong style="color:oklch(0.4 0.1 150)">reliable</strong></div>
-      <div style="border:2px solid oklch(0.7 0.12 20);border-radius:8px;padding:.6rem .8rem">Another source <strong>disagrees</strong> → <strong style="color:oklch(0.42 0.14 20)">not reliable</strong></div>
-      <div style="border:2px solid oklch(0.7 0.12 20);border-radius:8px;padding:.6rem .8rem"><strong>Hidden agenda</strong> (look good, sell, blame) → <strong style="color:oklch(0.42 0.14 20)">not reliable</strong></div>
+      <div style="border:2px solid oklch(0.7 0.1 150);border-radius:8px;padding:.6rem .8rem">If another source <strong>agrees</strong> with it, it is <strong style="color:oklch(0.4 0.1 150)">reliable</strong></div>
+      <div style="border:2px solid oklch(0.7 0.12 20);border-radius:8px;padding:.6rem .8rem">If another source <strong>disagrees</strong> with it, it is <strong style="color:oklch(0.42 0.14 20)">not reliable</strong></div>
+      <div style="border:2px solid oklch(0.7 0.12 20);border-radius:8px;padding:.6rem .8rem">If the author has a <strong>hidden agenda</strong> (to look good, sell something or blame someone), it is <strong style="color:oklch(0.42 0.14 20)">not reliable</strong></div>
     </div>
   </div>
 
   <div style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-top:6px solid oklch(0.6 0.14 20);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.9rem">
     <div style="display:flex;flex-wrap:wrap;gap:.5rem .8rem;align-items:baseline">
-      <span style="background:oklch(0.93 0.04 20);color:oklch(0.4 0.13 20);font-weight:700;border-radius:6px;padding:.1rem .5rem">Q5 · 10m</span>
+      <span style="background:oklch(0.93 0.04 20);color:oklch(0.4 0.13 20);font-weight:700;border-radius:6px;padding:.1rem .5rem">Question 5 (10 marks)</span>
       <strong style="font-size:1.25rem">Evaluative</strong>
       <span style="color:oklch(0.42 0.03 250);font-style:italic">"How far do the sources show that…?"</span>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,14rem),1fr));gap:.6rem">
       <div style="background:oklch(0.96 0.025 20);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.4 0.13 20)">1 Summary sentence</span><span style="font-size:.93rem">Sources __ and __ support that [copy the question]. However, Sources __ and __ do not.</span></div>
-      <div style="background:oklch(0.96 0.025 20);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.4 0.13 20)">2 One paragraph per source (all 5)</span><span style="font-size:.93rem">Source A supports that… Source A says, "…". Therefore, this shows that…</span></div>
+      <div style="background:oklch(0.96 0.025 20);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.4 0.13 20)">2 One paragraph for each source (all five)</span><span style="font-size:.93rem">Source A supports that… Source A says, "…". Therefore, this shows that…</span></div>
       <div style="background:oklch(0.96 0.025 20);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.4 0.13 20)">3 Conclusion</span><span style="font-size:.93rem">Overall, I think [your answer] because…</span></div>
     </div>
-    <div style="font-size:.93rem"><strong>Tip:</strong> you already studied Sources A–E in Q1–Q4. Reuse what you found.</div>
+    <div style="font-size:.93rem"><strong>Tip:</strong> you already studied Sources A to E in Questions 1 to 4. Reuse what you found.</div>
   </div>
 </section>
 
@@ -270,7 +306,7 @@ button:focus-visible, a:focus-visible { outline: 3px solid oklch(0.45 0.14 250);
     <div style="background:oklch(0.94 0.04 250);border-radius:12px;padding:1rem;display:flex;flex-direction:column;gap:.3rem">
       <span style="font-size:2.6rem;font-weight:700;line-height:1;color:oklch(0.4 0.14 250)">P</span><strong>Point</strong>
       <span style="font-size:.93rem">Answer the question in one sentence.</span>
-      <span style="font-size:.93rem;font-style:italic;color:oklch(0.4 0.14 250)">"One way/impact is…"</span>
+      <span style="font-size:.93rem;font-style:italic;color:oklch(0.4 0.14 250)">"One way (or impact) is…"</span>
     </div>
     <div style="background:oklch(0.94 0.04 150);border-radius:12px;padding:1rem;display:flex;flex-direction:column;gap:.3rem">
       <span style="font-size:2.6rem;font-weight:700;line-height:1;color:oklch(0.4 0.11 150)">E</span><strong>Explain</strong>
@@ -285,24 +321,24 @@ button:focus-visible, a:focus-visible { outline: 3px solid oklch(0.45 0.14 250);
     <div style="background:oklch(0.94 0.04 330);border-radius:12px;padding:1rem;display:flex;flex-direction:column;gap:.3rem">
       <span style="font-size:2.6rem;font-weight:700;line-height:1;color:oklch(0.42 0.14 330)">L</span><strong>Link</strong>
       <span style="font-size:.93rem">Tie it back to the question's words.</span>
-      <span style="font-size:.93rem;font-style:italic;color:oklch(0.42 0.14 330)">"Therefore,… [copy the question]"</span>
+      <span style="font-size:.93rem;font-style:italic;color:oklch(0.42 0.14 330)">"Therefore,… [use the question's words]"</span>
     </div>
   </div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:1rem">
     <div style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.6rem">
-      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:.5rem;flex-wrap:wrap"><strong style="font-size:1.2rem">Q6 Opinion · 7m</strong><span style="background:#1b2a4a;color:#fff;border-radius:999px;padding:.1rem .7rem;font-weight:700;font-size:.9rem">1 × PEEL</span></div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:.5rem;flex-wrap:wrap"><strong style="font-size:1.2rem">Question 6: Opinion (7 marks)</strong><span style="background:#1b2a4a;color:#fff;border-radius:999px;padding:.1rem .7rem;font-weight:700;font-size:.9rem">One PEEL paragraph</span></div>
       <ul style="margin:0;padding-left:1.2rem;display:flex;flex-direction:column;gap:.3rem;font-size:.95rem">
-        <li>Starts with "In your opinion…": wants a reason, suggestion or impact.</li>
+        <li>It starts with "In your opinion…" and asks for a reason, a suggestion or an impact.</li>
         <li>Pick <strong>one</strong> point you know well and go deep. One strong paragraph beats two thin ones.</li>
         <li>Say <strong>"I think…"</strong> in your Point.</li>
       </ul>
     </div>
     <div style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.6rem">
-      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:.5rem;flex-wrap:wrap"><strong style="font-size:1.2rem">Q7 Explanation · 8m</strong><span style="background:#1b2a4a;color:#fff;border-radius:999px;padding:.1rem .7rem;font-weight:700;font-size:.9rem">2 × PEEL</span></div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:.5rem;flex-wrap:wrap"><strong style="font-size:1.2rem">Question 7: Explanation (8 marks)</strong><span style="background:#1b2a4a;color:#fff;border-radius:999px;padding:.1rem .7rem;font-weight:700;font-size:.9rem">Two PEEL paragraphs</span></div>
       <ul style="margin:0;padding-left:1.2rem;display:flex;flex-direction:column;gap:.3rem;font-size:.95rem">
-        <li>Names <strong>two</strong> things (e.g. race and nationality) → one PEEL each.</li>
+        <li>It names <strong>two</strong> things (for example, race and nationality). Write one PEEL paragraph for each.</li>
         <li>Use a <strong>different example</strong> in each paragraph.</li>
-        <li>Never use the extracts. Use the examples in Sections 4–7.</li>
+        <li>Never use the extracts as examples. Use the examples in Sections 4 to 7.</li>
       </ul>
     </div>
   </div>
@@ -312,58 +348,58 @@ button:focus-visible, a:focus-visible { outline: 3px solid oklch(0.45 0.14 250);
 <section id="s4" style="display:flex;flex-direction:column;gap:1.25rem">
   <div style="display:flex;align-items:baseline;gap:.9rem;border-top:3px solid #1b2a4a;padding-top:1rem">
     <span style="font-size:2.4rem;font-weight:700;line-height:1">4</span>
-    <h2 style="margin:0;font-size:1.6rem">Ch5: what makes Singapore diverse</h2>
+    <h2 style="margin:0;font-size:1.6rem">Chapter 5: what makes Singapore diverse</h2>
   </div>
   <div style="display:flex;flex-wrap:wrap;gap:.5rem;align-items:center">
-    <span style="background:#1b2a4a;color:#fff;border-radius:8px;padding:.35rem .8rem;font-weight:700">Race &amp; ethnicity</span>
+    <span style="background:#1b2a4a;color:#fff;border-radius:8px;padding:.35rem .8rem;font-weight:700">Race and ethnicity</span>
     <span style="background:#1b2a4a;color:#fff;border-radius:8px;padding:.35rem .8rem;font-weight:700">Religion</span>
     <span style="background:#1b2a4a;color:#fff;border-radius:8px;padding:.35rem .8rem;font-weight:700">Nationality</span>
-    <span style="background:#1b2a4a;color:#fff;border-radius:8px;padding:.35rem .8rem;font-weight:700">SES</span>
+    <span style="background:#1b2a4a;color:#fff;border-radius:8px;padding:.35rem .8rem;font-weight:700">Socio-economic status</span>
   </div>
-  <p style="margin:0;font-size:.93rem;color:oklch(0.42 0.03 250)">For each: <strong>meaning</strong> → <strong>how it creates diversity</strong> → <strong>examples</strong>. Your Ch5 class notes weren't in the source files; check these against them.</p>
+  <p style="margin:0;font-size:.93rem;color:oklch(0.42 0.03 250)">For each one, learn the <strong>meaning</strong>, <strong>how it creates diversity</strong> and the <strong>examples</strong>. Your Chapter 5 class notes were not in the files used for these notes, so check these against them.</p>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,26rem),1fr));gap:1rem">
     <div style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.7rem">
-      <strong style="font-size:1.25rem">Race &amp; ethnicity</strong>
-      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.14 250)">Meaning · </span>Race = shared ancestry and looks. Ethnicity = shared culture (language, food, customs).</div>
-      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.11 150)">How · </span>Four main groups: Chinese, Malay, Indian, Others, each with smaller groups (Hokkien, Cantonese; Tamil, Punjabi).</div>
+      <strong style="font-size:1.25rem">Race and ethnicity</strong>
+      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.14 250)">Meaning: </span>Race is about shared ancestry and looks. Ethnicity is about shared culture, such as language, food and customs.</div>
+      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.11 150)">How it creates diversity: </span>Singapore has four main groups: Chinese, Malay, Indian and Others. Each has smaller groups too, such as Hokkien and Cantonese Chinese, or Tamil and Punjabi Indians.</div>
       <div style="display:flex;flex-direction:column;gap:.4rem;font-size:.93rem;background:oklch(0.96 0.03 75);border-radius:8px;padding:.7rem .8rem">
         <span style="font-weight:700;color:oklch(0.42 0.11 60)">Examples</span>
-        <div><strong>EIP</strong>: HDB caps each race per block, so neighbours are mixed.</div>
-        <div><strong>GRCs</strong>: every team has at least one minority candidate.</div>
-        <div><strong>Public holidays</strong>: CNY, Hari Raya Puasa, Deepavali for everyone.</div>
+        <div><strong>Ethnic Integration Policy (EIP)</strong>: the Housing and Development Board (HDB) limits how many of each race can live in a block, so neighbours come from different races.</div>
+        <div><strong>Group Representation Constituencies (GRCs)</strong>: each team must include at least one minority candidate, so minorities have a voice in Parliament.</div>
+        <div><strong>Public holidays</strong>: Chinese New Year, Hari Raya Puasa and Deepavali are holidays for everyone.</div>
       </div>
     </div>
     <div style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.7rem">
       <strong style="font-size:1.25rem">Religion</strong>
-      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.14 250)">Meaning · </span>Beliefs and practices about God or gods and how to live.</div>
-      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.11 150)">How · </span>Buddhists, Christians, Muslims, Taoists, Hindus; ~1 in 5 no religion. Different festivals, food rules (halal, vegetarian), dress, places of worship.</div>
+      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.14 250)">Meaning: </span>A set of beliefs and practices about God or gods and how to live.</div>
+      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.11 150)">How it creates diversity: </span>Singapore has Buddhists, Christians, Muslims, Taoists and Hindus, and about 1 in 5 people have no religion. Each religion has its own festivals, food rules (such as halal or vegetarian), dress and places of worship.</div>
       <div style="display:flex;flex-direction:column;gap:.4rem;font-size:.93rem;background:oklch(0.96 0.03 75);border-radius:8px;padding:.7rem .8rem">
         <span style="font-weight:700;color:oklch(0.42 0.11 60)">Examples</span>
-        <div><strong>Waterloo Street</strong>: Kwan Im Thong Hood Cho (Buddhist) beside Sri Krishnan (Hindu).</div>
-        <div><strong>Inter-Religious Organisation (IRO)</strong>: leaders work together for understanding.</div>
-        <div><strong>Maintenance of Religious Harmony Act</strong>: action against stirring hatred between religions.</div>
+        <div><strong>Places of worship side by side</strong>: on Waterloo Street, a Buddhist temple (Kwan Im Thong Hood Cho) stands next to a Hindu temple (Sri Krishnan).</div>
+        <div><strong>Inter-Religious Organisation (IRO)</strong>: leaders of different religions work together to build understanding.</div>
+        <div><strong>Maintenance of Religious Harmony Act</strong>: action can be taken against anyone who stirs up hatred between religions.</div>
       </div>
     </div>
     <div style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.7rem">
       <strong style="font-size:1.25rem">Nationality</strong>
-      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.14 250)">Meaning · </span>The country a person legally belongs to.</div>
-      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.11 150)">How · </span>Citizens, PRs, and foreigners who work or study here. Some become citizens through naturalisation (Ch1).</div>
+      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.14 250)">Meaning: </span>The country a person legally belongs to.</div>
+      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.11 150)">How it creates diversity: </span>Singapore has citizens, permanent residents (PRs), and foreigners who work or study here. Some foreigners later become citizens through naturalisation (Chapter 1).</div>
       <div style="display:flex;flex-direction:column;gap:.4rem;font-size:.93rem;background:oklch(0.96 0.03 75);border-radius:8px;padding:.7rem .8rem">
         <span style="font-weight:700;color:oklch(0.42 0.11 60)">Examples</span>
-        <div><strong>Foreign workers</strong>: build flats, roads, MRT (Serangoon Gardens dorms, Ch3).</div>
-        <div><strong>Foreign professionals</strong>: hospitals, banks, research labs.</div>
-        <div><strong>Singapore Citizenship Journey</strong>: new citizens learn history and values.</div>
+        <div><strong>Foreign workers</strong>: build our flats, roads and Mass Rapid Transit (MRT) lines (remember the Serangoon Gardens dormitories case study in Chapter 3).</div>
+        <div><strong>Foreign professionals</strong>: work in hospitals, banks and research labs.</div>
+        <div><strong>Singapore Citizenship Journey</strong>: new citizens learn about Singapore's history and values before they get citizenship.</div>
       </div>
     </div>
     <div style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.7rem">
       <strong style="font-size:1.25rem">Socio-economic status (SES)</strong>
-      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.14 250)">Meaning · </span>Place in society based on income, education and job.</div>
-      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.11 150)">How · </span>Rental flats, HDB, condos, landed homes: very different lives and chances in education and work.</div>
+      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.14 250)">Meaning: </span>A person's place in society based on their income, education and job.</div>
+      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.11 150)">How it creates diversity: </span>Families live very different lives. Some live in rental flats, others in HDB flats, condominiums or landed homes, and they may have different chances in education and work.</div>
       <div style="display:flex;flex-direction:column;gap:.4rem;font-size:.93rem;background:oklch(0.96 0.03 75);border-radius:8px;padding:.7rem .8rem">
         <span style="font-weight:700;color:oklch(0.42 0.11 60)">Examples</span>
-        <div><strong>ComCare</strong>: cash, food and bill help for low-income families.</div>
-        <div><strong>Edusave &amp; MOE Financial Assistance Scheme</strong>: school costs (meritocracy, Ch3).</div>
-        <div><strong>Curiosity Credits (2026)</strong>: S$500 for youths 13–17 in self-help groups to try hobbies (<a href="https://mothership.sg/2026/07/third-spaces-somerset-belt-sg-youth-plan/">source</a>).</div>
+        <div><strong>ComCare</strong>: government help with cash, food and bills for low-income families.</div>
+        <div><strong>Edusave and the Ministry of Education (MOE) Financial Assistance Scheme</strong>: help students from lower-income families pay for school (links to meritocracy in Chapter 3).</div>
+        <div><strong>Curiosity Credits (2026)</strong>: youths aged 13 to 17 in self-help groups get S$500 to try hobbies such as arts, sports and technology.</div>
       </div>
     </div>
   </div>
@@ -373,29 +409,29 @@ button:focus-visible, a:focus-visible { outline: 3px solid oklch(0.45 0.14 250);
 <section id="s5" style="display:flex;flex-direction:column;gap:1.25rem">
   <div style="display:flex;align-items:baseline;gap:.9rem;border-top:3px solid #1b2a4a;padding-top:1rem">
     <span style="font-size:2.4rem;font-weight:700;line-height:1">5</span>
-    <h2 style="margin:0;font-size:1.6rem">Ch6: building harmony through interactions</h2>
+    <h2 style="margin:0;font-size:1.6rem">Chapter 6: building harmony through interactions</h2>
   </div>
   <p style="margin:0">Mixing with different groups can lead to sharing cultures, knowledge and skills, but also to tensions. Singapore builds harmony in two ways:</p>
   <div style="background:oklch(0.96 0.08 95);border-radius:12px;padding:1rem 1.2rem;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center;font-size:clamp(1.2rem,3vw,1.6rem);font-weight:700">
-    <span style="background:#fff;border-radius:8px;padding:.2rem .7rem">Space</span><span>+</span><span style="background:#fff;border-radius:8px;padding:.2rem .7rem">Open mind</span><span>=</span><span style="background:#1b2a4a;color:#fff;border-radius:8px;padding:.2rem .7rem">Harmony</span>
+    <span style="background:#fff;border-radius:8px;padding:.2rem .7rem">Common spaces</span><span>and</span><span style="background:#fff;border-radius:8px;padding:.2rem .7rem">an open mind</span><span>build</span><span style="background:#1b2a4a;color:#fff;border-radius:8px;padding:.2rem .7rem">harmony</span>
   </div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,26rem),1fr));gap:1rem">
     <div style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.7rem">
       <strong style="font-size:1.25rem">Common spaces</strong>
-      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.14 250)">Meaning · </span>A physical or social space where people interact in activities or work together on projects.</div>
-      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.11 150)">Why it helps · </span>Shared experiences and memories → mutual understanding, sense of community, commitment to Singapore, trust.</div>
+      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.14 250)">Meaning: </span>A physical or social space where people interact in activities or work together on projects.</div>
+      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.11 150)">Why it helps: </span>People build shared experiences and memories. This creates mutual understanding, a sense of community, commitment to Singapore and trust in each other.</div>
       <div style="display:flex;flex-direction:column;gap:.4rem;font-size:.93rem;background:oklch(0.96 0.03 75);border-radius:8px;padding:.7rem .8rem">
         <span style="font-weight:700;color:oklch(0.42 0.11 60)">Examples</span>
         <div><strong>Places:</strong> community clubs, Residents' Networks, void decks, hawker centres.</div>
-        <div><strong>Shared experiences:</strong> school, CCAs, Sec 1 camp, Sec 3 Outward Bound, Racial Harmony Day, National Day.</div>
-        <div><strong>People's Association (1960):</strong> promotes racial harmony and cohesion; ~1,800 grassroots groups, 100+ CCs, 5 CDCs.</div>
-        <div><strong>New 2026:</strong> SG Youth Plan: 12 free youth "third spaces" by end-2026; ~3 in 5 youths say they'd help meet different people (<a href="https://mothership.sg/2026/07/third-spaces-somerset-belt-sg-youth-plan/">source</a>).</div>
+        <div><strong>Shared experiences:</strong> school, co-curricular activities (CCAs), Secondary 1 camp, Secondary 3 Outward Bound, Racial Harmony Day, National Day.</div>
+        <div><strong>People's Association (PA):</strong> set up in 1960 to promote racial harmony and social cohesion. It runs about 1,800 grassroots groups, over 100 community clubs and five Community Development Councils.</div>
+        <div><strong>New in 2026:</strong> the SG Youth Plan is setting up 12 free youth "third spaces" by the end of 2026. About 3 in 5 youths surveyed said such spaces would help them meet people from different backgrounds.</div>
       </div>
     </div>
     <div style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.7rem">
       <strong style="font-size:1.25rem">Openness</strong>
-      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.14 250)">Meaning · </span>An attitude of respecting and appreciating people who are different from you.</div>
-      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.11 150)">Why it helps · </span>An open mind to listen and engage builds real understanding across backgrounds → a harmonious society.</div>
+      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.14 250)">Meaning: </span>An attitude of respecting and appreciating people who are different from you.</div>
+      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.11 150)">Why it helps: </span>Keeping an open mind to listen to and engage others builds real understanding between people of different backgrounds. This leads to a harmonious society.</div>
       <div style="display:flex;flex-direction:column;gap:.4rem;font-size:.93rem;background:oklch(0.96 0.03 75);border-radius:8px;padding:.7rem .8rem">
         <span style="font-weight:700;color:oklch(0.42 0.11 60)">Everyday examples</span>
         <div>Trying another culture's food at a hawker centre.</div>
@@ -410,38 +446,38 @@ button:focus-visible, a:focus-visible { outline: 3px solid oklch(0.45 0.14 250);
 <section id="s6" style="display:flex;flex-direction:column;gap:1.25rem">
   <div style="display:flex;align-items:baseline;gap:.9rem;border-top:3px solid oklch(0.55 0.12 150);padding-top:1rem">
     <span style="font-size:2.4rem;font-weight:700;line-height:1;color:oklch(0.4 0.11 150)">6</span>
-    <h2 style="margin:0;font-size:1.6rem">Ch6: the benefits <span style="color:oklch(0.4 0.11 150)">(positive)</span></h2>
+    <h2 style="margin:0;font-size:1.6rem">Chapter 6: the benefits <span style="color:oklch(0.4 0.11 150)">(positive effects)</span></h2>
   </div>
   <div style="background:oklch(0.96 0.08 95);border-radius:12px;padding:1rem 1.2rem;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center;font-size:clamp(1.1rem,3vw,1.45rem);font-weight:700">
-    <span>The good side =</span><span style="background:#fff;border-radius:8px;padding:.2rem .7rem">share culture</span><span>+</span><span style="background:#fff;border-radius:8px;padding:.2rem .7rem">share know-how</span>
+    <span>The good side:</span><span style="background:#fff;border-radius:8px;padding:.2rem .7rem">sharing cultures</span><span>and</span><span style="background:#fff;border-radius:8px;padding:.2rem .7rem">sharing know-how</span>
   </div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,26rem),1fr));gap:1rem">
     <div style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-top:6px solid oklch(0.6 0.12 150);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.7rem">
-      <strong style="font-size:1.25rem">1 · Cultural exchange &amp; appreciation</strong>
-      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.14 250)">What · </span>Groups share ideas, customs and traditions.</div>
-      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.11 150)">Why good · </span>We learn to appreciate other groups → meaningful relationships; shapes local culture and art.</div>
+      <strong style="font-size:1.25rem">Benefit 1: Cultural exchange and appreciation</strong>
+      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.14 250)">What it is: </span>Different groups share their ideas, customs and traditions.</div>
+      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.11 150)">Why it is good: </span>Singaporeans learn to appreciate other ethnic groups and nationalities. This builds meaningful relationships and shapes our local culture and art.</div>
       <div style="display:flex;flex-direction:column;gap:.4rem;font-size:.93rem;background:oklch(0.96 0.03 75);border-radius:8px;padding:.7rem .8rem">
         <span style="font-weight:700;color:oklch(0.42 0.11 60)">Examples</span>
-        <div><strong>ASEAN Youth Fellowship</strong>: young SEA leaders build partnerships and change communities.</div>
-        <div><strong>Dr Iskandar Jalil</strong>: pottery mixing Japanese and Islamic styles (studied in Japan, 1970s).</div>
-        <div><strong>Fusion</strong>: Oniatta Effendi's batik (Javanese + Japanese); Chef Willin Low's laksa pesto linguine.</div>
+        <div><strong>ASEAN Youth Fellowship</strong>: brings together young leaders from across Southeast Asia to build partnerships and make positive changes in their communities.</div>
+        <div><strong>Dr Iskandar Jalil's pottery</strong>: combines Japanese and Islamic styles, after he studied in Japan in the 1970s.</div>
+        <div><strong>Fusion</strong>: Ms Oniatta Effendi's batik clothing mixes Javanese patterns with Japanese designs. Chef Willin Low mixes Singapore and European food, such as laksa pesto linguine.</div>
       </div>
     </div>
     <div style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-top:6px solid oklch(0.6 0.12 150);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.7rem">
-      <strong style="font-size:1.25rem">2 · Exchange of knowledge &amp; skills</strong>
-      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.14 250)">What · </span>People of different countries, backgrounds and experiences work together.</div>
-      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.11 150)">Why good · </span>New ideas and innovation; foreign scientists share expertise → stronger Singapore research.</div>
+      <strong style="font-size:1.25rem">Benefit 2: Exchange of knowledge and skills</strong>
+      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.14 250)">What it is: </span>People from different countries, backgrounds and experiences work together.</div>
+      <div style="font-size:.93rem"><span style="font-weight:700;color:oklch(0.4 0.11 150)">Why it is good: </span>This creates new ideas and innovation. Foreign scientists share their expertise with Singaporeans, which strengthens Singapore's research.</div>
       <div style="display:flex;flex-direction:column;gap:.4rem;font-size:.93rem;background:oklch(0.96 0.03 75);border-radius:8px;padding:.7rem .8rem">
         <span style="font-weight:700;color:oklch(0.42 0.11 60)">Examples</span>
-        <div><strong>A*STAR + Cytos Biotechnology</strong> (Swiss): H1N1 flu vaccine.</div>
-        <div><strong>Thermo Fisher Scientific</strong> (MNC): local + foreign scientists; PCR kits and protective equipment in COVID-19.</div>
+        <div><strong>A*STAR and Cytos Biotechnology</strong>: Singapore's Agency for Science, Technology and Research (A*STAR) worked with this Swiss company on an H1N1 flu vaccine.</div>
+        <div><strong>Thermo Fisher Scientific</strong>: a multinational company whose local and foreign scientists do research in Singapore. During COVID-19 it helped supply PCR test kits and protective equipment.</div>
       </div>
     </div>
   </div>
   <div style="border:2px solid oklch(0.7 0.12 20);background:oklch(0.97 0.02 20);border-radius:12px;padding:1rem 1.2rem;display:flex;flex-direction:column;gap:.4rem;font-size:.95rem">
     <strong style="color:oklch(0.42 0.14 20)">Watch out: cultural appropriation (not "appreciation")</strong>
-    <span>Minority cultures can be replaced or absorbed by the majority. <strong>Cultural appropriation</strong> = using another culture's language, food, music or dress without permission or insensitively.</span>
-    <span><strong>Example:</strong> Max Mara was accused of copying the traditional prints of the Oma people of Laos without credit.</span>
+    <span>Cultural exchange can also cause problems, such as minority cultures being replaced or absorbed by the majority. <strong>Cultural appropriation</strong> means using another culture's language, food, music or dress without permission or in an insensitive way.</span>
+    <span><strong>Example:</strong> fashion brand Max Mara was accused of copying the traditional prints of the Oma people of Laos without recognising where they came from.</span>
   </div>
 </section>
 
@@ -449,20 +485,20 @@ button:focus-visible, a:focus-visible { outline: 3px solid oklch(0.45 0.14 250);
 <section id="s7" style="display:flex;flex-direction:column;gap:1.25rem">
   <div style="display:flex;align-items:baseline;gap:.9rem;border-top:3px solid oklch(0.55 0.14 20);padding-top:1rem">
     <span style="font-size:2.4rem;font-weight:700;line-height:1;color:oklch(0.42 0.14 20)">7</span>
-    <h2 style="margin:0;font-size:1.6rem">Ch6: the challenges <span style="color:oklch(0.42 0.14 20)">(negative)</span></h2>
+    <h2 style="margin:0;font-size:1.6rem">Chapter 6: the challenges <span style="color:oklch(0.42 0.14 20)">(negative effects)</span></h2>
   </div>
-  <p style="margin:0">For each challenge learn: <strong>the problem</strong> → <strong>how the government responds</strong>.</p>
+  <p style="margin:0">For each challenge, learn <strong>the problem</strong> and <strong>how the government responds</strong>.</p>
 
   <div style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-top:6px solid oklch(0.6 0.14 20);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:1rem">
-    <strong style="font-size:1.25rem">1 · Stereotypes, prejudice &amp; discrimination</strong>
+    <strong style="font-size:1.25rem">Challenge 1: Stereotypes, prejudice and discrimination</strong>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,14rem),1fr));gap:.6rem">
       <div style="background:oklch(0.96 0.08 95);border-radius:10px;padding:.9rem;display:flex;flex-direction:column;gap:.3rem">
         <span style="font-size:1.6rem;font-weight:700;line-height:1">Think</span><strong>Stereotype</strong>
-        <span style="font-size:.9rem">An assumption about a whole group from general beliefs (looks, gender, age, nationality).</span>
+        <span style="font-size:.9rem">An assumption about a whole group, based on general beliefs about things such as looks, gender, age or nationality.</span>
       </div>
       <div style="background:oklch(0.96 0.08 95);border-radius:10px;padding:.9rem;display:flex;flex-direction:column;gap:.3rem">
         <span style="font-size:1.6rem;font-weight:700;line-height:1">Feel</span><strong>Prejudice</strong>
-        <span style="font-size:.9rem">Negative feelings towards a group because of stereotypes, shown in hurtful words and actions.</span>
+        <span style="font-size:.9rem">Negative feelings towards a group because of stereotypes, shown in insensitive or hurtful words and actions.</span>
       </div>
       <div style="background:oklch(0.96 0.08 95);border-radius:10px;padding:.9rem;display:flex;flex-direction:column;gap:.3rem">
         <span style="font-size:1.6rem;font-weight:700;line-height:1">Do</span><strong>Discrimination</strong>
@@ -470,43 +506,43 @@ button:focus-visible, a:focus-visible { outline: 3px solid oklch(0.45 0.14 250);
       </div>
     </div>
     <div style="display:flex;flex-direction:column;gap:.3rem;font-size:.93rem">
-      <div><strong>Xenophobia</strong> = irrational fear of foreigners. <strong>Racism</strong> = discrimination because of race.</div>
-      <div><strong>Why bad:</strong> hurt, anger, distrust → divides society, breaks harmony.</div>
+      <div><strong>Xenophobia</strong> is an irrational fear of foreigners. <strong>Racism</strong> is discrimination because of race.</div>
+      <div><strong>Why it is bad:</strong> it causes hurt, anger and distrust, which can divide society and break harmony.</div>
     </div>
     <div style="display:flex;flex-direction:column;gap:.5rem;font-size:.93rem;background:oklch(0.96 0.025 250);border-radius:8px;padding:.8rem .9rem">
-      <span style="font-weight:700;color:oklch(0.4 0.14 250)">Government responds</span>
-      <div><strong>Maintenance of Religious Harmony Act</strong>: keeps religion and politics apart, guards against clashing foreign ideas, encourages respect across religions.</div>
-      <div><strong>Maintenance of Racial Harmony Act (Feb 2025)</strong>: stops content harming racial harmony; lesser offenders can mend ties instead of prosecution (<a href="https://singaporelawwatch.sg/Results/new-law-to-protect-racial-harmony-passed">source</a>).</div>
-      <div><strong>POFMA (2019)</strong>: anti-fake news law; orders false posts corrected, stopping lies that stir hatred.</div>
+      <span style="font-weight:700;color:oklch(0.4 0.14 250)">How the government responds</span>
+      <div><strong>Maintenance of Religious Harmony Act</strong>: keeps religion and politics separate, guards against foreign ideas that clash with our multi-religious society, and encourages respect and trust across religions.</div>
+      <div><strong>Maintenance of Racial Harmony Act (passed February 2025)</strong>: lets the government stop people from spreading content that harms racial harmony, and gives people who commit less serious race-related offences a chance to mend ties instead of being prosecuted.</div>
+      <div><strong>Protection from Online Falsehoods and Manipulation Act (POFMA, 2019)</strong>: Singapore's anti-fake news law. It can order false posts to be corrected, which stops lies that stir up hatred between groups.</div>
     </div>
   </div>
 
   <div style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-top:6px solid oklch(0.6 0.14 20);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:1rem">
-    <strong style="font-size:1.25rem">2 · Competition for resources</strong>
-    <div style="font-size:.93rem"><strong>Why:</strong> falling birth rate + ageing population → manpower shortage → more foreign workers → tension over <strong>jobs</strong> and <strong>infrastructure</strong>.</div>
+    <strong style="font-size:1.25rem">Challenge 2: Competition for resources</strong>
+    <div style="font-size:.93rem"><strong>Why it happens:</strong> Singapore's falling birth rate and ageing population cause a manpower shortage, so more foreigners come to work here. This creates tension over <strong>jobs</strong> and <strong>infrastructure</strong>.</div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:.8rem">
       <div style="border:1px solid oklch(0.9 0.01 250);border-radius:10px;overflow:hidden;display:flex;flex-direction:column">
         <div style="background:oklch(0.97 0.02 20);padding:.8rem .9rem;display:flex;flex-direction:column;gap:.35rem;font-size:.93rem">
-          <span style="font-weight:700;color:oklch(0.42 0.14 20)">Jobs · problem</span>
-          <div>High-skilled foreign PMETs compete with local graduates for white-collar jobs.</div>
-          <div>Lower-skilled foreign workers accept lower pay → keeps wages low for lower-income Singaporeans.</div>
+          <span style="font-weight:700;color:oklch(0.42 0.14 20)">Jobs: the problem</span>
+          <div>High-skilled foreigners in PMET jobs (professionals, managers, executives and technicians) compete with local graduates for the same white-collar jobs.</div>
+          <div>Lower-skilled foreign workers accept lower pay, which keeps wages low for lower-income Singaporeans.</div>
         </div>
         <div style="background:oklch(0.96 0.025 250);padding:.8rem .9rem;display:flex;flex-direction:column;gap:.35rem;font-size:.93rem">
-          <span style="font-weight:700;color:oklch(0.4 0.14 250)">Response</span>
-          <div><strong>SkillsFuture Singapore &amp; Workforce Singapore</strong>: training grants, retraining, job help.</div>
-          <div><strong>Fair Consideration Framework</strong>: consider Singaporeans fairly first.</div>
-          <div><strong>Stricter rules</strong>: tighter EP criteria, higher S Pass salary, higher work permit levy.</div>
+          <span style="font-weight:700;color:oklch(0.4 0.14 250)">How the government responds</span>
+          <div><strong>SkillsFuture Singapore and Workforce Singapore</strong>: give training grants and help people retrain and find new jobs.</div>
+          <div><strong>Fair Consideration Framework</strong>: employers must consider Singaporeans fairly before hiring foreigners.</div>
+          <div><strong>Stricter rules</strong>: tighter Employment Pass criteria, a higher minimum salary for S Passes, and a higher levy for work permits.</div>
         </div>
       </div>
       <div style="border:1px solid oklch(0.9 0.01 250);border-radius:10px;overflow:hidden;display:flex;flex-direction:column">
         <div style="background:oklch(0.97 0.02 20);padding:.8rem .9rem;display:flex;flex-direction:column;gap:.35rem;font-size:.93rem">
-          <span style="font-weight:700;color:oklch(0.42 0.14 20)">Infrastructure · problem</span>
-          <div>More people strain limited resources: crowded transport, competition for healthcare, need for more housing.</div>
+          <span style="font-weight:700;color:oklch(0.42 0.14 20)">Infrastructure: the problem</span>
+          <div>More people put pressure on Singapore's limited resources: crowded public transport, competition for healthcare, and the need for more housing.</div>
         </div>
         <div style="background:oklch(0.96 0.025 250);padding:.8rem .9rem;display:flex;flex-direction:column;gap:.35rem;font-size:.93rem;flex:1">
-          <span style="font-weight:700;color:oklch(0.4 0.14 250)">Response</span>
-          <div><strong>Land Transport Master Plan 2040</strong>: more train links, bus priority, cycling paths, integrated hubs.</div>
-          <div><strong>Cross Island Line</strong>: new MRT line to ease crowding (studied in WA2).</div>
+          <span style="font-weight:700;color:oklch(0.4 0.14 250)">How the government responds</span>
+          <div><strong>Land Transport Master Plan 2040</strong>: more train connections, priority for buses, more cycling paths and more integrated transport hubs.</div>
+          <div><strong>Cross Island Line</strong>: a new MRT line to reduce crowding on existing lines (you studied it in Weighted Assessment 2).</div>
         </div>
       </div>
     </div>
@@ -519,14 +555,10 @@ button:focus-visible, a:focus-visible { outline: 3px solid oklch(0.45 0.14 250);
     <span style="font-size:2.4rem;font-weight:700;line-height:1">8</span>
     <h2 style="margin:0;font-size:1.6rem">Most likely questions, with model answers</h2>
   </div>
-  <p style="margin:0;font-size:.95rem">Predictions based on what the 2024 and 2025 papers haven't asked yet. Colours match PEEL:
-    <span style="background:oklch(0.94 0.04 250);color:oklch(0.4 0.14 250);font-weight:700;border-radius:4px;padding:0 .35rem">P</span>
-    <span style="background:oklch(0.94 0.04 150);color:oklch(0.4 0.11 150);font-weight:700;border-radius:4px;padding:0 .35rem">E</span>
-    <span style="background:oklch(0.94 0.05 70);color:oklch(0.42 0.11 60);font-weight:700;border-radius:4px;padding:0 .35rem">Ex</span>
-    <span style="background:oklch(0.94 0.04 330);color:oklch(0.42 0.14 330);font-weight:700;border-radius:4px;padding:0 .35rem">L</span></p>
+  <p style="margin:0;font-size:.95rem">These are predictions based on what the 2024 and 2025 papers have not asked yet. The labels show the PEEL parts: P for Point, E for Explain, Ex for Example and L for Link.</p>
 
   <div style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.9rem">
-    <span style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:oklch(0.45 0.02 250)">Top pick · Q7 (8m) · version A</span>
+    <span style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:oklch(0.45 0.02 250)">Top pick for Question 7 (8 marks), version A</span>
     <strong style="font-size:1.1rem">Explain how race and ethnicity, and nationality, contribute to a diverse society in Singapore.</strong>
     <div style="display:flex;flex-direction:column;gap:.35rem;font-size:.95rem;border-left:3px solid oklch(0.88 0.01 250);padding-left:.9rem">
       <div><span style="background:oklch(0.94 0.04 250);color:oklch(0.4 0.14 250);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">P</span>Race and ethnicity make Singapore diverse because our society is made up of many races, each with its own culture.</div>
@@ -543,7 +575,7 @@ button:focus-visible, a:focus-visible { outline: 3px solid oklch(0.45 0.14 250);
   </div>
 
   <div style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.9rem">
-    <span style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:oklch(0.45 0.02 250)">Top pick · Q7 (8m) · version B</span>
+    <span style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:oklch(0.45 0.02 250)">Top pick for Question 7 (8 marks), version B</span>
     <strong style="font-size:1.1rem">Explain the positive effects of cultural exchange and the exchange of knowledge and skills in a diverse society like Singapore.</strong>
     <div style="display:flex;flex-direction:column;gap:.35rem;font-size:.95rem;border-left:3px solid oklch(0.88 0.01 250);padding-left:.9rem">
       <div><span style="background:oklch(0.94 0.04 250);color:oklch(0.4 0.14 250);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">P</span>One positive effect is cultural exchange and appreciation.</div>
@@ -560,42 +592,129 @@ button:focus-visible, a:focus-visible { outline: 3px solid oklch(0.45 0.14 250);
   </div>
 
   <div style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.9rem">
-    <span style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:oklch(0.45 0.02 250)">Top pick · Q6 (7m) · opinion</span>
+    <span style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:oklch(0.45 0.02 250)">Top pick for Question 6 (7 marks, opinion)</span>
     <strong style="font-size:1.1rem">In your opinion, how can Singaporeans build a harmonious society? Explain with reference to one way.</strong>
     <div style="display:flex;flex-direction:column;gap:.35rem;font-size:.95rem;border-left:3px solid oklch(0.88 0.01 250);padding-left:.9rem">
       <div><span style="background:oklch(0.94 0.04 250);color:oklch(0.4 0.14 250);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">P</span>In my opinion, the best way to build harmony is through common spaces.</div>
       <div><span style="background:oklch(0.94 0.04 150);color:oklch(0.4 0.11 150);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">E</span>Common spaces are places where people of different races, religions and nationalities meet, take part in activities and work together. This gives them shared experiences and memories, which build mutual understanding and trust.</div>
-      <div><span style="background:oklch(0.94 0.05 70);color:oklch(0.42 0.11 60);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">Ex</span>For example, community clubs run by the People's Association hold classes and festival celebrations for residents of all races. In school, students bond through CCAs, Sec 3 Outward Bound and Racial Harmony Day.</div>
+      <div><span style="background:oklch(0.94 0.05 70);color:oklch(0.42 0.11 60);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">Ex</span>For example, community clubs run by the People's Association hold classes and festival celebrations for residents of all races. In school, students bond through co-curricular activities (CCAs), Secondary 3 Outward Bound and Racial Harmony Day.</div>
       <div><span style="background:oklch(0.94 0.04 330);color:oklch(0.42 0.14 330);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">L</span>Therefore, I think common spaces build harmony because they turn strangers into friends and create trust between different groups.</div>
     </div>
-    <div style="font-size:.93rem">If it asks about <strong>openness</strong> instead, use the same frame with the openness examples in <a href="#s5">Section 5</a>.</div>
+    <div style="font-size:.93rem">If the question asks about <strong>openness</strong> instead, use the same frame with the openness examples in <a href="#s5">Section 5</a>.</div>
   </div>
 
-  <div style="font-weight:700;font-size:1.1rem">Other questions to practise (past papers)</div>
+  <div class="keep-next" style="font-weight:700;font-size:1.1rem">Other questions to practise (from past papers)</div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:.7rem">
     <div style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-radius:10px;padding:.9rem 1rem;display:flex;flex-direction:column;gap:.35rem;font-size:.93rem">
-      <strong>Q6: What is the impact of living in a diverse society? (one impact)</strong>
-      <span style="color:oklch(0.42 0.03 250)">Positive: cultural exchange (<a href="#s6">6</a>). Negative: competition for jobs (<a href="#s7">7</a>).</span>
+      <strong>Question 6: What is the impact of living in a diverse society? (one positive or negative impact)</strong>
+      <span style="color:oklch(0.42 0.03 250)">Positive: cultural exchange (Section 6). Negative: competition for jobs (Section 7).</span>
     </div>
     <div style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-radius:10px;padding:.9rem 1rem;display:flex;flex-direction:column;gap:.35rem;font-size:.93rem">
-      <strong>Q6: How can religion contribute to a diverse Singapore?</strong>
-      <span style="color:oklch(0.42 0.03 250)">Open-house festivals, IRO, places of worship side by side (<a href="#s4">4</a>).</span>
+      <strong>Question 6: How can religion contribute to a diverse Singapore?</strong>
+      <span style="color:oklch(0.42 0.03 250)">Festivals with open houses that everyone can join, the Inter-Religious Organisation, and places of worship side by side (Section 4).</span>
     </div>
     <div style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-radius:10px;padding:.9rem 1rem;display:flex;flex-direction:column;gap:.35rem;font-size:.93rem">
-      <strong>Q7: How do religion and SES create diversity?</strong>
-      <span style="color:oklch(0.42 0.03 250)">Religion and SES cards (<a href="#s4">4</a>).</span>
+      <strong>Question 7: How do religion and socio-economic status create diversity?</strong>
+      <span style="color:oklch(0.42 0.03 250)">The religion and socio-economic status examples (Section 4).</span>
     </div>
     <div style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-radius:10px;padding:.9rem 1rem;display:flex;flex-direction:column;gap:.35rem;font-size:.93rem">
-      <strong>Q7: Negative effects of prejudice/discrimination and competition for resources</strong>
-      <span style="color:oklch(0.42 0.03 250)">Think, Feel, Do; jobs and infrastructure (<a href="#s7">7</a>).</span>
+      <strong>Question 7: The negative effects of prejudice and discrimination, and of competition for resources</strong>
+      <span style="color:oklch(0.42 0.03 250)">Think, Feel, Do, plus the jobs and infrastructure examples (Section 7).</span>
     </div>
   </div>
+</section>
+
+<!-- Section B practice -->
+<section id="sp" style="display:flex;flex-direction:column;gap:1.25rem">
+  <div style="display:flex;align-items:baseline;gap:.9rem;border-top:3px solid #1b2a4a;padding-top:1rem">
+    <span style="font-size:2.4rem;font-weight:700;line-height:1">9</span>
+    <h2 style="margin:0;font-size:1.6rem">Section B practice: structured-response questions</h2>
+  </div>
+  <p style="margin:0">Five practice sets in the same format as Section B of the exam: three extracts, then Question 6 (7 marks) and Question 7 (8 marks). Do one set at a time on lined paper, then open the model answers and mark yourself with the checklist at the end of this section.</p>
+  <div style="font-weight:700;font-size:1.1rem">Three rules for every set</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));gap:1rem">
+<div style="background:oklch(0.96 0.08 95);border-radius:12px;padding:1.1rem 1.2rem;display:flex;gap:.9rem"><span style="font-size:2rem;font-weight:700;line-height:1">1</span><div style="display:flex;flex-direction:column;gap:.35rem"><strong style="font-size:1.05rem">Do not use the extracts as your evidence or examples.</strong><span style="font-size:.95rem">Use your own examples from your notes.</span></div></div>
+<div style="background:oklch(0.96 0.08 95);border-radius:12px;padding:1.1rem 1.2rem;display:flex;gap:.9rem"><span style="font-size:2rem;font-weight:700;line-height:1">2</span><div style="display:flex;flex-direction:column;gap:.35rem"><strong style="font-size:1.05rem">Question 6: one PEEL paragraph.</strong><span style="font-size:.95rem">Give your opinion ("I think...").</span></div></div>
+<div style="background:oklch(0.96 0.08 95);border-radius:12px;padding:1.1rem 1.2rem;display:flex;gap:.9rem"><span style="font-size:2rem;font-weight:700;line-height:1">3</span><div style="display:flex;flex-direction:column;gap:.35rem"><strong style="font-size:1.05rem">Question 7: two PEEL paragraphs.</strong><span style="font-size:.95rem">One for each thing named in the question, with a different example in each.</span></div></div>
+  </div>
+<div class="set-card first" style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-top:6px solid oklch(0.6 0.14 250);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.9rem">
+<div style="display:flex;flex-wrap:wrap;gap:.5rem .8rem;align-items:baseline"><span style="background:oklch(0.93 0.04 250);color:oklch(0.38 0.13 250);font-weight:700;border-radius:6px;padding:.1rem .5rem">15 marks</span><strong style="font-size:1.25rem">Practice Set 1</strong></div>
+<p style="margin:0;font-size:.95rem"><strong>Living in a diverse society.</strong> Study the extracts carefully, and then answer both questions.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));gap:.6rem">
+<div style="background:oklch(0.96 0.025 250);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.38 0.13 250)">Extract 1</span><span style="font-size:.93rem">A survey of young Singaporeans found that most of them have close friends of a different race. However, fewer of them have close friends who are foreigners living in Singapore.</span></div>
+<div style="background:oklch(0.96 0.025 250);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.38 0.13 250)">Extract 2</span><span style="font-size:.93rem">Singapore&#x27;s resident population is about 74 per cent Chinese, 14 per cent Malay, 9 per cent Indian and 3 per cent Others. Within each group, there are smaller groups with their own languages and customs.</span></div>
+<div style="background:oklch(0.96 0.025 250);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.38 0.13 250)">Extract 3</span><span style="font-size:.93rem">Many people who live in Singapore were not born here. Some come to work or study, while others marry Singaporeans and later become permanent residents or citizens.</span></div>
+</div>
+<div style="border:1px solid oklch(0.9 0.01 250);border-radius:10px;padding:.9rem 1rem;display:flex;flex-direction:column;gap:.45rem"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:.5rem;flex-wrap:wrap"><span style="background:oklch(0.9 0.05 60);color:oklch(0.35 0.1 60);font-weight:700;border-radius:6px;padding:.1rem .5rem">Question 6</span><strong>[7 marks]</strong></div><span style="font-size:.93rem;color:oklch(0.42 0.03 250)">Extract 1 shows that young Singaporeans mix well with people of other races, but less with foreigners.</span><strong style="font-size:1.05rem;line-height:1.4">In your opinion, how can Singaporeans build stronger relationships with people from different backgrounds? Explain your answer with reference to <strong>one</strong> way.</strong></div>
+<div style="border:1px solid oklch(0.9 0.01 250);border-radius:10px;padding:.9rem 1rem;display:flex;flex-direction:column;gap:.45rem"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:.5rem;flex-wrap:wrap"><span style="background:oklch(0.9 0.05 60);color:oklch(0.35 0.1 60);font-weight:700;border-radius:6px;padding:.1rem .5rem">Question 7</span><strong>[8 marks]</strong></div><span style="font-size:.93rem;color:oklch(0.42 0.03 250)">Extracts 2 and 3 show that race and ethnicity, and nationality, are important factors that shape Singapore&#x27;s society.</span><strong style="font-size:1.05rem;line-height:1.4">Explain how race and ethnicity, and nationality, contribute to a diverse society in Singapore.</strong></div>
+<div style="display:flex;flex-direction:column;gap:.4rem"><strong>Plan before you write (Question 7)</strong><span style="font-size:.9rem;color:oklch(0.42 0.03 250)">Before writing, fill in a plan like this: the two things named in the question, a one-sentence Point for each, and the example from your notes you will use.</span><div style="overflow-x:auto"><table style="border-collapse:collapse;width:100%;min-width:30rem;font-size:.92rem"><thead><tr><th style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250);background:oklch(0.96 0.025 250)">Factor</th><th style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250);background:oklch(0.96 0.025 250)">Point (one sentence)</th><th style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250);background:oklch(0.96 0.025 250)">Example from your notes</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250);font-weight:700;width:9.5rem">Race and ethnicity</td><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250)">Singapore has many races, each with its own languages, food, customs and festivals.</td><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250)">Public holidays for Chinese New Year, Hari Raya Puasa and Deepavali; the Ethnic Integration Policy in HDB blocks.</td></tr><tr><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250);font-weight:700;width:9.5rem">Nationality</td><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250)">Singapore&#x27;s society includes citizens, permanent residents and foreigners from many countries.</td><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250)">Foreign workers build our flats and MRT lines; foreign professionals work in hospitals; the Singapore Citizenship Journey.</td></tr></tbody></table></div></div>
+<details style="border-top:1px solid oklch(0.9 0.01 250);padding-top:.8rem"><summary style="cursor:pointer;font-weight:700;display:inline-block;background:#1b2a4a;color:#fff;border-radius:8px;padding:.5rem 1rem;min-height:44px;box-sizing:border-box;line-height:1.7">Show model answers</summary><div style="display:flex;flex-direction:column;gap:1rem;margin-top:.9rem"><div style="display:flex;flex-direction:column;gap:.6rem"><span style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:oklch(0.45 0.02 250)">Model answer: Question 6</span><div style="display:flex;flex-direction:column;gap:.35rem;font-size:.95rem;border-left:3px solid oklch(0.88 0.01 250);padding-left:.9rem"><div><span style="background:oklch(0.94 0.04 250);color:oklch(0.4 0.14 250);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">P</span>In my opinion, Singaporeans can build stronger relationships with people from different backgrounds by taking part in activities in common spaces.</div><div><span style="background:oklch(0.94 0.04 150);color:oklch(0.4 0.11 150);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">E</span>Common spaces are places where people of different races, religions and nationalities meet and work together. When they spend time together, they build shared experiences and memories, which help them understand and trust each other.</div><div><span style="background:oklch(0.94 0.05 70);color:oklch(0.42 0.11 60);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">Ex</span>For example, the People&#x27;s Association runs community clubs and Residents&#x27; Networks where residents of all backgrounds join classes, sports and festival celebrations. In school, students from different backgrounds bond through co-curricular activities and the Secondary 3 Outward Bound course.</div><div><span style="background:oklch(0.94 0.04 330);color:oklch(0.42 0.14 330);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">L</span>Therefore, I think taking part in activities in common spaces is the best way to build stronger relationships with people from different backgrounds, because it turns strangers into friends.</div></div><div style="font-size:.93rem;color:oklch(0.42 0.03 250)"><em>Another way you could use:</em> an attitude of openness (see the openness paragraph in Practice Set 5, Question 7).</div></div><div style="display:flex;flex-direction:column;gap:.6rem"><span style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:oklch(0.45 0.02 250)">Model answer: Question 7</span><div style="display:flex;flex-direction:column;gap:.35rem;font-size:.95rem;border-left:3px solid oklch(0.88 0.01 250);padding-left:.9rem"><div><span style="background:oklch(0.94 0.04 250);color:oklch(0.4 0.14 250);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">P</span>Race and ethnicity contribute to a diverse society because Singapore is made up of many races, each with its own culture.</div><div><span style="background:oklch(0.94 0.04 150);color:oklch(0.4 0.11 150);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">E</span>Singapore has four main groups, Chinese, Malay, Indian and Others, and each group has different languages, food, customs and festivals.</div><div><span style="background:oklch(0.94 0.05 70);color:oklch(0.42 0.11 60);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">Ex</span>For example, Chinese New Year, Hari Raya Puasa and Deepavali are all public holidays, and the Ethnic Integration Policy makes sure people of different races live in the same HDB blocks.</div><div><span style="background:oklch(0.94 0.04 330);color:oklch(0.42 0.14 330);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">L</span>Therefore, race and ethnicity contribute to a diverse society because people of many cultures live, study and work side by side.</div></div><div style="display:flex;flex-direction:column;gap:.35rem;font-size:.95rem;border-left:3px solid oklch(0.88 0.01 250);padding-left:.9rem"><div><span style="background:oklch(0.94 0.04 250);color:oklch(0.4 0.14 250);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">P</span>Nationality also contributes to a diverse society because Singapore&#x27;s society includes citizens, permanent residents and many foreigners.</div><div><span style="background:oklch(0.94 0.04 150);color:oklch(0.4 0.11 150);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">E</span>People come from many countries to work or study here, and they bring different ways of life with them.</div><div><span style="background:oklch(0.94 0.05 70);color:oklch(0.42 0.11 60);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">Ex</span>For example, foreign workers help build our HDB flats and MRT lines, while foreign professionals work in our hospitals and research labs. New citizens also go through the Singapore Citizenship Journey to learn about Singapore&#x27;s history and values.</div><div><span style="background:oklch(0.94 0.04 330);color:oklch(0.42 0.14 330);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">L</span>Therefore, nationality contributes to a diverse society because people from many countries are part of Singapore&#x27;s society.</div></div></div></div></details>
+</div>
+<div class="set-card" style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-top:6px solid oklch(0.6 0.12 200);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.9rem">
+<div style="display:flex;flex-wrap:wrap;gap:.5rem .8rem;align-items:baseline"><span style="background:oklch(0.93 0.04 200);color:oklch(0.38 0.1 200);font-weight:700;border-radius:6px;padding:.1rem .5rem">15 marks</span><strong style="font-size:1.25rem">Practice Set 2</strong></div>
+<p style="margin:0;font-size:.95rem"><strong>Living in a diverse society.</strong> Study the extracts carefully, and then answer both questions.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));gap:.6rem">
+<div style="background:oklch(0.96 0.025 200);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.38 0.1 200)">Extract 1</span><span style="font-size:.93rem">A foreign student who moved to Singapore said she felt lonely in her first few weeks at school. Things changed when her classmates started asking about her home country and invited her to join their group.</span></div>
+<div style="background:oklch(0.96 0.025 200);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.38 0.1 200)">Extract 2</span><span style="font-size:.93rem">A group of young Singaporean musicians plays songs that mix the Chinese erhu, the Indian tabla and the Malay kompang. They say growing up in a multicultural society gave them the idea.</span></div>
+<div style="background:oklch(0.96 0.025 200);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.38 0.1 200)">Extract 3</span><span style="font-size:.93rem">Scientists from many countries work together in Singapore&#x27;s research centres. Their different training and experiences help them come up with new ideas.</span></div>
+</div>
+<div style="border:1px solid oklch(0.9 0.01 250);border-radius:10px;padding:.9rem 1rem;display:flex;flex-direction:column;gap:.45rem"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:.5rem;flex-wrap:wrap"><span style="background:oklch(0.9 0.05 60);color:oklch(0.35 0.1 60);font-weight:700;border-radius:6px;padding:.1rem .5rem">Question 6</span><strong>[7 marks]</strong></div><span style="font-size:.93rem;color:oklch(0.42 0.03 250)">Extract 1 shows how a foreign student came to feel welcome in school.</span><strong style="font-size:1.05rem;line-height:1.4">In your opinion, why is it important for Singaporeans to be open to people from different backgrounds? Explain your answer with reference to <strong>one</strong> reason.</strong></div>
+<div style="border:1px solid oklch(0.9 0.01 250);border-radius:10px;padding:.9rem 1rem;display:flex;flex-direction:column;gap:.45rem"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:.5rem;flex-wrap:wrap"><span style="background:oklch(0.9 0.05 60);color:oklch(0.35 0.1 60);font-weight:700;border-radius:6px;padding:.1rem .5rem">Question 7</span><strong>[8 marks]</strong></div><span style="font-size:.93rem;color:oklch(0.42 0.03 250)">Extracts 2 and 3 reflect the positive effects of living in a diverse society.</span><strong style="font-size:1.05rem;line-height:1.4">Explain the positive effects of cultural exchange and appreciation, and the exchange of knowledge and skills, in a diverse society like Singapore.</strong></div>
+<div style="display:flex;flex-direction:column;gap:.4rem"><strong>Plan before you write (Question 7)</strong><span style="font-size:.9rem;color:oklch(0.42 0.03 250)">Before writing, fill in a plan like this: the two things named in the question, a one-sentence Point for each, and the example from your notes you will use.</span><div style="overflow-x:auto"><table style="border-collapse:collapse;width:100%;min-width:30rem;font-size:.92rem"><thead><tr><th style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250);background:oklch(0.96 0.025 200)">Factor</th><th style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250);background:oklch(0.96 0.025 200)">Point (one sentence)</th><th style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250);background:oklch(0.96 0.025 200)">Example from your notes</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250);font-weight:700;width:9.5rem">Cultural exchange and appreciation</td><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250)">Sharing ideas, customs and traditions helps groups understand and respect each other&#x27;s cultures.</td><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250)">Dr Iskandar Jalil&#x27;s pottery (Japanese and Islamic styles); Ms Oniatta Effendi&#x27;s batik clothing.</td></tr><tr><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250);font-weight:700;width:9.5rem">Exchange of knowledge and skills</td><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250)">People from different countries bring different skills and experiences, which creates new ideas.</td><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250)">A*STAR worked with Cytos Biotechnology on an H1N1 flu vaccine.</td></tr></tbody></table></div></div>
+<details style="border-top:1px solid oklch(0.9 0.01 250);padding-top:.8rem"><summary style="cursor:pointer;font-weight:700;display:inline-block;background:#1b2a4a;color:#fff;border-radius:8px;padding:.5rem 1rem;min-height:44px;box-sizing:border-box;line-height:1.7">Show model answers</summary><div style="display:flex;flex-direction:column;gap:1rem;margin-top:.9rem"><div style="display:flex;flex-direction:column;gap:.6rem"><span style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:oklch(0.45 0.02 250)">Model answer: Question 6</span><div style="display:flex;flex-direction:column;gap:.35rem;font-size:.95rem;border-left:3px solid oklch(0.88 0.01 250);padding-left:.9rem"><div><span style="background:oklch(0.94 0.04 250);color:oklch(0.4 0.14 250);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">P</span>In my opinion, one important reason for Singaporeans to be open to people from different backgrounds is that openness builds understanding and trust, which keeps our society harmonious.</div><div><span style="background:oklch(0.94 0.04 150);color:oklch(0.4 0.11 150);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">E</span>Openness means respecting and appreciating people who are different from us. When we keep an open mind and are willing to listen and ask questions, we learn why others think and live the way they do. This stops us from believing stereotypes, so there is less prejudice and everyone feels accepted.</div><div><span style="background:oklch(0.94 0.05 70);color:oklch(0.42 0.11 60);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">Ex</span>For example, a student can invite classmates of other races to a Hari Raya or Deepavali open house, try food from another culture at a hawker centre, or ask a Muslim classmate why he fasts during Ramadan instead of making assumptions.</div><div><span style="background:oklch(0.94 0.04 330);color:oklch(0.42 0.14 330);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">L</span>Therefore, I think it is important for Singaporeans to be open to people from different backgrounds, because openness builds the understanding and trust that a harmonious society needs.</div></div><div style="font-size:.93rem;color:oklch(0.42 0.03 250)"><em>Note the question type:</em> this question asks for a reason, not a way. Your Point must say why it matters, not what to do. Practice Sets 1, 4 and 5 ask for a way, and Practice Set 3 asks for an impact.</div></div><div style="display:flex;flex-direction:column;gap:.6rem"><span style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:oklch(0.45 0.02 250)">Model answer: Question 7</span><div style="display:flex;flex-direction:column;gap:.35rem;font-size:.95rem;border-left:3px solid oklch(0.88 0.01 250);padding-left:.9rem"><div><span style="background:oklch(0.94 0.04 250);color:oklch(0.4 0.14 250);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">P</span>One positive effect of a diverse society is cultural exchange and appreciation.</div><div><span style="background:oklch(0.94 0.04 150);color:oklch(0.4 0.11 150);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">E</span>When different groups share their ideas, customs and traditions, they learn to understand and respect each other&#x27;s cultures, and this shapes Singapore&#x27;s own culture and art.</div><div><span style="background:oklch(0.94 0.05 70);color:oklch(0.42 0.11 60);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">Ex</span>For example, Dr Iskandar Jalil&#x27;s pottery combines Japanese and Islamic styles, and Ms Oniatta Effendi&#x27;s batik clothing mixes Javanese patterns with Japanese designs.</div><div><span style="background:oklch(0.94 0.04 330);color:oklch(0.42 0.14 330);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">L</span>Therefore, cultural exchange is a positive effect because it helps Singaporeans appreciate other cultures and builds meaningful relationships.</div></div><div style="display:flex;flex-direction:column;gap:.35rem;font-size:.95rem;border-left:3px solid oklch(0.88 0.01 250);padding-left:.9rem"><div><span style="background:oklch(0.94 0.04 250);color:oklch(0.4 0.14 250);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">P</span>Another positive effect is the exchange of knowledge and skills.</div><div><span style="background:oklch(0.94 0.04 150);color:oklch(0.4 0.11 150);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">E</span>People from different countries bring different qualifications and experiences, and working together creates new ideas and innovation.</div><div><span style="background:oklch(0.94 0.05 70);color:oklch(0.42 0.11 60);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">Ex</span>For example, Singapore&#x27;s Agency for Science, Technology and Research (A*STAR) worked with the Swiss company Cytos Biotechnology on an H1N1 flu vaccine, with foreign scientists sharing their expertise.</div><div><span style="background:oklch(0.94 0.04 330);color:oklch(0.42 0.14 330);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">L</span>Therefore, the exchange of knowledge and skills is a positive effect because it strengthens Singapore&#x27;s research and helps solve problems that affect everyone.</div></div></div></div></details>
+</div>
+<div class="set-card" style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-top:6px solid oklch(0.6 0.12 150);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.9rem">
+<div style="display:flex;flex-wrap:wrap;gap:.5rem .8rem;align-items:baseline"><span style="background:oklch(0.93 0.04 150);color:oklch(0.38 0.1 150);font-weight:700;border-radius:6px;padding:.1rem .5rem">15 marks</span><strong style="font-size:1.25rem">Practice Set 3</strong></div>
+<p style="margin:0;font-size:.95rem"><strong>Living in a diverse society.</strong> Study the extracts carefully, and then answer both questions.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));gap:.6rem">
+<div style="background:oklch(0.96 0.025 150);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.38 0.1 150)">Extract 1</span><span style="font-size:.93rem">In a diverse society, people meet others with different beliefs, customs and ways of life every day: at school, at work and in their neighbourhoods.</span></div>
+<div style="background:oklch(0.96 0.025 150);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.38 0.1 150)">Extract 2</span><span style="font-size:.93rem">Singapore&#x27;s calendar includes public holidays for several religions, such as Vesak Day, Good Friday, Hari Raya Haji and Deepavali.</span></div>
+<div style="background:oklch(0.96 0.025 150);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.38 0.1 150)">Extract 3</span><span style="font-size:.93rem">Some families in Singapore need help with daily costs such as food and transport, while others can easily afford overseas holidays and private tuition.</span></div>
+</div>
+<div style="border:1px solid oklch(0.9 0.01 250);border-radius:10px;padding:.9rem 1rem;display:flex;flex-direction:column;gap:.45rem"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:.5rem;flex-wrap:wrap"><span style="background:oklch(0.9 0.05 60);color:oklch(0.35 0.1 60);font-weight:700;border-radius:6px;padding:.1rem .5rem">Question 6</span><strong>[7 marks]</strong></div><span style="font-size:.93rem;color:oklch(0.42 0.03 250)">Extract 1 describes daily life in a diverse society.</span><strong style="font-size:1.05rem;line-height:1.4">In your opinion, what is the impact of living in a diverse society on Singaporeans? Explain your answer with reference to <strong>one</strong> positive or negative impact.</strong></div>
+<div style="border:1px solid oklch(0.9 0.01 250);border-radius:10px;padding:.9rem 1rem;display:flex;flex-direction:column;gap:.45rem"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:.5rem;flex-wrap:wrap"><span style="background:oklch(0.9 0.05 60);color:oklch(0.35 0.1 60);font-weight:700;border-radius:6px;padding:.1rem .5rem">Question 7</span><strong>[8 marks]</strong></div><span style="font-size:.93rem;color:oklch(0.42 0.03 250)">Extracts 2 and 3 show that religion and socio-economic status are important factors of diversity.</span><strong style="font-size:1.05rem;line-height:1.4">Explain how religion and socio-economic status contribute to a diverse society in Singapore.</strong></div>
+<div style="display:flex;flex-direction:column;gap:.4rem"><strong>Plan before you write (Question 7)</strong><span style="font-size:.9rem;color:oklch(0.42 0.03 250)">Before writing, fill in a plan like this: the two things named in the question, a one-sentence Point for each, and the example from your notes you will use.</span><div style="overflow-x:auto"><table style="border-collapse:collapse;width:100%;min-width:30rem;font-size:.92rem"><thead><tr><th style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250);background:oklch(0.96 0.025 150)">Factor</th><th style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250);background:oklch(0.96 0.025 150)">Point (one sentence)</th><th style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250);background:oklch(0.96 0.025 150)">Example from your notes</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250);font-weight:700;width:9.5rem">Religion</td><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250)">Singaporeans follow many religions, each with its own beliefs, festivals and practices.</td><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250)">Buddhist and Hindu temples side by side on Waterloo Street; the Inter-Religious Organisation.</td></tr><tr><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250);font-weight:700;width:9.5rem">Socio-economic status</td><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250)">Singaporeans have different incomes, education levels and jobs, so families live different lives.</td><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250)">ComCare; Edusave and the MOE Financial Assistance Scheme; Curiosity Credits (2026).</td></tr></tbody></table></div></div>
+<details style="border-top:1px solid oklch(0.9 0.01 250);padding-top:.8rem"><summary style="cursor:pointer;font-weight:700;display:inline-block;background:#1b2a4a;color:#fff;border-radius:8px;padding:.5rem 1rem;min-height:44px;box-sizing:border-box;line-height:1.7">Show model answers</summary><div style="display:flex;flex-direction:column;gap:1rem;margin-top:.9rem"><div style="display:flex;flex-direction:column;gap:.6rem"><span style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:oklch(0.45 0.02 250)">Model answer: Question 6</span><div style="display:flex;flex-direction:column;gap:.35rem;font-size:.95rem;border-left:3px solid oklch(0.88 0.01 250);padding-left:.9rem"><div><span style="background:oklch(0.94 0.04 250);color:oklch(0.4 0.14 250);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">P</span>In my opinion, one positive impact of living in a diverse society is that Singaporeans get to learn about and appreciate other cultures.</div><div><span style="background:oklch(0.94 0.04 150);color:oklch(0.4 0.11 150);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">E</span>When people of different races, religions and nationalities meet every day, they share their customs, food and traditions. This helps them understand each other and creates new ideas that become part of Singapore&#x27;s own culture.</div><div><span style="background:oklch(0.94 0.05 70);color:oklch(0.42 0.11 60);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">Ex</span>For example, Chef Willin Low creates fusion dishes such as laksa pesto linguine, which mix Singapore and European food. Young people also learn from each other through programmes like the ASEAN Youth Fellowship, which brings together young leaders from across Southeast Asia.</div><div><span style="background:oklch(0.94 0.04 330);color:oklch(0.42 0.14 330);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">L</span>Therefore, I think the impact of living in a diverse society is positive, because it helps Singaporeans appreciate other cultures and builds a richer local culture that everyone can share.</div></div><div style="font-size:.93rem;color:oklch(0.42 0.03 250)"><em>A negative impact you could use instead:</em> stereotypes and prejudice, or competition for jobs (see Practice Set 4, Question 7).</div></div><div style="display:flex;flex-direction:column;gap:.6rem"><span style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:oklch(0.45 0.02 250)">Model answer: Question 7</span><div style="display:flex;flex-direction:column;gap:.35rem;font-size:.95rem;border-left:3px solid oklch(0.88 0.01 250);padding-left:.9rem"><div><span style="background:oklch(0.94 0.04 250);color:oklch(0.4 0.14 250);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">P</span>Religion contributes to a diverse society because Singaporeans follow many different religions.</div><div><span style="background:oklch(0.94 0.04 150);color:oklch(0.4 0.11 150);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">E</span>Singapore has Buddhists, Christians, Muslims, Taoists and Hindus, and about 1 in 5 people have no religion. Each religion has its own beliefs, festivals, places of worship and practices, such as halal or vegetarian food rules.</div><div><span style="background:oklch(0.94 0.05 70);color:oklch(0.42 0.11 60);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">Ex</span>For example, on Waterloo Street, a Buddhist temple (Kwan Im Thong Hood Cho) stands next to a Hindu temple (Sri Krishnan). Leaders of different religions also work together through the Inter-Religious Organisation to build understanding.</div><div><span style="background:oklch(0.94 0.04 330);color:oklch(0.42 0.14 330);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">L</span>Therefore, religion contributes to a diverse society because people with different beliefs and practices live side by side in Singapore.</div></div><div style="display:flex;flex-direction:column;gap:.35rem;font-size:.95rem;border-left:3px solid oklch(0.88 0.01 250);padding-left:.9rem"><div><span style="background:oklch(0.94 0.04 250);color:oklch(0.4 0.14 250);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">P</span>Socio-economic status also contributes to a diverse society because Singaporeans have different incomes, education levels and jobs.</div><div><span style="background:oklch(0.94 0.04 150);color:oklch(0.4 0.11 150);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">E</span>Because of this, families live in different types of homes, have different lifestyles and may have different chances in education and work.</div><div><span style="background:oklch(0.94 0.05 70);color:oklch(0.42 0.11 60);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">Ex</span>For example, the government helps lower-income families through ComCare, which gives help with cash, food and bills, and through Edusave and the Ministry of Education Financial Assistance Scheme, which help students pay for school. From 2026, youths aged 13 to 17 in self-help groups can also get S$500 in Curiosity Credits to try new hobbies.</div><div><span style="background:oklch(0.94 0.04 330);color:oklch(0.42 0.14 330);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">L</span>Therefore, socio-economic status contributes to a diverse society because people from different income groups have different lives and needs.</div></div></div></div></details>
+</div>
+<div class="set-card" style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-top:6px solid oklch(0.6 0.13 70);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.9rem">
+<div style="display:flex;flex-wrap:wrap;gap:.5rem .8rem;align-items:baseline"><span style="background:oklch(0.93 0.04 70);color:oklch(0.38 0.1 70);font-weight:700;border-radius:6px;padding:.1rem .5rem">15 marks</span><strong style="font-size:1.25rem">Practice Set 4</strong></div>
+<p style="margin:0;font-size:.95rem"><strong>Living in a diverse society.</strong> Study the extracts carefully, and then answer both questions.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));gap:.6rem">
+<div style="background:oklch(0.96 0.025 70);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.38 0.1 70)">Extract 1</span><span style="font-size:.93rem">A student shared online that his classmates left him out of a group project because they believed students of his race were lazy. Many people replied to support him.</span></div>
+<div style="background:oklch(0.96 0.025 70);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.38 0.1 70)">Extract 2</span><span style="font-size:.93rem">A foreign worker said that some people moved away when he sat next to them on the bus, even though he had done nothing wrong.</span></div>
+<div style="background:oklch(0.96 0.025 70);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.38 0.1 70)">Extract 3</span><span style="font-size:.93rem">Some residents say that, as the population grows, it has become harder to get a flat or a hospital bed when they need one.</span></div>
+</div>
+<div style="border:1px solid oklch(0.9 0.01 250);border-radius:10px;padding:.9rem 1rem;display:flex;flex-direction:column;gap:.45rem"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:.5rem;flex-wrap:wrap"><span style="background:oklch(0.9 0.05 60);color:oklch(0.35 0.1 60);font-weight:700;border-radius:6px;padding:.1rem .5rem">Question 6</span><strong>[7 marks]</strong></div><span style="font-size:.93rem;color:oklch(0.42 0.03 250)">Extract 1 describes an experience of prejudice.</span><strong style="font-size:1.05rem;line-height:1.4">In your opinion, how can prejudice and discrimination be reduced in Singapore? Explain your answer with reference to <strong>one</strong> way.</strong></div>
+<div style="border:1px solid oklch(0.9 0.01 250);border-radius:10px;padding:.9rem 1rem;display:flex;flex-direction:column;gap:.45rem"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:.5rem;flex-wrap:wrap"><span style="background:oklch(0.9 0.05 60);color:oklch(0.35 0.1 60);font-weight:700;border-radius:6px;padding:.1rem .5rem">Question 7</span><strong>[8 marks]</strong></div><span style="font-size:.93rem;color:oklch(0.42 0.03 250)">Extracts 2 and 3 reflect the negative effects of living in a diverse society.</span><strong style="font-size:1.05rem;line-height:1.4">Explain the negative effects of prejudice and discrimination, and of competition for resources, in a diverse society like Singapore.</strong></div>
+<div style="display:flex;flex-direction:column;gap:.4rem"><strong>Plan before you write (Question 7)</strong><span style="font-size:.9rem;color:oklch(0.42 0.03 250)">Before writing, fill in a plan like this: the two things named in the question, a one-sentence Point for each, and the example from your notes you will use.</span><div style="overflow-x:auto"><table style="border-collapse:collapse;width:100%;min-width:30rem;font-size:.92rem"><thead><tr><th style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250);background:oklch(0.96 0.025 70)">Factor</th><th style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250);background:oklch(0.96 0.025 70)">Point (one sentence)</th><th style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250);background:oklch(0.96 0.025 70)">Example from your notes</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250);font-weight:700;width:9.5rem">Prejudice and discrimination</td><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250)">Believing stereotypes leads to unfair treatment, which causes hurt and distrust.</td><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250)">The 2021 Orchard Road incident with an interracial couple; hurtful remarks online.</td></tr><tr><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250);font-weight:700;width:9.5rem">Competition for resources</td><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250)">More foreigners working here means more competition for limited jobs and infrastructure, which causes tension.</td><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250)">Foreigners in PMET jobs compete with local graduates; lower wages for lower-income workers; crowded trains and buses.</td></tr></tbody></table></div></div>
+<details style="border-top:1px solid oklch(0.9 0.01 250);padding-top:.8rem"><summary style="cursor:pointer;font-weight:700;display:inline-block;background:#1b2a4a;color:#fff;border-radius:8px;padding:.5rem 1rem;min-height:44px;box-sizing:border-box;line-height:1.7">Show model answers</summary><div style="display:flex;flex-direction:column;gap:1rem;margin-top:.9rem"><div style="display:flex;flex-direction:column;gap:.6rem"><span style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:oklch(0.45 0.02 250)">Model answer: Question 6</span><div style="display:flex;flex-direction:column;gap:.35rem;font-size:.95rem;border-left:3px solid oklch(0.88 0.01 250);padding-left:.9rem"><div><span style="background:oklch(0.94 0.04 250);color:oklch(0.4 0.14 250);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">P</span>In my opinion, the best way to reduce prejudice and discrimination in Singapore is for the government to have strong laws that protect racial and religious harmony.</div><div><span style="background:oklch(0.94 0.04 150);color:oklch(0.4 0.11 150);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">E</span>Laws make it clear that insulting or hurting other groups is wrong and has serious consequences. This stops people from spreading hateful words or lies about other races and religions, so that everyone feels safe and respected.</div><div><span style="background:oklch(0.94 0.05 70);color:oklch(0.42 0.11 60);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">Ex</span>For example, the Maintenance of Racial Harmony Act, passed in February 2025, lets the government stop people from spreading content that harms racial harmony. The Maintenance of Religious Harmony Act allows action against anyone who stirs up hatred between religions, and the Protection from Online Falsehoods and Manipulation Act (POFMA) can order false posts to be corrected.</div><div><span style="background:oklch(0.94 0.04 330);color:oklch(0.42 0.14 330);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">L</span>Therefore, I think strong laws are the best way to reduce prejudice and discrimination, because they stop hatred from spreading and protect harmony in Singapore.</div></div><div style="font-size:.93rem;color:oklch(0.42 0.03 250)"><em>Other ways you could use:</em> an attitude of openness or common spaces, which help people see past stereotypes (see Practice Sets 1 and 2).</div></div><div style="display:flex;flex-direction:column;gap:.6rem"><span style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:oklch(0.45 0.02 250)">Model answer: Question 7</span><div style="display:flex;flex-direction:column;gap:.35rem;font-size:.95rem;border-left:3px solid oklch(0.88 0.01 250);padding-left:.9rem"><div><span style="background:oklch(0.94 0.04 250);color:oklch(0.4 0.14 250);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">P</span>One negative effect of a diverse society is prejudice and discrimination.</div><div><span style="background:oklch(0.94 0.04 150);color:oklch(0.4 0.11 150);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">E</span>When people believe stereotypes about a group, they may develop negative feelings towards that group and treat its members unfairly, for example by insulting them or leaving them out. This causes hurt, anger and distrust, which divides society and breaks harmony.</div><div><span style="background:oklch(0.94 0.05 70);color:oklch(0.42 0.11 60);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">Ex</span>For example, in 2021 a man confronted an interracial couple along Orchard Road and told them that people should date their own race. Some people also make hurtful remarks online based on stereotypes about other races or nationalities.</div><div><span style="background:oklch(0.94 0.04 330);color:oklch(0.42 0.14 330);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">L</span>Therefore, prejudice and discrimination are negative effects because they hurt people and damage trust between different groups in Singapore.</div></div><div style="display:flex;flex-direction:column;gap:.35rem;font-size:.95rem;border-left:3px solid oklch(0.88 0.01 250);padding-left:.9rem"><div><span style="background:oklch(0.94 0.04 250);color:oklch(0.4 0.14 250);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">P</span>Another negative effect is competition for resources.</div><div><span style="background:oklch(0.94 0.04 150);color:oklch(0.4 0.11 150);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">E</span>Because of Singapore&#x27;s falling birth rate and ageing population, more foreigners come to work here. As the population grows, people compete for limited jobs and infrastructure, which can cause tension between locals and foreigners.</div><div><span style="background:oklch(0.94 0.05 70);color:oklch(0.42 0.11 60);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">Ex</span>For example, high-skilled foreigners in professional, manager, executive and technician (PMET) jobs compete with local graduates for the same white-collar jobs, while lower-skilled foreign workers accept lower pay, which keeps wages low for lower-income Singaporeans. Trains and buses also become more crowded during peak hours.</div><div><span style="background:oklch(0.94 0.04 330);color:oklch(0.42 0.14 330);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">L</span>Therefore, competition for resources is a negative effect because it creates unhappiness and tension between different groups in Singapore.</div></div><div style="font-size:.93rem;color:oklch(0.42 0.03 250)">If your teacher gave a different example of prejudice in class, use that one instead of the Orchard Road example.</div></div></div></details>
+</div>
+<div class="set-card" style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-top:6px solid oklch(0.6 0.14 20);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.9rem">
+<div style="display:flex;flex-wrap:wrap;gap:.5rem .8rem;align-items:baseline"><span style="background:oklch(0.93 0.04 20);color:oklch(0.38 0.13 20);font-weight:700;border-radius:6px;padding:.1rem .5rem">15 marks</span><strong style="font-size:1.25rem">Practice Set 5</strong></div>
+<p style="margin:0;font-size:.95rem">Study the extracts carefully, and then answer both questions. Question 6 in this set comes from Issue 1 (Citizenship and Governance), because Question 6 in the exam can be on any topic.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));gap:.6rem">
+<div style="background:oklch(0.96 0.025 20);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.38 0.13 20)">Extract 1</span><span style="font-size:.93rem">A group of residents in a housing estate started a weekly programme to deliver meals to elderly neighbours who live alone. One volunteer said that the government cannot spot every need, so citizens should step in where they can.</span></div>
+<div style="background:oklch(0.96 0.025 20);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.38 0.13 20)">Extract 2</span><span style="font-size:.93rem">During the National Day period, families of different races in one housing estate held a party together. They shared food from their own cultures, and their children played together.</span></div>
+<div style="background:oklch(0.96 0.025 20);border-radius:8px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.2rem"><span style="font-weight:700;color:oklch(0.38 0.13 20)">Extract 3</span><span style="font-size:.93rem">A teacher said her students learnt the most about other cultures when they were curious and asked respectful questions, instead of assuming things about their classmates.</span></div>
+</div>
+<div style="border:1px solid oklch(0.9 0.01 250);border-radius:10px;padding:.9rem 1rem;display:flex;flex-direction:column;gap:.45rem"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:.5rem;flex-wrap:wrap"><span style="background:oklch(0.9 0.05 60);color:oklch(0.35 0.1 60);font-weight:700;border-radius:6px;padding:.1rem .5rem">Question 6</span><strong>[7 marks]</strong></div><span style="font-size:.93rem;color:oklch(0.42 0.03 250)">Extract 1 shows citizens helping to meet a need in society.</span><strong style="font-size:1.05rem;line-height:1.4">In your opinion, how can Singaporeans work for the good of society? Explain your answer with reference to <strong>one</strong> way.</strong></div>
+<div style="border:1px solid oklch(0.9 0.01 250);border-radius:10px;padding:.9rem 1rem;display:flex;flex-direction:column;gap:.45rem"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:.5rem;flex-wrap:wrap"><span style="background:oklch(0.9 0.05 60);color:oklch(0.35 0.1 60);font-weight:700;border-radius:6px;padding:.1rem .5rem">Question 7</span><strong>[8 marks]</strong></div><span style="font-size:.93rem;color:oklch(0.42 0.03 250)">Extracts 2 and 3 show how Singaporeans build harmony in a diverse society.</span><strong style="font-size:1.05rem;line-height:1.4">Explain how common spaces and an attitude of openness help to build a harmonious society in Singapore.</strong></div>
+<div style="display:flex;flex-direction:column;gap:.4rem"><strong>Plan before you write (Question 7)</strong><span style="font-size:.9rem;color:oklch(0.42 0.03 250)">Before writing, fill in a plan like this: the two things named in the question, a one-sentence Point for each, and the example from your notes you will use.</span><div style="overflow-x:auto"><table style="border-collapse:collapse;width:100%;min-width:30rem;font-size:.92rem"><thead><tr><th style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250);background:oklch(0.96 0.025 20)">Factor</th><th style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250);background:oklch(0.96 0.025 20)">Point (one sentence)</th><th style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250);background:oklch(0.96 0.025 20)">Example from your notes</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250);font-weight:700;width:9.5rem">Common spaces</td><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250)">Places where people of different backgrounds meet build shared experiences, understanding and trust.</td><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250)">People&#x27;s Association community clubs; co-curricular activities and Secondary 3 Outward Bound; SG Youth Plan youth spaces.</td></tr><tr><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250);font-weight:700;width:9.5rem">Openness</td><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250)">Respecting and appreciating diversity builds understanding and reduces prejudice.</td><td style="text-align:left;vertical-align:top;padding:.5rem .65rem;border:1px solid oklch(0.9 0.01 250)">Trying another culture&#x27;s food at a hawker centre; a Hari Raya or Deepavali open house; asking a classmate about Ramadan.</td></tr></tbody></table></div></div>
+<details style="border-top:1px solid oklch(0.9 0.01 250);padding-top:.8rem"><summary style="cursor:pointer;font-weight:700;display:inline-block;background:#1b2a4a;color:#fff;border-radius:8px;padding:.5rem 1rem;min-height:44px;box-sizing:border-box;line-height:1.7">Show model answers</summary><div style="display:flex;flex-direction:column;gap:1rem;margin-top:.9rem"><div style="display:flex;flex-direction:column;gap:.6rem"><span style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:oklch(0.45 0.02 250)">Model answer: Question 6</span><div style="display:flex;flex-direction:column;gap:.35rem;font-size:.95rem;border-left:3px solid oklch(0.88 0.01 250);padding-left:.9rem"><div><span style="background:oklch(0.94 0.04 250);color:oklch(0.4 0.14 250);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">P</span>In my opinion, Singaporeans can work for the good of society by volunteering to meet the needs of groups that the government may have missed.</div><div><span style="background:oklch(0.94 0.04 150);color:oklch(0.4 0.11 150);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">E</span>The government sets up policies and national programmes, but there are still gaps in meeting the specific needs of some groups, such as the elderly. Citizens who notice these gaps can start their own efforts, using resources from the government and community groups.</div><div><span style="background:oklch(0.94 0.05 70);color:oklch(0.42 0.11 60);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">Ex</span>For example, RSVP Singapore, the Organisation of Senior Volunteers, runs programmes such as My Buddy and Cyberguide, where volunteers befriend elderly people and teach them to use technology. Individuals also help, such as the volunteer instructor in the Age Well Everyday programme who teaches the elderly to exercise and stay active.</div><div><span style="background:oklch(0.94 0.04 330);color:oklch(0.42 0.14 330);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">L</span>Therefore, I think volunteering is the best way for Singaporeans to work for the good of society, because it fills the gaps and improves the lives of those who need help.</div></div><div style="font-size:.93rem;color:oklch(0.42 0.03 250)"><em>Another way you could use:</em> giving feedback to the government through official channels such as REACH, or taking part in a Citizens&#x27; Jury, to influence decisions (Chapter 4).</div></div><div style="display:flex;flex-direction:column;gap:.6rem"><span style="font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:oklch(0.45 0.02 250)">Model answer: Question 7</span><div style="display:flex;flex-direction:column;gap:.35rem;font-size:.95rem;border-left:3px solid oklch(0.88 0.01 250);padding-left:.9rem"><div><span style="background:oklch(0.94 0.04 250);color:oklch(0.4 0.14 250);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">P</span>Common spaces help to build a harmonious society because they bring people of different backgrounds together.</div><div><span style="background:oklch(0.94 0.04 150);color:oklch(0.4 0.11 150);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">E</span>Common spaces are physical or social spaces where people of different races, religions and nationalities interact in activities or work together on projects. This creates shared experiences and memories, which build mutual understanding, a sense of community and trust.</div><div><span style="background:oklch(0.94 0.05 70);color:oklch(0.42 0.11 60);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">Ex</span>For example, the People&#x27;s Association runs community clubs and Residents&#x27; Networks where residents of all backgrounds join classes and festival celebrations. In school, students bond through co-curricular activities and the Secondary 3 Outward Bound course, and from 2026 the SG Youth Plan is setting up free youth spaces where young people from different backgrounds can meet.</div><div><span style="background:oklch(0.94 0.04 330);color:oklch(0.42 0.14 330);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">L</span>Therefore, common spaces help to build a harmonious society because they turn strangers into friends and create trust between different groups.</div></div><div style="display:flex;flex-direction:column;gap:.35rem;font-size:.95rem;border-left:3px solid oklch(0.88 0.01 250);padding-left:.9rem"><div><span style="background:oklch(0.94 0.04 250);color:oklch(0.4 0.14 250);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">P</span>An attitude of openness also helps to build a harmonious society because it makes people willing to understand those who are different from them.</div><div><span style="background:oklch(0.94 0.04 150);color:oklch(0.4 0.11 150);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">E</span>Openness means respecting and appreciating diversity. When people keep an open mind to listen to and engage others, they build real understanding and stop believing stereotypes, so there is less prejudice.</div><div><span style="background:oklch(0.94 0.05 70);color:oklch(0.42 0.11 60);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">Ex</span>For example, Singaporeans can try food from another culture at a hawker centre, visit a friend&#x27;s Hari Raya or Deepavali open house, or ask a classmate why he fasts during Ramadan instead of assuming.</div><div><span style="background:oklch(0.94 0.04 330);color:oklch(0.42 0.14 330);font-weight:700;border-radius:4px;padding:0 .35rem;margin-right:.35rem">L</span>Therefore, openness helps to build a harmonious society because understanding between people of different backgrounds leads to respect and harmony.</div></div></div></div></details>
+</div>
+<div class="self-check" style="display:flex;flex-direction:column;gap:1rem">
+<div style="font-weight:700;font-size:1.1rem">Self-marking checklist</div>
+<p style="margin:0;font-size:.95rem;color:oklch(0.42 0.03 250)">After each set, tick what your answer has. Anything left unticked is what to fix next time.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:1rem">
+<div style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.6rem"><strong style="font-size:1.15rem">Question 6 (7 marks)</strong><label style="display:flex;gap:.7rem;align-items:flex-start;font-size:.95rem;cursor:pointer"><input type="checkbox" style="width:1.2rem;height:1.2rem;margin-top:.2rem;flex:none">I gave my opinion clearly, with &quot;I think&quot; or &quot;In my opinion&quot;.</label><label style="display:flex;gap:.7rem;align-items:flex-start;font-size:.95rem;cursor:pointer"><input type="checkbox" style="width:1.2rem;height:1.2rem;margin-top:.2rem;flex:none">My Point answers the question in one sentence.</label><label style="display:flex;gap:.7rem;align-items:flex-start;font-size:.95rem;cursor:pointer"><input type="checkbox" style="width:1.2rem;height:1.2rem;margin-top:.2rem;flex:none">I explained how or why.</label><label style="display:flex;gap:.7rem;align-items:flex-start;font-size:.95rem;cursor:pointer"><input type="checkbox" style="width:1.2rem;height:1.2rem;margin-top:.2rem;flex:none">I gave a Singapore example from my notes, not from the extract.</label><label style="display:flex;gap:.7rem;align-items:flex-start;font-size:.95rem;cursor:pointer"><input type="checkbox" style="width:1.2rem;height:1.2rem;margin-top:.2rem;flex:none">I linked back to the question&#x27;s words with &quot;Therefore&quot;.</label><label style="display:flex;gap:.7rem;align-items:flex-start;font-size:.95rem;cursor:pointer"><input type="checkbox" style="width:1.2rem;height:1.2rem;margin-top:.2rem;flex:none">I wrote about one way, reason or impact only, and developed it fully.</label></div>
+<div style="background:#fff;border:1px solid oklch(0.9 0.01 250);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.6rem"><strong style="font-size:1.15rem">Question 7 (8 marks)</strong><label style="display:flex;gap:.7rem;align-items:flex-start;font-size:.95rem;cursor:pointer"><input type="checkbox" style="width:1.2rem;height:1.2rem;margin-top:.2rem;flex:none">I wrote two PEEL paragraphs, one for each thing named in the question.</label><label style="display:flex;gap:.7rem;align-items:flex-start;font-size:.95rem;cursor:pointer"><input type="checkbox" style="width:1.2rem;height:1.2rem;margin-top:.2rem;flex:none">Each paragraph has a different example from my notes.</label><label style="display:flex;gap:.7rem;align-items:flex-start;font-size:.95rem;cursor:pointer"><input type="checkbox" style="width:1.2rem;height:1.2rem;margin-top:.2rem;flex:none">Neither paragraph uses the extracts as evidence.</label><label style="display:flex;gap:.7rem;align-items:flex-start;font-size:.95rem;cursor:pointer"><input type="checkbox" style="width:1.2rem;height:1.2rem;margin-top:.2rem;flex:none">Each paragraph ends with a link to the question&#x27;s words.</label><label style="display:flex;gap:.7rem;align-items:flex-start;font-size:.95rem;cursor:pointer"><input type="checkbox" style="width:1.2rem;height:1.2rem;margin-top:.2rem;flex:none">I filled in the planning box before writing.</label></div>
+</div></div>
 </section>
 
 <!-- 9 -->
 <section id="s9" style="display:flex;flex-direction:column;gap:1.25rem">
   <div style="display:flex;align-items:baseline;gap:.9rem;border-top:3px solid #1b2a4a;padding-top:1rem;flex-wrap:wrap">
-    <span style="font-size:2.4rem;font-weight:700;line-height:1">9</span>
+    <span style="font-size:2.4rem;font-weight:700;line-height:1">10</span>
     <h2 style="margin:0;font-size:1.6rem">Night-before checklist</h2>
     <span style="margin-left:auto;font-weight:700;color:oklch(0.4 0.11 150)"><span id="doneLabel"></span></span>
   </div>
@@ -603,7 +722,7 @@ button:focus-visible, a:focus-visible { outline: 3px solid oklch(0.45 0.14 250);
   <div style="display:flex;flex-direction:column;gap:.5rem">
     <div id="checklist" style="display:contents"></div>
   </div>
-  <div style="font-size:.93rem;background:oklch(0.96 0.025 250);border-radius:10px;padding:.9rem 1rem">Section A could be on any recent policy. A likely one: from January 2026, secondary students cannot use phones or smartwatches at any time during school hours, including recess and CCAs (<a href="https://says.com/my/news/trending/secondary-school-students-in-spore-to-be-barred-from-using-phones-even-during-recess">source</a>). No need to memorise: the sources give you what you need.</div>
+  <div style="font-size:.93rem;background:oklch(0.96 0.025 250);border-radius:10px;padding:.9rem 1rem">Section A could be on any recent government policy. One likely candidate is the Ministry of Education's rule that, from January 2026, secondary students cannot use phones or smartwatches at any time during school hours, including recess and co-curricular activities. You do not need to memorise any topic: the sources give you what you need.</div>
 </section>
 
 <!-- Flashcards -->
@@ -613,7 +732,7 @@ button:focus-visible, a:focus-visible { outline: 3px solid oklch(0.45 0.14 250);
     <h2 style="margin:0;font-size:1.6rem">Test yourself</h2>
     <span style="margin-left:auto;font-weight:700;color:oklch(0.42 0.03 250)"><span id="cardsLabel"></span></span>
   </div>
-  <p style="margin:0">Say the answer out loud, then tap the card to check.</p>
+  <p style="margin:0">Say the answer out loud, then check it.</p>
   <div style="display:flex;gap:.5rem;flex-wrap:wrap">
     <button id="revealAll" type="button" style="font:inherit;font-weight:700;cursor:pointer;background:#1b2a4a;color:#fff;border:none;border-radius:8px;padding:.55rem 1rem;min-height:44px">Reveal all</button>
     <button id="hideAll" type="button" style="font:inherit;font-weight:700;cursor:pointer;background:#fff;color:#1b2a4a;border:1px solid oklch(0.85 0.01 250);border-radius:8px;padding:.55rem 1rem;min-height:44px">Hide all</button>
@@ -627,42 +746,152 @@ button:focus-visible, a:focus-visible { outline: 3px solid oklch(0.45 0.14 250);
 </main>
 <script>
 const CARDS = [
-  ["SBQ", "Q1 Inference frame?", "Infer → Evidence → Explain (This shows that…)"],
-  ["SBQ", "Q2 Purpose frame?", "Answer (purpose word + audience) → Infer → Evidence → Explain → Outcome"],
-  ["SBQ", "Name 8 purpose words", "convince, persuade, encourage, warn, reassure, justify, criticise, blame"],
-  ["SBQ", "Q3 Comparison frame + how to score higher?", "Answer → Point → Evidence (C and D) → Explain. Give 1 similarity + 1 difference, then 'Overall…'. Compare the message."],
-  ["SBQ", "Q4 Reliability frame?", "Answer → Infer → Evidence → Cross-check → Author"],
-  ["SBQ", "Q4: three reliability rules", "Another source agrees = reliable. Disagrees = not reliable. Hidden agenda = not reliable."],
-  ["SBQ", "Q5 Evaluative frame?", "Summary sentence (which support / which don't) → one paragraph per source (all 5) → Conclusion"],
-  ["SRQ", "PEEL stands for?", "Point · Explain · Example · Link"],
-  ["SRQ", "Q6 vs Q7: how many PEEL paragraphs?", "Q6 opinion = 1 PEEL (say 'I think'). Q7 = 2 PEEL, different example each."],
-  ["Ch5", "4 things that make Singapore diverse", "Race & ethnicity · Religion · Nationality · SES"],
-  ["Ch5", "Race & ethnicity: 3 examples", "Ethnic Integration Policy · GRCs · Public holidays (CNY, Hari Raya, Deepavali)"],
-  ["Ch5", "Religion: 3 examples", "Waterloo Street temples side by side · Inter-Religious Organisation · Maintenance of Religious Harmony Act"],
-  ["Ch5", "Nationality: 3 examples", "Foreign workers (flats, MRT) · Foreign professionals · Singapore Citizenship Journey"],
-  ["Ch5", "SES: 3 examples", "ComCare · Edusave & MOE FAS · Curiosity Credits (S$500, 2026)"],
-  ["Ch6", "Harmony memory hook", "Space + Open mind = Harmony"],
-  ["Ch6", "Common spaces: places + key organisation", "CCs, Residents' Networks, void decks, hawker centres · People's Association (1960) · SG Youth Plan third spaces (2026)"],
-  ["Ch6", "Openness: 3 everyday examples", "Hawker food from another culture · Hari Raya / Deepavali open house · Asking why a classmate fasts in Ramadan"],
-  ["Ch6", "The 2 benefits of diversity", "Cultural exchange & appreciation + Exchange of knowledge & skills (share culture + share know-how)"],
-  ["Ch6", "Cultural exchange examples", "ASEAN Youth Fellowship · Dr Iskandar Jalil's pottery · Oniatta Effendi batik / Willin Low laksa pesto linguine"],
-  ["Ch6", "Knowledge exchange examples", "A*STAR + Cytos Biotechnology (H1N1 vaccine) · Thermo Fisher (COVID-19 PCR kits)"],
-  ["Ch6", "Cultural ___ = using a culture insensitively. Example?", "Appropriation (not appreciation). Max Mara copying Oma people's prints (Laos)."],
-  ["Ch6", "Think, Feel, Do = ?", "Think = Stereotype · Feel = Prejudice · Do = Discrimination"],
-  ["Ch6", "Govt responses to prejudice (3 laws)", "Maintenance of Religious Harmony Act · Maintenance of Racial Harmony Act (2025) · POFMA (2019)"],
-  ["Ch6", "Why competition for resources happens", "Falling birth rate + ageing population → manpower shortage → more foreigners → tension over jobs & infrastructure"],
-  ["Ch6", "Govt responses: jobs", "SkillsFuture & Workforce Singapore · Fair Consideration Framework · Stricter EP / S Pass / work permit rules"],
-  ["Ch6", "Govt responses: infrastructure", "Land Transport Master Plan 2040 · Cross Island Line"]
+ [
+  "Section A",
+  "What is the frame for Question 1 (Inference)?",
+  "Infer, then give evidence, then explain in your own words (\"This shows that…\")."
+ ],
+ [
+  "Section A",
+  "What is the frame for Question 2 (Purpose)?",
+  "Answer with the purpose word and the audience, infer, give evidence, explain, then state the outcome the author wants."
+ ],
+ [
+  "Section A",
+  "Name the eight purpose words.",
+  "Convince, persuade, encourage, warn, reassure, justify, criticise and blame."
+ ],
+ [
+  "Section A",
+  "What is the frame for Question 3 (Comparison), and how do you score higher?",
+  "Answer, point, evidence from both sources, then explain. To score higher, give one similarity and one difference, then write \"Overall…\". Compare the message, not the type of source."
+ ],
+ [
+  "Section A",
+  "What is the frame for Question 4 (Reliability)?",
+  "Answer, infer, give evidence, cross-check with another source, then look at the author."
+ ],
+ [
+  "Section A",
+  "What are the three reliability rules?",
+  "If another source agrees, it is reliable. If another source disagrees, it is not reliable. If the author has a hidden agenda, it is not reliable."
+ ],
+ [
+  "Section A",
+  "What is the frame for Question 5 (Evaluative)?",
+  "A summary sentence saying which sources support and which do not, then one paragraph for each of the five sources, then a conclusion."
+ ],
+ [
+  "Section B",
+  "What does PEEL stand for?",
+  "Point, Explain, Example, Link."
+ ],
+ [
+  "Section B",
+  "How many PEEL paragraphs do Questions 6 and 7 need?",
+  "Question 6 (opinion) needs one PEEL paragraph, and you should say \"I think\". Question 7 needs two PEEL paragraphs, with a different example in each."
+ ],
+ [
+  "Section B",
+  "What goes in your plan for Question 7?",
+  "The two things named in the question, a one-sentence Point for each, and the example from your notes you will use."
+ ],
+ [
+  "Chapter 5",
+  "What four things make Singapore diverse?",
+  "Race and ethnicity, religion, nationality, and socio-economic status."
+ ],
+ [
+  "Chapter 5",
+  "Give three examples for race and ethnicity.",
+  "The Ethnic Integration Policy, Group Representation Constituencies, and public holidays such as Chinese New Year, Hari Raya Puasa and Deepavali."
+ ],
+ [
+  "Chapter 5",
+  "Give three examples for religion.",
+  "The Buddhist and Hindu temples side by side on Waterloo Street, the Inter-Religious Organisation, and the Maintenance of Religious Harmony Act."
+ ],
+ [
+  "Chapter 5",
+  "Give three examples for nationality.",
+  "Foreign workers who build our flats and MRT lines, foreign professionals, and the Singapore Citizenship Journey."
+ ],
+ [
+  "Chapter 5",
+  "Give three examples for socio-economic status.",
+  "ComCare, Edusave and the MOE Financial Assistance Scheme, and Curiosity Credits (S$500, from 2026)."
+ ],
+ [
+  "Chapter 6",
+  "What is the memory hook for building harmony?",
+  "Common spaces and an open mind build harmony."
+ ],
+ [
+  "Chapter 6",
+  "Name some common spaces and the key organisation.",
+  "Community clubs, Residents' Networks, void decks and hawker centres. The key organisation is the People's Association, set up in 1960. New in 2026: the SG Youth Plan's third spaces."
+ ],
+ [
+  "Chapter 6",
+  "Give three everyday examples of openness.",
+  "Trying another culture's food at a hawker centre, visiting a friend's Hari Raya or Deepavali open house, and asking a classmate why they fast during Ramadan."
+ ],
+ [
+  "Chapter 6",
+  "What are the two benefits of diversity?",
+  "Cultural exchange and appreciation, and exchange of knowledge and skills (sharing cultures and sharing know-how)."
+ ],
+ [
+  "Chapter 6",
+  "Give examples of cultural exchange.",
+  "The ASEAN Youth Fellowship, Dr Iskandar Jalil's pottery, Oniatta Effendi's batik clothing, and Chef Willin Low's laksa pesto linguine."
+ ],
+ [
+  "Chapter 6",
+  "Give examples of the exchange of knowledge and skills.",
+  "A*STAR working with Cytos Biotechnology on an H1N1 flu vaccine, and Thermo Fisher Scientific supplying PCR test kits during COVID-19."
+ ],
+ [
+  "Chapter 6",
+  "What is it called when a culture is used without permission or in an insensitive way? Give an example.",
+  "Cultural appropriation (not appreciation). Max Mara was accused of copying the traditional prints of the Oma people of Laos."
+ ],
+ [
+  "Chapter 6",
+  "What do Think, Feel and Do stand for?",
+  "Think is stereotype, Feel is prejudice, and Do is discrimination."
+ ],
+ [
+  "Chapter 6",
+  "Name three laws the government uses against prejudice.",
+  "The Maintenance of Religious Harmony Act, the Maintenance of Racial Harmony Act (2025), and the Protection from Online Falsehoods and Manipulation Act (POFMA, 2019)."
+ ],
+ [
+  "Chapter 6",
+  "Why does competition for resources happen?",
+  "A falling birth rate and an ageing population cause a manpower shortage, so more foreigners come to work here. This creates tension over jobs and infrastructure."
+ ],
+ [
+  "Chapter 6",
+  "How does the government respond on jobs?",
+  "SkillsFuture Singapore and Workforce Singapore, the Fair Consideration Framework, and stricter rules for Employment Passes, S Passes and work permits."
+ ],
+ [
+  "Chapter 6",
+  "How does the government respond on infrastructure?",
+  "The Land Transport Master Plan 2040 and the Cross Island Line."
+ ]
 ];
 const CHECKS = [
-  "I can write the frame for all five SBQ questions from memory.",
-  "After every quote, I write \"This shows that...\" in my own words.",
-  "Two things in the question = two PEEL paragraphs.",
-  "I know one example each for race, religion, nationality and SES.",
-  "I know one example each for common spaces, openness, cultural exchange, knowledge exchange, prejudice, jobs and infrastructure.",
-  "I remember the hooks: Think, Feel, Do and Space + Open mind = Harmony.",
-  "I will not use the extracts as my examples.",
-  "I will write \"cultural appropriation\", not \"appreciation\"."
+ "I can write the frame for all five Section A questions from memory.",
+ "After every quote, I write \"This shows that...\" in my own words.",
+ "If the question names two things, I write two PEEL paragraphs.",
+ "I know one example each for race, religion, nationality and socio-economic status.",
+ "I know one example each for common spaces, openness, cultural exchange, knowledge exchange, prejudice, jobs and infrastructure.",
+ "I remember the memory hooks: \"Think, Feel, Do\" and \"Common spaces and an open mind build harmony\".",
+ "I will not use the extracts as my examples.",
+ "I have done at least one Section B practice set and marked it with the self-marking checklist.",
+ "I will write \"cultural appropriation\", not \"appreciation\"."
 ];
 const KEY = "ss-eoy-notes-v1";
 const S = {
@@ -718,6 +947,8 @@ document.getElementById("shuffle").addEventListener("click", () => {
   open = CARDS.map(() => false); renderCards();
 });
 renderChecklist(); renderCards();
+window.addEventListener("beforeprint", () => document.querySelectorAll("#sp details").forEach(d => { d.open = true; }));
+document.querySelectorAll("#sp details").forEach(d => d.addEventListener("toggle", () => { d.querySelector("summary").textContent = d.open ? "Hide model answers" : "Show model answers"; }));
 </script>
 
 
