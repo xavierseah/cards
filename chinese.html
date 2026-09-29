@@ -1,0 +1,149 @@
+<!doctype html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>考前巴士笔记</title><style>
+:root{
+ --paper:#ffffff; --ink:#1d2a36; --muted:#5d6975; --rule:#d5dbd7;
+ --grid:#2e7d5b; --grid-tint:#e3efe7; --red:#b3302a;
+ --c1:#2f6db5; --c1b:#dbe8fa; --c2:#2c8a49; --c2b:#dcf2e1;
+ --c3:#c46a12; --c3b:#fde6cc; --c4:#7a4fb3; --c4b:#ece2f7; --c5:#b3302a; --c5b:#f9dcdc;
+ --sans:"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Noto Sans SC","Microsoft YaHei","Source Han Sans SC",sans-serif;
+ --serif:"Songti SC","STSong","Noto Serif CJK SC","Noto Serif SC","Source Han Serif SC","SimSun",serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.75}
+a{color:var(--grid)}
+:focus-visible{outline:3px solid var(--c1);outline-offset:2px}
+.wrap{max-width:760px;margin:0 auto;padding:0 18px 80px}
+header.top{padding:28px 0 8px}
+.title{font-family:var(--serif);font-weight:700;font-size:34px;letter-spacing:.06em;margin:0}
+.cells{display:flex;gap:0;margin:10px 0 6px}
+.cells i{width:26px;height:26px;border:1.5px solid var(--grid);margin-left:-1.5px}
+.cells i:first-child{margin-left:0}
+.subtitle{color:var(--muted);margin:4px 0 0;font-size:15px}
+nav.toc{border-top:2px solid var(--ink);border-bottom:1px solid var(--rule);margin:18px 0 8px;padding:10px 0}
+nav.toc ol{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:2px 14px}
+nav.toc a{text-decoration:none;color:var(--ink);font-size:15px}
+nav.toc a span{display:inline-block;min-width:1.9em;color:var(--grid);font-weight:700}
+section{padding-top:18px;scroll-margin-top:8px}
+h2{font-size:23px;margin:24px 0 10px;display:flex;align-items:center;gap:10px}
+h2 .n{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border:2px solid var(--grid);color:var(--grid);font-size:16px;flex:none}
+h3{font-size:18px;margin:20px 0 6px}
+p{margin:8px 0}
+.src{display:inline-block;font-size:12px;color:var(--muted);border:1px solid var(--rule);border-radius:3px;padding:0 5px;margin-left:4px;line-height:1.6;vertical-align:1px}
+.src.adv{border-style:dashed}
+.box{border:2.5px solid var(--ink);padding:12px 16px;margin:12px 0}
+.box .bt{font-family:var(--serif);font-weight:700;font-size:21px;margin-bottom:4px}
+.example{border-left:4px solid var(--grid);padding:6px 12px;margin:12px 0;background:var(--grid-tint)}
+.example .lab{font-size:13px;color:var(--grid);font-weight:700}
+.tw{overflow-x:auto;margin:10px 0}
+table{border-collapse:collapse;width:100%;font-size:15.5px}
+th,td{border-bottom:1px solid var(--rule);padding:7px 8px;text-align:left;vertical-align:top}
+th{border-bottom:2px solid var(--ink);font-weight:700;white-space:nowrap}
+td.part{white-space:nowrap;font-weight:700}
+td.ex{font-family:var(--serif)}
+td.srccol{font-size:12.5px;color:var(--muted);min-width:7em}
+ul.plain{padding-left:1.2em;margin:8px 0}
+ul.plain li{margin:6px 0}
+.wr{border:1px solid var(--rule);padding:10px 12px;margin:10px 0}
+.wr .nm{font-weight:700}
+.wr .w,.wr .r{display:grid;grid-template-columns:1.8em 1fr;gap:4px;font-family:var(--serif);margin:4px 0}
+.wr .w b{color:var(--red)} .wr .r b{color:var(--grid)}
+.wr .why{font-size:14.5px;color:var(--muted)}
+.dd{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.dd div{border:1px solid var(--rule);padding:8px 12px}
+.dd ul{margin:4px 0;padding-left:1.1em;font-family:var(--serif)}
+@media (max-width:520px){.dd{grid-template-columns:1fr}}
+ol.checks{list-style:none;padding:0;margin:8px 0}
+ol.checks li{display:grid;grid-template-columns:2em 1fr;align-items:start;padding:6px 0;border-bottom:1px solid var(--rule)}
+ol.checks input{width:20px;height:20px;margin-top:5px;accent-color:var(--grid)}
+/* roles */
+.key{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px;margin:8px 0}
+.key span{display:inline-flex;align-items:center;gap:6px}
+.key i{width:22px;height:12px;display:inline-block;border-bottom:3px solid}
+.k1 i{background:var(--c1b);border-color:var(--c1)} .k2 i{background:var(--c2b);border-color:var(--c2)}
+.k3 i{background:var(--c3b);border-color:var(--c3)} .k4 i{background:var(--c4b);border-color:var(--c4)}
+.k5 i{background:var(--c5b);border-color:var(--c5)}
+.on .c1{background:var(--c1b);box-shadow:inset 0 -2px var(--c1)} .on .c2{background:var(--c2b);box-shadow:inset 0 -2px var(--c2)}
+.on .c3{background:var(--c3b);box-shadow:inset 0 -2px var(--c3)} .on .c4{background:var(--c4b);box-shadow:inset 0 -2px var(--c4)}
+.on .c5{background:var(--c5b);box-shadow:inset 0 -2px var(--c5)}
+.roles-demo{font-family:var(--serif);line-height:2}
+/* practice */
+.tasklist{list-style:none;padding:0;margin:10px 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:4px 14px}
+.tasklist a{text-decoration:none;color:var(--ink)}
+.tasklist b{display:inline-block;min-width:2em;color:var(--grid)}
+.tasklist em{font-style:normal;font-size:12.5px;color:var(--muted)}
+article.task{border-top:2px solid var(--ink);margin-top:34px;padding-top:6px;scroll-margin-top:6px}
+.task h3{font-size:20px;margin:6px 0}
+.task h3 .no{color:var(--grid);margin-right:.4em}
+.q{border:2.5px solid var(--ink);padding:10px 14px;margin:8px 0;font-family:var(--serif);font-size:16px}
+.q p{margin:3px 0}
+.q .hd{font-family:var(--sans);font-size:14px;color:var(--muted);margin:1px 0}
+.meta{font-size:14.5px;color:var(--muted)}
+.plan{border:1.5px dashed var(--grid);padding:8px 12px;margin:10px 0}
+.plan .pt{font-weight:700;color:var(--grid);font-size:15px}
+.plan label{display:block;font-size:14.5px;margin-top:6px}
+.plan textarea{width:100%;min-height:2.2em;font:inherit;font-size:16px;padding:4px 8px;border:1px solid var(--rule);border-radius:4px;resize:vertical;background:#fff;color:var(--ink)}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}
+button{font:inherit;font-size:16px;padding:8px 16px;border:2px solid var(--ink);background:#fff;color:var(--ink);border-radius:4px;cursor:pointer;min-height:44px}
+button.primary{background:var(--ink);color:#fff}
+button:disabled{opacity:.4;cursor:default}
+.sample{display:none;margin:8px 0}
+.sample.open{display:block}
+.sample .ehd{font-size:14px;color:var(--muted);margin:0 0 6px;padding-left:4.6em}
+.sheet{background-image:linear-gradient(var(--grid-tint) 1px,transparent 1px),linear-gradient(90deg,var(--grid-tint) 1px,transparent 1px);background-size:2em 2em;padding:.2em 0;border:1px solid var(--grid-tint)}
+.para{display:grid;grid-template-columns:4.4em 1fr;align-items:start}
+.para .pl{font-size:13px;color:var(--grid);font-weight:700;padding:.35em 0 0 .4em;line-height:1.4}
+.para .pt{font-family:var(--serif);font-size:17px;line-height:2em;padding-right:.6em}
+.para .pt.ind{text-indent:2em}
+.para .pt .line{display:block}
+.count{font-size:14.5px;margin:8px 0 2px}
+.task .keywrap{display:none}
+.task .sample.on .keywrap{display:block}
+.tnav{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:10px;font-size:15px}
+.tnav a{margin-left:12px}
+.done{display:inline-flex;align-items:center;gap:6px;min-height:44px}
+.done input{width:22px;height:22px;accent-color:var(--grid)}
+.progress{font-weight:700;color:var(--grid)}
+.tasklist li.ok a b{color:var(--ink)} .tasklist li.ok a::after{content:" ✓";color:var(--grid);font-weight:700}
+@media (max-width:520px){body{font-size:16px}.title{font-size:28px}.para{grid-template-columns:3.6em 1fr}.sample .ehd{padding-left:3.8em}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+.model{margin:14px 0;border:2.5px solid var(--ink);padding:10px 10px 6px}
+.model .lab{font-weight:700;font-size:16px;margin-bottom:2px}
+.quizbar{display:flex;gap:10px;align-items:center;margin:8px 0}
+.quizbar .qcnt{font-size:14px;color:var(--muted);margin-left:auto}
+.frame mark.k{background:transparent;color:inherit;padding:0}
+.frame.quiz mark.k{background:var(--ink);color:transparent;border-radius:3px;cursor:pointer}
+.frame.quiz mark.k.shown{background:var(--c3b);color:inherit}
+@media print{nav.toc,.btns,.plan,.tnav{display:none}.sample{display:block}}
+
+.bar{display:flex;border:2px solid var(--ink);margin:10px 0 2px;font-size:13px;line-height:1.3}
+.bar div{padding:6px 6px;border-right:2px solid var(--ink)}
+.bar div:last-child{border-right:0}
+.bar .a{flex:35} .bar .b{flex:80;background:var(--grid-tint)} .bar .c{flex:12;font-size:12px}
+.times{position:relative;height:1.4em;font-size:12px;color:var(--muted)}
+.times span{position:absolute;top:0}
+.note{font-size:13px;color:var(--muted)}
+mark.k{background:var(--c3b);color:var(--ink);box-shadow:inset 0 -2px var(--c3);padding:0 1px;border-radius:2px}
+body.quiz mark.k{background:var(--ink);color:transparent;box-shadow:none;cursor:pointer}
+body.quiz mark.k.shown{background:var(--c3b);color:var(--ink);box-shadow:inset 0 -2px var(--c3)}
+.tools{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--rule);padding:8px 0;display:flex;gap:10px;align-items:center;z-index:2}
+.tools .cnt{font-size:14px;color:var(--muted);margin-left:auto}
+.bus section{border-top:2px solid var(--ink);margin-top:16px;padding-top:4px}
+.bus h2{font-size:20px;margin:8px 0}
+.bus p{font-family:var(--serif);margin:6px 0}
+ol.bl{padding-left:1.4em} ol.bl li{margin:4px 0}
+</style></head><body class="bus"><div class="wrap"><header class="top"><h1 class="title">考前巴士笔记</h1><p class="subtitle">华文试卷一　9月30日（星期三）上午8:30至10:30</p></header><div class="bar" aria-label="时间分配"><div class="a">实用文 35分钟</div><div class="b">作文 80分钟</div><div class="c">查 5</div></div><div class="times"><span style="left:0">8:30</span><span style="left:27.6%;transform:translateX(-50%)">9:05</span><span style="left:90.6%;transform:translateX(-50%)">10:25</span></div><p class="note">时间分配是建议，考卷没有规定。先做实用文也是建议。</p><div class="tools"><button id="quiz" class="primary" aria-pressed="false">考考我</button><button id="reset">重来</button><span class="cnt" aria-live="polite"></span></div><section><h2>实用文　35分钟</h2><p><b>八个部分</b>：主题 → 收件人 → 开头 → 情况 → 影响 → 建议 → 结尾 → 发件人。页边写：情况、影响×2、建议×2。</p><p><b>三个提醒</b></p><ol class='bl'><li>主题一定写：反映＿＿的问题。</li><li>建议写两个，是给收件人做的（市镇理事会、学校），不是“我们”。</li><li>每个建议后面写“这样做，……”，写一个新的结果，不要重复建议。</li></ol><p><b>题目常见词</b></p><ol class='bl'><li>反映 (report a problem)　说明 (explain)　提出建议 (give suggestions)</li><li>改善 (improve)　故障 (break down)　关注 (be concerned about)</li><li>市镇理事会 (Town Council)　管理处 (management office)　居民 (residents)　设施 (facilities)</li></ol><p><b>容易写错</b>：跌倒　海报　队员　分队　这件事　摊位　带来不便</p><p><mark class="k" tabindex="0">主题：反映＿＿的问题</mark></p><p><mark class="k" tabindex="0">李经理：</mark>（老师／校长／主席／警长）</p><p><mark class="k" tabindex="0">您好！</mark><mark class="k" tabindex="0">我是＿＿的居民＿＿。</mark><mark class="k" tabindex="0">我写电邮的目的是为了向您反映＿＿的情况，并提出建议。</mark></p><p><mark class="k" tabindex="0">最近，我在＿＿看到＿＿在＿＿。</mark><mark class="k" tabindex="0">例如，</mark>＿＿。<mark class="k" tabindex="0">我感到</mark>＿＿。</p><p><mark class="k" tabindex="0">如果不解决这个问题，可能会造成</mark>＿＿。<mark class="k" tabindex="0">此外，还可能会</mark>＿＿。</p><p><mark class="k" tabindex="0">我有以下建议：</mark></p><p><mark class="k" tabindex="0">第一，我认为＿＿应该</mark>（做什么），（怎么做）。<mark class="k" tabindex="0">这样做，</mark>（会怎么样）。</p><p><mark class="k" tabindex="0">第二，我认为＿＿应该</mark>……<mark class="k" tabindex="0">这样做，</mark>……</p><p><mark class="k" tabindex="0">素闻您从善如流，关心居民。</mark><mark class="k" tabindex="0">希望您能考虑我的建议，解决这个问题。</mark><mark class="k" tabindex="0">谢谢！</mark></p><p>王志强<mark class="k" tabindex="0">　启</mark></p><p>分数：开头1、情况2、影响2、建议4、结尾1。主题、收件人、发件人写错各扣1分。</p></section><section><h2>记叙文　80分钟</h2><p><b>样子</b>：开头 → 背景 → 问题 → 行动 → 结果 → 结尾。每段一个摄像机拍得到的画面。</p><p><b>标准开头（每一题都能用）</b></p><p><mark class="k" tabindex="0">那是＿＿的一个＿＿，我在＿＿＿＿。</mark></p><p>（改变看法的题目加一句）<mark class="k" tabindex="0">以前，我一直以为＿＿。</mark></p><p><mark class="k" tabindex="0">当时的我并不知道，接下来发生的事，会＿＿。</mark>（放题目的话）</p><p><mark class="k" tabindex="0">那件事，我到现在还记得清清楚楚。</mark></p><p><mark class="k" tabindex="0">没想到，</mark>＿＿。　误会法：<mark class="k" tabindex="0">我以为</mark>＿＿。</p><p><mark class="k" tabindex="0">我连忙</mark>＿＿。／<mark class="k" tabindex="0">我决定</mark>＿＿。</p><p><mark class="k" tabindex="0">最后，</mark>＿＿。（拍得到的结果）　误会法：<mark class="k" tabindex="0">原来，</mark>＿＿。</p><p><b>结尾：用题目的词</b></p><p>感受：<mark class="k" tabindex="0">这件事让我感到既＿＿又＿＿。</mark></p><p>道理：<mark class="k" tabindex="0">这件事让我明白了＿＿。</mark></p><p>教训：<mark class="k" tabindex="0">这件事给了我一个深刻的教训：＿＿。</mark></p><p>启示：<mark class="k" tabindex="0">这件事给了我很大的启示：＿＿。</mark></p><p>题目规定倒叙时：<mark class="k" tabindex="0">每当看到＿＿，我就会想起＿＿。</mark></p></section><section><h2>最后检查</h2><ol class='bl'><li>实用文：主题、收件人、“启”对吗？影响两个、建议两个吗？</li><li>公务电邮全是“您”吗？</li><li>记叙文：开头第二句有题目的话吗？结尾用了题目要求的词吗？</li><li>结果拍得到吗？</li><li>用手指一个字一个字地指着读，漏字了吗？</li><li>实用文150、作文300，到了吗？</li></ol></section></div><script>
+(function(){
+ var ks=[].slice.call(document.querySelectorAll('mark.k')), cnt=document.querySelector('.cnt'),
+     tq=document.getElementById('quiz'), rs=document.getElementById('reset');
+ function upd(){ var n=ks.filter(function(m){return m.classList.contains('shown');}).length;
+   cnt.textContent=document.body.classList.contains('quiz')?('已翻开 '+n+'／'+ks.length):('共 '+ks.length+' 个要背的句子'); }
+ function flip(m){ if(document.body.classList.contains('quiz')){ m.classList.add('shown'); upd(); } }
+ ks.forEach(function(m){ m.addEventListener('click',function(){flip(m);});
+   m.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();flip(m);} }); });
+ tq.addEventListener('click',function(){ var on=document.body.classList.toggle('quiz');
+   tq.textContent=on?'全部显示':'考考我'; tq.setAttribute('aria-pressed',on);
+   ks.forEach(function(m){m.classList.remove('shown');}); upd(); });
+ rs.addEventListener('click',function(){ ks.forEach(function(m){m.classList.remove('shown');}); upd(); });
+ upd();
+})();
+</script></body></html>
