@@ -2,19 +2,20 @@
 <html lang="en-GB">
 <head>
 <meta charset="utf-8">
+<meta name="color-scheme" content="light dark">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Paper 3 today</title>
 <style>
 :root{
   --bg:#f6f3ee; --card:#fffdfa; --line:#e3ddd3; --ink:#2b2622; --muted:#6b645c;
   --blue:#2f5fb3; --bluesoft:#e6edf9; --dark:#3a3430; --gold:#f2e27a; --goldink:#2b2622;
-  --red:#f4b6b6; --orange:#fbd9a5; --green:#c6e8b8; --skyblue:#b9d3f0; --violet:#d9c2ec;
+  --curve:#2f5fb3; --red:#f4b6b6; --orange:#fbd9a5; --green:#c6e8b8; --skyblue:#b9d3f0; --violet:#d9c2ec;
   box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
 }
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
-  --bg:#1c1a18; --card:#262321; --line:#3a3531; --ink:#f1ece4; --muted:#b2a99d; --bluesoft:#2a3550; --dark:#3f3935; --goldink:#1c1a18;
+  --bg:#1c1a18; --card:#262321; --line:#3a3531; --ink:#f1ece4; --muted:#b2a99d; --bluesoft:#2a3550; --dark:#3f3935; --goldink:#1c1a18; --blue:#5b86d9; --curve:#8fb0f2;
 }}
-:root[data-theme="dark"]{ --bg:#1c1a18; --card:#262321; --line:#3a3531; --ink:#f1ece4; --muted:#b2a99d; --bluesoft:#2a3550; --dark:#3f3935; --goldink:#1c1a18; }
+:root[data-theme="dark"]{ --bg:#1c1a18; --card:#262321; --line:#3a3531; --ink:#f1ece4; --muted:#b2a99d; --bluesoft:#2a3550; --dark:#3f3935; --goldink:#1c1a18; --blue:#5b86d9; --curve:#8fb0f2; }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:calc(78px + env(safe-area-inset-top,0px))}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Atkinson Hyperlegible",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-height:1.45}
@@ -50,7 +51,10 @@ body.testing .k.seen{filter:none}
 .grid .lb{color:var(--muted);font-size:14px}
 .g3{grid-template-columns:84px 1fr 1fr}
 .g2{grid-template-columns:1fr 1fr}
-.g4{grid-template-columns:1.2fr 1fr 1fr 1.1fr}
+.g4{grid-template-columns:repeat(3,1fr);font-size:15px}
+.g4>div{padding:8px}
+.g4 .rowlab{grid-column:1 / -1;font-size:13px;font-weight:700;color:var(--muted);background:var(--bg);padding:5px 8px}
+.grid>div{overflow-wrap:break-word;min-width:0}
 .callout{border-left:4px solid var(--blue);background:var(--bluesoft);padding:10px 12px;border-radius:0 12px 12px 0}
 .eq{font-size:17px;line-height:1.6;overflow-x:auto}
 .ct{display:grid;grid-template-columns:70px repeat(5,1fr);border:1px solid var(--line);border-radius:12px;overflow:hidden;text-align:center;font-size:16px}
@@ -73,6 +77,14 @@ svg{max-width:100%;height:auto;display:block}
 .end b{font-size:22px;color:var(--gold);display:block;margin-bottom:6px}
 .btns{display:flex;gap:8px;justify-content:flex-end}
 .btns button{min-height:40px;padding:0 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-weight:700;font-size:14px}
+
+svg [fill="#2b2622"]{fill:var(--ink)}
+svg [fill="#6b645c"]{fill:var(--muted)}
+svg [stroke="#2b2622"]{stroke:var(--ink)}
+svg [stroke="#8a847c"]{stroke:var(--muted)}
+svg [stroke="#e3ddd3"]{stroke:var(--line)}
+svg [stroke="#2f5fb3"]{stroke:var(--curve)}
+.chips.ui div{color:#2b2622}
 @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} .k{transition:none} }
 </style>
 </head>
@@ -257,7 +269,7 @@ svg{max-width:100%;height:auto;display:block}
   <section id="s6">
     <div class="h"><span>6</span><h2>Indicator &amp; salts</h2></div>
     <h3>Universal Indicator</h3>
-    <div class="chips">
+    <div class="chips ui">
       <div style="background:var(--red)"><b>red</b>strong acid</div>
       <div style="background:var(--orange)"><b>orange / yellow</b>weak acid</div>
       <div style="background:var(--green)"><b>green</b>neutral</div>
@@ -326,10 +338,13 @@ svg{max-width:100%;height:auto;display:block}
     <h3>Particles table</h3>
     <div class="callout">Write the <span class="k">row names first</span>: state, movement, forces. Fill one row at a time.</div>
     <div class="grid g4">
-      <div class="hd"></div><div class="hd">Solid</div><div class="hd">Liquid</div><div class="hd">Gas</div>
-      <div class="lb">Forces</div><div><span class="k">very strong</span></div><div><span class="k">less strong</span></div><div><span class="k">very weak</span></div>
-      <div class="lb">Movement</div><div><span class="k">vibrate</span> about fixed positions</div><div><span class="k">slide</span> past each other</div><div>move <span class="k">quickly and randomly</span></div>
-      <div class="lb">Arrangement</div><div>closely packed, <span class="k">orderly</span></div><div>closely packed, <span class="k">disorderly</span></div><div><span class="k">far apart</span></div>
+      <div class="hd">Solid</div><div class="hd">Liquid</div><div class="hd">Gas</div>
+      <div class="rowlab">Forces</div>
+      <div><span class="k">very strong</span></div><div><span class="k">less strong</span></div><div><span class="k">very weak</span></div>
+      <div class="rowlab">Movement</div>
+      <div><span class="k">vibrate</span> about fixed positions</div><div><span class="k">slide</span> past each other</div><div>move <span class="k">quickly and randomly</span></div>
+      <div class="rowlab">Arrangement</div>
+      <div>closely packed, <span class="k">orderly</span></div><div>closely packed, <span class="k">disorderly</span></div><div><span class="k">far apart</span></div>
     </div>
   </section>
 
