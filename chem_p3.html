@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Paper 3 today</title>
+<style>
+:root{
+  --bg:#f6f3ee; --card:#fffdfa; --line:#e3ddd3; --ink:#2b2622; --muted:#6b645c;
+  --blue:#2f5fb3; --bluesoft:#e6edf9; --dark:#3a3430; --gold:#f2e27a; --goldink:#2b2622;
+  --red:#f4b6b6; --orange:#fbd9a5; --green:#c6e8b8; --skyblue:#b9d3f0; --violet:#d9c2ec;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#1c1a18; --card:#262321; --line:#3a3531; --ink:#f1ece4; --muted:#b2a99d; --bluesoft:#2a3550; --dark:#3f3935; --goldink:#1c1a18;
+}}
+:root[data-theme="dark"]{ --bg:#1c1a18; --card:#262321; --line:#3a3531; --ink:#f1ece4; --muted:#b2a99d; --bluesoft:#2a3550; --dark:#3f3935; --goldink:#1c1a18; }
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:calc(78px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Atkinson Hyperlegible",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-height:1.45}
+.top{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 10px;padding-top:calc(8px + env(safe-area-inset-top,0px))}
+.bar{display:flex;gap:8px;align-items:center}
+nav{flex:1;min-width:0;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+nav::-webkit-scrollbar{display:none}
+nav a{flex:none;display:flex;align-items:center;gap:7px;min-height:44px;padding:0 13px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-size:15px;font-weight:700;text-decoration:none;color:var(--ink)}
+nav a i{width:9px;height:9px;border-radius:50%;background:var(--blue);display:inline-block}
+.test{flex:none;min-height:44px;padding:0 14px;border-radius:999px;border:2px solid var(--blue);background:var(--card);color:var(--blue);font-weight:700;font-size:15px}
+.test[aria-pressed="true"]{background:var(--blue);color:#fff}
+.sub{display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--muted);padding:6px 2px 0}
+main{max-width:640px;margin:0 auto;padding:14px 12px 40px;display:flex;flex-direction:column;gap:16px}
+h1{font-size:30px;line-height:1.1;margin:6px 0 2px;letter-spacing:-0.01em}
+.lede{color:var(--muted);margin:0 0 4px}
+.legend{font-size:15px;color:var(--muted);margin:0}
+section{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px 16px 20px;display:flex;flex-direction:column;gap:14px}
+.h{display:flex;align-items:center;gap:12px}
+.h span{flex:none;width:38px;height:38px;border-radius:11px;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:16px;font-weight:700}
+h2{margin:0;font-size:24px;line-height:1.15;letter-spacing:-0.01em}
+h3{margin:0;font-size:17px;color:var(--muted);font-weight:700}
+p{margin:0}
+ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:7px}
+.k{font-weight:700;background:var(--gold);color:var(--goldink);padding:0 4px;border-radius:5px;box-decoration-break:clone;-webkit-box-decoration-break:clone;transition:filter .15s}
+body.testing .k{filter:blur(6px);cursor:pointer;user-select:none}
+body.testing .k.seen{filter:none}
+.rules{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.rule{background:var(--dark);color:#f1ece4;border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:6px}
+.rule b{font-size:24px;line-height:1.1;color:var(--gold)}
+.grid{display:grid;border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:16px}
+.grid>div{padding:10px;border-top:1px solid var(--line)}
+.grid .hd{background:var(--bluesoft);font-weight:700;border-top:0}
+.grid .lb{color:var(--muted);font-size:14px}
+.g3{grid-template-columns:84px 1fr 1fr}
+.g2{grid-template-columns:1fr 1fr}
+.g4{grid-template-columns:1.2fr 1fr 1fr 1.1fr}
+.callout{border-left:4px solid var(--blue);background:var(--bluesoft);padding:10px 12px;border-radius:0 12px 12px 0}
+.eq{font-size:17px;line-height:1.6;overflow-x:auto}
+.ct{display:grid;grid-template-columns:70px repeat(5,1fr);border:1px solid var(--line);border-radius:12px;overflow:hidden;text-align:center;font-size:16px}
+.ct>div{padding:8px 4px;border-top:1px solid var(--line)}
+.ct .hd{background:var(--bluesoft);font-weight:700;border-top:0}
+.ct .lb{text-align:left;color:var(--muted);font-size:14px}
+.chips{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;text-align:center;font-size:14px}
+.chips div{border-radius:10px;padding:8px 4px}
+.chips b{display:block;font-size:15px}
+.steps{display:flex;flex-direction:column;gap:8px}
+.step{display:flex;gap:10px;align-items:flex-start}
+.step span{flex:none;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px;margin-top:1px}
+svg{max-width:100%;height:auto;display:block}
+.states{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;text-align:center}
+.states div{border:1px solid var(--line);border-radius:12px;padding:10px 6px}
+.states b{display:block;font-size:18px}
+.explain{display:grid;grid-template-columns:86px 1fr;gap:6px 10px;align-items:start}
+.explain .lb{color:var(--muted);font-size:14px;padding-top:2px}
+.end{text-align:center;padding:22px 12px;border-radius:16px;background:var(--dark);color:#f1ece4}
+.end b{font-size:22px;color:var(--gold);display:block;margin-bottom:6px}
+.btns{display:flex;gap:8px;justify-content:flex-end}
+.btns button{min-height:40px;padding:0 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-weight:700;font-size:14px}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} .k{transition:none} }
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="bar">
+    <nav aria-label="Sections">
+      <a href="#s1"><i style="background:var(--dark)"></i>Rules</a>
+      <a href="#s2"><i></i>Bonding</a>
+      <a href="#s3"><i></i>Equations</a>
+      <a href="#s4"><i></i>Gas tests</a>
+      <a href="#s5"><i></i>Oxides</a>
+      <a href="#s6"><i></i>pH &amp; salts</a>
+      <a href="#s7"><i></i>Separation</a>
+      <a href="#s8"><i></i>States</a>
+      <a href="#s9"><i></i>Explain</a>
+    </nav>
+    <button class="test" id="testBtn" aria-pressed="false">Test me</button>
+  </div>
+  <div class="sub"><span id="hint">Highlighted words are the ones that score marks.</span><span id="progress"></span></div>
+</div>
+
+<main>
+  <div>
+    <h1>Paper 3 today</h1>
+    <p class="lede">Read this on the bus. Nothing else.</p>
+    <p class="legend"><b>Test me</b> blurs the highlighted words. Say the word in your head, then tap to check.</p>
+  </div>
+
+  <section id="s1">
+    <div class="h"><span style="background:var(--dark)">1</span><h2>The 4 rules</h2></div>
+    <div class="rules">
+      <div class="rule"><b>No blanks</b><div>Never leave a part blank. A guess can score.</div></div>
+      <div class="rule"><b>70 s</b><div>About 70 seconds a mark. Then move on.</div></div>
+      <div class="rule"><b>Section B</b><div>Look at both options’ diagrams before choosing.</div></div>
+      <div class="rule"><b>3 lines</b><div>Explain: condition, reason, so.</div></div>
+    </div>
+  </section>
+
+  <section id="s2">
+    <div class="h"><span>2</span><h2>Dot-and-cross</h2></div>
+    <div class="grid g3">
+      <div class="hd"></div><div class="hd">Metal + non-metal</div><div class="hd">Two non-metals</div>
+      <div class="lb">Electrons</div><div><span class="k">give and take</span></div><div><span class="k">share</span></div>
+      <div class="lb">Circles</div><div>apart</div><div><span class="k">overlap</span></div>
+      <div class="lb">Brackets</div><div><span class="k">brackets and charges</span></div><div><span class="k">no brackets</span></div>
+    </div>
+    <div class="callout"><b>First, read the question:</b> <span class="k">outermost electrons only</span>, or <span class="k">all electrons</span>? Draw what it asks.</div>
+    <h3>Give or take? Look at the last number</h3>
+    <div class="grid g2">
+      <div class="hd">Last number 1, 2, 3</div><div class="hd">Last number 5, 6, 7</div>
+      <div><span class="k">give</span> that many</div><div><span class="k">take</span> enough to make 8</div>
+      <div>Lost electrons, so <span class="k">plus (+)</span><br>Na 2,8,1 becomes Na<sup>+</sup></div>
+      <div>Gained electrons, so <span class="k">minus (−)</span><br>Cl 2,8,7 becomes Cl<sup>−</sup></div>
+    </div>
+    <h3>When you draw it</h3>
+    <ul>
+      <li>Circle 1 is the <span class="k">smallest</span>, round the symbol. It gets the <span class="k">first number</span>.</li>
+      <li>Draw <span class="k">every ion</span>. Two of one ion? Draw both, or write a big 2 in front of the bracket.</li>
+      <li>Add a <span class="k">key</span>: • for one element, × for the other.</li>
+      <li>The ion has a <span class="k">charge</span>. The compound has <span class="k">none</span>.</li>
+    </ul>
+  </section>
+
+  <section id="s3">
+    <div class="h"><span>3</span><h2>Equations</h2></div>
+    <div class="steps">
+      <div class="step"><span>1</span><div>Write <span class="k">all the products</span>. Use the pattern table below.</div></div>
+      <div class="step"><span>2</span><div><span class="k">Count table</span> first: every element, left and right. Then balance.</div></div>
+      <div class="step"><span>3</span><div><span class="k">State symbols</span> on every formula. <span class="k">Fizzing</span> means (g).</div></div>
+    </div>
+    <div class="grid g2">
+      <div class="hd">Acid +</div><div class="hd">gives</div>
+      <div>metal</div><div>salt + <span class="k">hydrogen</span></div>
+      <div>carbonate</div><div>salt + <span class="k">water</span> + <span class="k">carbon dioxide</span></div>
+      <div>base or alkali</div><div>salt + <span class="k">water</span></div>
+      <div>ammonium salt + alkali, warmed</div><div>salt + water + <span class="k">ammonia</span></div>
+    </div>
+    <div class="chips" style="grid-template-columns:repeat(4,1fr)">
+      <div style="background:var(--bluesoft)"><b>(s)</b>solid</div>
+      <div style="background:var(--bluesoft)"><b>(l)</b>liquid</div>
+      <div style="background:var(--bluesoft)"><b>(g)</b>gas</div>
+      <div style="background:var(--bluesoft)"><b>(aq)</b>dissolved</div>
+    </div>
+    <div class="callout">A carbonate is <span class="k">CO<sub>3</sub></span>, one carbon and three oxygens, never just C. The other group ions: sulfate <span class="k">SO<sub>4</sub></span>, nitrate <span class="k">NO<sub>3</sub></span>, hydroxide <span class="k">OH</span>, ammonium <span class="k">NH<sub>4</sub></span>.</div>
+    <h3>Where the charges come from</h3>
+    <div class="grid g2">
+      <div class="hd">A single element</div><div class="hd">A group ion</div>
+      <div>From its group: I <span class="k">1+</span>, II <span class="k">2+</span>, III <span class="k">3+</span>; V <span class="k">3−</span>, VI <span class="k">2−</span>, VII <span class="k">1−</span></div>
+      <div>From the school's list: carbonate <span class="k">2−</span>, sulfate <span class="k">2−</span>, nitrate <span class="k">1−</span>, hydroxide <span class="k">1−</span>, ammonium <span class="k">1+</span></div>
+    </div>
+    <h3>Example</h3>
+    <p class="eq">Li<sub>2</sub>CO<sub>3</sub>(s) + 2HCl(aq) → 2LiCl(aq) + H<sub>2</sub>O(l) + CO<sub>2</sub>(g)</p>
+    <div class="ct">
+      <div class="hd lb"></div><div class="hd">Li</div><div class="hd">C</div><div class="hd">O</div><div class="hd">H</div><div class="hd">Cl</div>
+      <div class="lb">Left</div><div>2</div><div>1</div><div>3</div><div>2</div><div>2</div>
+      <div class="lb">Right</div><div>2</div><div>1</div><div>3</div><div>2</div><div>2</div>
+    </div>
+    <p>Left equals right for every element, so it is balanced. The carbonate gives <span class="k">three products</span>; stop only after the last one.</p>
+  </section>
+
+  <section id="s4">
+    <div class="h"><span>4</span><h2>Gas tests</h2></div>
+    <div class="callout">A test is <span class="k">what you do to the gas</span>, not how you made it.</div>
+    <div class="grid g3" style="grid-template-columns:1fr 1.2fr 1.2fr">
+      <div class="hd">Gas</div><div class="hd">Test</div><div class="hd">Result</div>
+      <div><b>Hydrogen</b></div><div><span class="k">burning splint</span></div><div>goes out with a <span class="k">pop</span></div>
+      <div><b>Carbon dioxide</b></div><div>bubble through <span class="k">limewater</span></div><div><span class="k">white precipitate</span></div>
+      <div><b>Ammonia</b></div><div><span class="k">damp red litmus</span></div><div>turns <span class="k">blue</span></div>
+    </div>
+  </section>
+
+  <section id="s5">
+    <div class="h"><span>5</span><h2>Oxides</h2></div>
+    <div class="callout"><b>Step 1, always:</b> is it a <span class="k">metal</span> or a <span class="k">non-metal</span>?</div>
+    <div class="grid g2">
+      <div class="hd">Metal oxide</div><div class="hd">Non-metal oxide</div>
+      <div>On <span class="k">ZAL</span>? Zinc, Aluminium, Lead(II)<br>→ <span class="k">amphoteric</span></div>
+      <div>On <span class="k">NOCOWater</span>? Nitrogen monoxide, Carbon monoxide, Water<br>→ <span class="k">neutral</span></div>
+      <div>Any other → <span class="k">basic</span></div>
+      <div>Any other → <span class="k">acidic</span></div>
+    </div>
+    <p>Amphoteric reacts with <span class="k">both</span> acids and alkalis. Neutral reacts with <span class="k">neither</span>.</p>
+  </section>
+
+  <section id="s6">
+    <div class="h"><span>6</span><h2>Indicator &amp; salts</h2></div>
+    <h3>Universal Indicator</h3>
+    <div class="chips">
+      <div style="background:var(--red)"><b>red</b>strong acid</div>
+      <div style="background:var(--orange)"><b>orange / yellow</b>weak acid</div>
+      <div style="background:var(--green)"><b>green</b>neutral</div>
+      <div style="background:var(--skyblue)"><b>blue</b>weak alkali</div>
+      <div style="background:var(--violet)"><b>violet</b>strong alkali</div>
+    </div>
+    <p>The further from green, the stronger. Red and violet at the two ends.</p>
+    <h3>Salt names</h3>
+    <p><span class="k">metal word</span> + <span class="k">acid word</span>. Sulfuric → sulfate. Hydrochloric → chloride. Nitric → nitrate.</p>
+    <p>Always <span class="k">both words</span>: lithium chloride, not chloride.</p>
+  </section>
+
+  <section id="s7">
+    <div class="h"><span>7</span><h2>Separation</h2></div>
+    <h3>Condenser</h3>
+    <ul>
+      <li>Water in at the <span class="k">bottom</span>, out at the <span class="k">top</span>.</li>
+      <li>Why: the water <span class="k">cools the steam</span> so it <span class="k">condenses</span>. It is the steam that is cooled, not the condenser.</li>
+    </ul>
+    <h3>Chromatography</h3>
+    <ul>
+      <li>Start line in <span class="k">pencil</span>: pencil is <span class="k">insoluble in the solvent</span>, so it does not move up the paper.</li>
+      <li>Two samples match when their spots are at the <span class="k">same height</span>.</li>
+      <li>One spot only = a <span class="k">pure</span> substance.</li>
+    </ul>
+    <h3>Pure solid</h3>
+    <p>Measure the melting point. A pure solid melts <span class="k">sharply</span> at a <span class="k">fixed temperature</span>.</p>
+    <h3>Making crystals</h3>
+    <div class="steps">
+      <div class="step"><span>1</span><div>Heat till <span class="k">saturated</span></div></div>
+      <div class="step"><span>2</span><div><span class="k">Cool</span> so crystals form</div></div>
+      <div class="step"><span>3</span><div><span class="k">Filter</span></div></div>
+      <div class="step"><span>4</span><div>Wash with <span class="k">cold distilled water</span></div></div>
+      <div class="step"><span>5</span><div>Dry <span class="k">between filter papers</span></div></div>
+    </div>
+  </section>
+
+  <section id="s8">
+    <div class="h"><span>8</span><h2>States &amp; heating curves</h2></div>
+    <h3>Minus temperatures</h3>
+    <p>With minus signs, the <span class="k">bigger number is colder</span>. −50 °C is colder than −30 °C.</p>
+    <h3>Which state?</h3>
+    <div class="states">
+      <div><b>Solid</b>below mp</div>
+      <div><b>Liquid</b>between mp and bp</div>
+      <div><b>Gas</b>above bp</div>
+    </div>
+    <h3>Heating curve</h3>
+    <p><span class="k">Two flat parts</span>, labelled <span class="k">melting point</span> and <span class="k">boiling point</span>.</p>
+    <svg viewBox="0 0 320 170" role="img" aria-label="Heating curve with two flat parts">
+      <line x1="34" y1="140" x2="300" y2="140" stroke="#8a847c" stroke-width="1.5"/>
+      <line x1="34" y1="140" x2="34" y2="14" stroke="#8a847c" stroke-width="1.5"/>
+      <polyline points="34,130 80,100 150,100 200,55 260,55 300,30" fill="none" stroke="#2f5fb3" stroke-width="3" stroke-linejoin="round"/>
+      <line x1="34" y1="100" x2="80" y2="100" stroke="#8a847c" stroke-dasharray="3 3"/>
+      <line x1="34" y1="55" x2="200" y2="55" stroke="#8a847c" stroke-dasharray="3 3"/>
+      <text x="8" y="104" font-size="12" fill="#2b2622">mp</text>
+      <text x="8" y="59" font-size="12" fill="#2b2622">bp</text>
+      <text x="92" y="92" font-size="12" fill="#2b2622">melting point</text>
+      <text x="212" y="47" font-size="12" fill="#2b2622">boiling point</text>
+      <text x="40" y="128" font-size="11" fill="#6b645c">solid</text>
+      <text x="152" y="80" font-size="11" fill="#6b645c">liquid</text>
+      <text x="268" y="26" font-size="11" fill="#6b645c">gas</text>
+      <text x="230" y="156" font-size="11" fill="#6b645c">time</text>
+      <text x="6" y="12" font-size="11" fill="#6b645c">temperature</text>
+    </svg>
+    <h3>Particles table</h3>
+    <div class="callout">Write the <span class="k">row names first</span>: state, movement, forces. Fill one row at a time.</div>
+    <div class="grid g4">
+      <div class="hd"></div><div class="hd">Solid</div><div class="hd">Liquid</div><div class="hd">Gas</div>
+      <div class="lb">Forces</div><div><span class="k">very strong</span></div><div><span class="k">less strong</span></div><div><span class="k">very weak</span></div>
+      <div class="lb">Movement</div><div><span class="k">vibrate</span> about fixed positions</div><div><span class="k">slide</span> past each other</div><div>move <span class="k">quickly and randomly</span></div>
+      <div class="lb">Arrangement</div><div>closely packed, <span class="k">orderly</span></div><div>closely packed, <span class="k">disorderly</span></div><div><span class="k">far apart</span></div>
+    </div>
+  </section>
+
+  <section id="s9">
+    <div class="h"><span>9</span><h2>Explain answers</h2></div>
+    <p>Write it in 3 lines: <span class="k">condition</span>, <span class="k">reason</span>, <span class="k">so</span>.</p>
+    <h3>Why is an alloy harder?</h3>
+    <div class="explain">
+      <div class="lb">Condition</div><div>Atoms of <span class="k">different sizes</span></div>
+      <div class="lb">Reason</div><div><span class="k">disrupt the regular arrangement</span></div>
+      <div class="lb">So</div><div>the <span class="k">layers cannot slide</span> over one another.</div>
+    </div>
+    <h3>Why does an ionic compound conduct?</h3>
+    <div class="explain">
+      <div class="lb">Condition</div><div>When <span class="k">molten or dissolved</span></div>
+      <div class="lb">Reason</div><div>the <span class="k">ions are free to move</span></div>
+      <div class="lb">So</div><div>it conducts. Solid: the ions are <span class="k">fixed</span>, so it does not.</div>
+    </div>
+    <h3>Why a low boiling point?</h3>
+    <div class="explain">
+      <div class="lb">Condition</div><div>A <span class="k">simple molecular</span> substance</div>
+      <div class="lb">Reason</div><div>has <span class="k">weak intermolecular forces</span>, so little energy is needed to overcome them</div>
+      <div class="lb">So</div><div>its <span class="k">boiling point is low</span>.</div>
+    </div>
+    <h3>What are isotopes?</h3>
+    <p>Atoms of the <span class="k">same element</span> with the <span class="k">same number of protons</span> but <span class="k">different numbers of neutrons</span>.</p>
+  </section>
+
+  <div class="end"><b>Never leave a part blank.</b>You know more than you think.</div>
+  <div class="btns"><button id="showAll">Show all</button><button id="hideAll">Hide all</button></div>
+</main>
+
+<script>
+(function(){
+  var body=document.body, btn=document.getElementById('testBtn'), prog=document.getElementById('progress'), hint=document.getElementById('hint');
+  var ks=Array.prototype.slice.call(document.querySelectorAll('.k'));
+  function store(k,v){ try{ localStorage.setItem(k,v); }catch(e){} }
+  function read(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } }
+  function update(){
+    if(!body.classList.contains('testing')){ prog.textContent=''; hint.textContent='Highlighted words are the ones that score marks.'; return; }
+    var seen=ks.filter(function(k){return k.classList.contains('seen');}).length;
+    prog.textContent=seen+' / '+ks.length+' checked';
+    hint.textContent='Say the word in your head, then tap the blur to check.';
+  }
+  function setTesting(on){
+    body.classList.toggle('testing',on); btn.setAttribute('aria-pressed',on?'true':'false');
+    if(!on){ ks.forEach(function(k){k.classList.remove('seen');}); }
+    store('p3-testing',on?'1':'0'); update();
+  }
+  btn.addEventListener('click',function(){ setTesting(!body.classList.contains('testing')); });
+  ks.forEach(function(k){ k.addEventListener('click',function(){ if(body.classList.contains('testing')){ k.classList.add('seen'); update(); } }); });
+  document.getElementById('showAll').addEventListener('click',function(){ ks.forEach(function(k){k.classList.add('seen');}); update(); });
+  document.getElementById('hideAll').addEventListener('click',function(){ ks.forEach(function(k){k.classList.remove('seen');}); update(); });
+  if(read('p3-testing')==='1'){ setTesting(true); } else { update(); }
+})();
+</script>
+</body>
+</html>
